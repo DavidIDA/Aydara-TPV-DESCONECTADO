@@ -207,15 +207,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Interop.Formula">
-      <HintPath>Q:\AGI\Codigo\Interop.Formula.dll</HintPath>
+      <HintPath>..\..\lib\Interop.Formula.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.MSDASC">
-      <HintPath>Q:\AGI\Codigo\Libreria AGI\AGI2005\v 0.5.16.0\Interop.MSDASC.dll</HintPath>
+      <HintPath>..\..\lib\Interop.MSDASC.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Interop.OSPOP3">
-      <HintPath>Q:\AGI\Codigo\Interop.OSPOP3.dll</HintPath>
+      <HintPath>..\..\lib\Interop.OSPOP3.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
