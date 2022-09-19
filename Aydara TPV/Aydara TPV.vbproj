@@ -92,9 +92,9 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AGI2005, Version=0.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="AGI2005, Version=0.5.16.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\agiws\AGI\AGI\Codigo\Libreria AGI\AGI2005\v 0.5.16.0\AGI2005.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\VS2019\lib\AGI2005.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
