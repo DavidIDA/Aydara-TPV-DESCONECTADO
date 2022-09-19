@@ -1,0 +1,2 @@
+--Aydara TPV  13.1.01
+ALTER TABLE TIENDAS ADD NumeroAlbaran INT

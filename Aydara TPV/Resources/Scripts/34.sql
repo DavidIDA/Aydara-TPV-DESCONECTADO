@@ -1,0 +1,2 @@
+--Aydara TPV 17.10.01
+ALTER TABLE INCIDENCIAS ADD FechaCierre datetime NULL

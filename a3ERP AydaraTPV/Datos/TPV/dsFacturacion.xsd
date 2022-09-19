@@ -1,0 +1,1062 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsFacturacion" targetNamespace="http://tempuri.org/dsFacturacion.xsd" xmlns:mstns="http://tempuri.org/dsFacturacion.xsd" xmlns="http://tempuri.org/dsFacturacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="UPDATE_TICKETS" GeneratorFunctionsComponentClassName="UPDATE_TICKETS" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="UPDATE_TICKETS" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="A3ConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="A3ConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.a3ERP_AydaraTPV.My.MySettings.GlobalReference.Default.A3ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SqlConection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SqlConection (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.a3ERP_AydaraTPV.Settings.GlobalReference.Default.SqlConection" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TICKETSTableAdapter" GeneratorDataComponentClassName="TICKETSTableAdapter" Name="TICKETS" UserDataComponentName="TICKETSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CONVERT(BIT, 0) AS SELECCIONAR, CASE IDA_TIPOSTIENDA.FACTURADIARIA WHEN 'T' THEN CONVERT(VARCHAR, FECCIERRE, 103) ELSE DATENAME(month, 
+                         FECCIERRE) + ' ' + CONVERT(VARCHAR, YEAR(FECCIERRE)) END AS FECHA, CASE IDA_TIPOSTIENDA.FACTURADIARIA WHEN 'T' THEN FECCIERRE ELSE NULL 
+                         END AS FECCIERRE, IDA_TICKETS.CODALM, ALMACEN.DESCALM, ALMACEN.IDA_TIPOTIENDA, SUM(IDA_TICKETS.TOTDOC) AS TOTAL, 
+                         ALMACEN.IDA_CODCLI AS CODCLI, CLIENTES.NOMCLI, REGIVA.APLIIVA, REGIVA.APLIREC, ALMACEN.IDA_DESCDEPOSITO, MIN(IDA_TICKETS.NUMDOC) 
+                         AS TICKETDESDE, MAX(IDA_TICKETS.NUMDOC) AS TICKETHASTA, MIN(IDA_TICKETS.IDALBV) AS IDALBV
+FROM            REGIVA INNER JOIN
+                         CLIENTES INNER JOIN
+                         IDA_TICKETS INNER JOIN
+                         ALMACEN ON IDA_TICKETS.CODALM = ALMACEN.CODALM ON CLIENTES.CODCLI = ALMACEN.IDA_CODCLI ON REGIVA.REGIVA = CLIENTES.REGIVA INNER JOIN
+                         IDA_TIPOSTIENDA ON ALMACEN.IDA_TIPOTIENDA = IDA_TIPOSTIENDA.CODIGO
+WHERE        (IDA_TICKETS.IDFACV IS NULL) AND (IDA_TICKETS.CREDITO = 0)
+GROUP BY CASE IDA_TIPOSTIENDA.FACTURADIARIA WHEN 'T' THEN CONVERT(VARCHAR, FECCIERRE, 103) ELSE DATENAME(month, FECCIERRE) + ' ' + CONVERT(VARCHAR, 
+                         YEAR(FECCIERRE)) END, CASE IDA_TIPOSTIENDA.FACTURADIARIA WHEN 'T' THEN FECCIERRE ELSE NULL END, IDA_TICKETS.CODALM, ALMACEN.DESCALM, 
+                         ALMACEN.IDA_TIPOTIENDA, ALMACEN.IDA_CODCLI, CLIENTES.NOMCLI, REGIVA.APLIIVA, REGIVA.APLIREC, ALMACEN.IDA_DESCDEPOSITO
+ORDER BY FECCIERRE, IDA_TICKETS.CODALM</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODALM" DataSetColumn="CODALM" />
+              <Mapping SourceColumn="DESCALM" DataSetColumn="DESCALM" />
+              <Mapping SourceColumn="IDA_TIPOTIENDA" DataSetColumn="IDA_TIPOTIENDA" />
+              <Mapping SourceColumn="SELECCIONAR" DataSetColumn="SELECCIONAR" />
+              <Mapping SourceColumn="CODCLI" DataSetColumn="CODCLI" />
+              <Mapping SourceColumn="NOMCLI" DataSetColumn="NOMCLI" />
+              <Mapping SourceColumn="APLIIVA" DataSetColumn="APLIIVA" />
+              <Mapping SourceColumn="APLIREC" DataSetColumn="APLIREC" />
+              <Mapping SourceColumn="IDA_DESCDEPOSITO" DataSetColumn="IDA_DESCDEPOSITO" />
+              <Mapping SourceColumn="TICKETDESDE" DataSetColumn="TICKETDESDE" />
+              <Mapping SourceColumn="TICKETHASTA" DataSetColumn="TICKETHASTA" />
+              <Mapping SourceColumn="IDALBV" DataSetColumn="IDALBV" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="TOTAL" DataSetColumn="TOTAL" />
+              <Mapping SourceColumn="FECCIERRE" DataSetColumn="FECCIERRE" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="ActualizaTicketsFacturados" Modifier="Public" Name="ActualizaTicketsFacturados" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ActualizaTicketsFacturados">
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>UPDATE       IDA_TICKETS
+SET                IDFACV = @IDFACV
+FROM            IDA_TICKETS INNER JOIN
+                         ALMACEN ON IDA_TICKETS.CODALM = ALMACEN.CODALM INNER JOIN
+                         IDA_TIPOSTIENDA ON IDA_TIPOSTIENDA.CODIGO = ALMACEN.IDA_TIPOTIENDA
+WHERE        (IDA_TICKETS.CREDITO = 0) AND (IDA_TICKETS.CODALM = @CODALM) AND (CASE IDA_TIPOSTIENDA.FACTURADIARIA WHEN 'T' THEN CONVERT(VARCHAR, 
+                         FECCIERRE, 103) ELSE DATENAME(month, FECCIERRE) + ' ' + CONVERT(VARCHAR, YEAR(FECCIERRE)) END = @FECHA) AND (IDA_TICKETS.IDFACV IS NULL)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="IDFACV" ColumnName="IDFACV" DataSourceName="Calavia.dbo.IDA_TICKETS" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@IDFACV" Precision="0" ProviderType="Money" Scale="0" Size="8" SourceColumn="IDFACV" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CODALM" ColumnName="CODALM" DataSourceName="Calavia.dbo.IDA_TICKETS" DataTypeServer="varchar(8)" DbType="AnsiString" Direction="Input" ParameterName="@CODALM" Precision="0" ProviderType="VarChar" Scale="0" Size="8" SourceColumn="CODALM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="FECHA" ColumnName="" DataSourceName="" DataTypeServer="unknown" DbType="AnsiString" Direction="Input" ParameterName="@FECHA" Precision="0" Scale="0" Size="1024" SourceColumn="" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CABEALBVTableAdapter" GeneratorDataComponentClassName="CABEALBVTableAdapter" Name="CABEALBV" UserDataComponentName="CABEALBVTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        0 AS SELECCIONAR, CABEALBV.IDALBV, CABEALBV.TIPOCONT, ISNULL(CABEALBV.SERIE, '') AS SERIE, CABEALBV.NUMDOC, CABEALBV.FECHA, CABEALBV.CODCLI, CABEALBV.NOMCLI,
+                          CABEALBV.POBCLI, CABEALBV.REFERENCIA, DIRENT.DIRENT1, CABEALBV.TOTDOC, CABEALBV.CAMBIOASEGURADO, CABEALBV.CAMBIO, CABEALBV.CODALM, 
+                         CABEALBV.CODIDIOMA, CABEALBV.CODMON, CABEALBV.CODPAIS, CABEALBV.CODPER, CABEALBV.CODREP, CABEALBV.CODREP2, CABEALBV.CODREP3, 
+                         CABEALBV.CODTRA, CABEALBV.DOCPAG, CABEALBV.FORPAG, CABEALBV.IDDIRENT, CABEALBV.IVAINCLUIDO, CABEALBV.NUMDOM, CABEALBV.PORPRONTO, 
+                         CABEALBV.PORIRPF, CABEALBV.PORRECFIN, CABEALBV.TARIFA, CABEALBV.REGIVA, CLIENTES.TIPFAC, FORMAPAG.DESCFOR, DOCUPAGO.DESCDOC, 
+                         CLIENTES.RUTA, RUTAS.NOMRUTA
+FROM            RUTAS RIGHT OUTER JOIN
+                         CLIENTES ON RUTAS.RUTA = CLIENTES.RUTA RIGHT OUTER JOIN
+                         CABEALBV LEFT OUTER JOIN
+                         DOCUPAGO ON CABEALBV.DOCPAG = DOCUPAGO.DOCPAG LEFT OUTER JOIN
+                         FORMAPAG ON CABEALBV.FORPAG = FORMAPAG.FORPAG ON CLIENTES.CODCLI = CABEALBV.CODCLI LEFT OUTER JOIN
+                         DIRENT ON CABEALBV.IDDIRENT = DIRENT.IDDIRENT
+WHERE        (CABEALBV.SITUACION = 'A') AND (CABEALBV.FACTURABLE = 'T') AND (CLIENTES.TIPFAC &lt;&gt; 'N')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IDALBV" DataSetColumn="IDALBV" />
+              <Mapping SourceColumn="TIPOCONT" DataSetColumn="TIPOCONT" />
+              <Mapping SourceColumn="SERIE" DataSetColumn="SERIE" />
+              <Mapping SourceColumn="NUMDOC" DataSetColumn="NUMDOC" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="CODCLI" DataSetColumn="CODCLI" />
+              <Mapping SourceColumn="NOMCLI" DataSetColumn="NOMCLI" />
+              <Mapping SourceColumn="POBCLI" DataSetColumn="POBCLI" />
+              <Mapping SourceColumn="REFERENCIA" DataSetColumn="REFERENCIA" />
+              <Mapping SourceColumn="TARIFA" DataSetColumn="TARIFA" />
+              <Mapping SourceColumn="DIRENT1" DataSetColumn="DIRENT1" />
+              <Mapping SourceColumn="TOTDOC" DataSetColumn="TOTDOC" />
+              <Mapping SourceColumn="CAMBIOASEGURADO" DataSetColumn="CAMBIOASEGURADO" />
+              <Mapping SourceColumn="CAMBIO" DataSetColumn="CAMBIO" />
+              <Mapping SourceColumn="CODALM" DataSetColumn="CODALM" />
+              <Mapping SourceColumn="CODIDIOMA" DataSetColumn="CODIDIOMA" />
+              <Mapping SourceColumn="CODMON" DataSetColumn="CODMON" />
+              <Mapping SourceColumn="CODPAIS" DataSetColumn="CODPAIS" />
+              <Mapping SourceColumn="CODPER" DataSetColumn="CODPER" />
+              <Mapping SourceColumn="CODREP" DataSetColumn="CODREP" />
+              <Mapping SourceColumn="CODREP2" DataSetColumn="CODREP2" />
+              <Mapping SourceColumn="CODREP3" DataSetColumn="CODREP3" />
+              <Mapping SourceColumn="CODTRA" DataSetColumn="CODTRA" />
+              <Mapping SourceColumn="DOCPAG" DataSetColumn="DOCPAG" />
+              <Mapping SourceColumn="FORPAG" DataSetColumn="FORPAG" />
+              <Mapping SourceColumn="IDDIRENT" DataSetColumn="IDDIRENT" />
+              <Mapping SourceColumn="IVAINCLUIDO" DataSetColumn="IVAINCLUIDO" />
+              <Mapping SourceColumn="NUMDOM" DataSetColumn="NUMDOM" />
+              <Mapping SourceColumn="PORPRONTO" DataSetColumn="PORPRONTO" />
+              <Mapping SourceColumn="PORIRPF" DataSetColumn="PORIRPF" />
+              <Mapping SourceColumn="PORRECFIN" DataSetColumn="PORRECFIN" />
+              <Mapping SourceColumn="REGIVA" DataSetColumn="REGIVA" />
+              <Mapping SourceColumn="TIPFAC" DataSetColumn="TIPFAC" />
+              <Mapping SourceColumn="DESCFOR" DataSetColumn="DESCFOR" />
+              <Mapping SourceColumn="DESCDOC" DataSetColumn="DESCDOC" />
+              <Mapping SourceColumn="RUTA" DataSetColumn="RUTA" />
+              <Mapping SourceColumn="NOMRUTA" DataSetColumn="NOMRUTA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LINEASTICKETSTableAdapter" GeneratorDataComponentClassName="LINEASTICKETSTableAdapter" Name="LINEASTICKETS" UserDataComponentName="LINEASTICKETSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDA_TICKETS.CODALM, DATENAME(month, IDA_TICKETS.FECCIERRE) + ' ' + CONVERT(VARCHAR, YEAR(IDA_TICKETS.FECCIERRE)) AS FECHA, 
+                         IDA_TICKETSLINEAS.CODART, IDA_TICKETSLINEAS.DESCLIN, SUM(IDA_TICKETSLINEAS.CANTIDAD) AS UNIDADES, SUM(IDA_TICKETSLINEAS.TOTLIN) AS IMPORTE, 
+                         CASE SUM(IDA_TICKETSLINEAS.CANTIDAD) WHEN 0 THEN 0 ELSE SUM(IDA_TICKETSLINEAS.TOTLIN) / SUM(IDA_TICKETSLINEAS.CANTIDAD) END AS PRECIO, 
+                         ALMACEN.IDA_TIPOTIENDA, IDA_TICKETSLINEAS.TIPIVA, TIPOIVA.PORIVA, TIPOIVA.PORREC, ISNULL(IDA_TICKETSLINEAS.ARTICULODIRECTO,ISNULL(ARTICULO.IDA_ARTICULODIRECTO, 'T')) AS ARTICULODIRECTO, 
+                         ISNULL(ARTICULO.IDA_ARTICULOSECCION, 'F') AS ARTICULOSECCION
+FROM            IDA_TICKETS INNER JOIN
+                         ALMACEN ON IDA_TICKETS.CODALM = ALMACEN.CODALM INNER JOIN
+                         IDA_TICKETSLINEAS ON IDA_TICKETS.IDTICKET = IDA_TICKETSLINEAS.IDTICKET INNER JOIN
+                         TIPOIVA ON IDA_TICKETSLINEAS.TIPIVA = TIPOIVA.TIPIVA INNER JOIN
+                         IDA_TIPOSTIENDA ON ALMACEN.IDA_TIPOTIENDA = IDA_TIPOSTIENDA.CODIGO LEFT OUTER JOIN
+                         ARTICULO ON IDA_TICKETSLINEAS.CODART = ARTICULO.CODART
+WHERE        (IDA_TICKETS.IDFACV IS NULL) AND (IDA_TICKETS.CREDITO = 0) AND (IDA_TIPOSTIENDA.FACTURADIARIA = 'F')
+GROUP BY IDA_TICKETSLINEAS.CODART, IDA_TICKETSLINEAS.DESCLIN, IDA_TICKETS.CODALM, ALMACEN.IDA_TIPOTIENDA, IDA_TICKETSLINEAS.TIPIVA, TIPOIVA.PORIVA, 
+                         TIPOIVA.PORREC, ISNULL(ARTICULO.IDA_ARTICULOSECCION, 'F'), ISNULL(IDA_TICKETSLINEAS.ARTICULODIRECTO,ISNULL(ARTICULO.IDA_ARTICULODIRECTO, 'T')), DATENAME(month, IDA_TICKETS.FECCIERRE) 
+                         + ' ' + CONVERT(VARCHAR, YEAR(IDA_TICKETS.FECCIERRE))
+HAVING        (SUM(IDA_TICKETSLINEAS.CANTIDAD) &lt;&gt; 0)
+ORDER BY FECHA, IDA_TICKETS.CODALM, IDA_TICKETSLINEAS.CODART</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODALM" DataSetColumn="CODALM" />
+              <Mapping SourceColumn="CODART" DataSetColumn="CODART" />
+              <Mapping SourceColumn="DESCLIN" DataSetColumn="DESCLIN" />
+              <Mapping SourceColumn="IDA_TIPOTIENDA" DataSetColumn="IDA_TIPOTIENDA" />
+              <Mapping SourceColumn="TIPIVA" DataSetColumn="TIPIVA" />
+              <Mapping SourceColumn="PORIVA" DataSetColumn="PORIVA" />
+              <Mapping SourceColumn="PORREC" DataSetColumn="PORREC" />
+              <Mapping SourceColumn="ARTICULODIRECTO" DataSetColumn="ARTICULODIRECTO" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="UNIDADES" DataSetColumn="UNIDADES" />
+              <Mapping SourceColumn="IMPORTE" DataSetColumn="IMPORTE" />
+              <Mapping SourceColumn="PRECIO" DataSetColumn="PRECIO" />
+              <Mapping SourceColumn="ARTICULOSECCION" DataSetColumn="ARTICULOSECCION" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CIERRESTableAdapter" GeneratorDataComponentClassName="CIERRESTableAdapter" Name="CIERRES" UserDataComponentName="CIERRESTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CONVERT(BIT, 0) AS SELECCIONAR, CASE IDA_TIPOSTIENDA.FACTURADIARIA WHEN 'T' THEN CONVERT(VARCHAR, FECCIERRE, 103) ELSE DATENAME(month, 
+                         FECCIERRE) + ' ' + CONVERT(VARCHAR, YEAR(FECCIERRE)) END AS FECHA, IDA_TICKETS.CODALM, IDA_TICKETS.FECCIERRE, IDA_TICKETS.IDALBV, 
+                         IDA_TICKETS.IDFACV, COUNT(IDA_TICKETS.IDTICKET) AS NUMTICKETS, CABEALBV.SERIE + '/' + CONVERT(VARCHAR, CONVERT(INT, CABEALBV.NUMDOC)) 
+                         AS ALBARAN_NUMDOC, ALMACEN.IDA_CODCLI, ALMACEN.IDA_DESCDEPOSITO, SUM(IDA_TICKETS.TOTDOC) AS TOTAL, ALMACEN.DESCALM, REGIVA.APLIIVA, 
+                         REGIVA.APLIREC, MONTH(IDA_TICKETS.FECCIERRE) AS MES, YEAR(IDA_TICKETS.FECCIERRE) AS EJERCICIO, IDA_TIPOSTIENDA.CONREPER, 
+                         IDA_TIPOSTIENDA.CONVENCIM, IDA_TIPOSTIENDA.GENERAALBARAN, IDA_TIPOSTIENDA.GENERAFACTURA, IDA_TIPOSTIENDA.TIPOCONTFACTURA, 
+                         IDA_TIPOSTIENDA.TIPOCONTALBARAN, IDA_TIPOSTIENDA.SERIEFACTURA, IDA_TIPOSTIENDA.SERIEALBARAN, IDA_TIPOSTIENDA.IVAINCLUIDO, ALMACEN.INTEXT, 
+                         SUM(IDA_TICKETS.TOTEFECTIVO - IDA_TICKETS.TOTCAMBIOS) AS TOTEFECTIVO, SUM(IDA_TICKETS.TOTTARJETA) AS TOTTARJETA
+FROM            REGIVA INNER JOIN
+                         IDA_TIPOSTIENDA INNER JOIN
+                         ALMACEN ON IDA_TIPOSTIENDA.CODIGO = ALMACEN.IDA_TIPOTIENDA INNER JOIN
+                         IDA_TICKETS ON ALMACEN.CODALM = IDA_TICKETS.CODALM INNER JOIN
+                         CLIENTES ON ALMACEN.IDA_CODCLI = CLIENTES.CODCLI ON REGIVA.REGIVA = CLIENTES.REGIVA LEFT OUTER JOIN
+                         CABEALBV ON IDA_TICKETS.IDALBV = CABEALBV.IDALBV
+WHERE        (IDA_TICKETS.IDFACV IS NULL) AND (IDA_TICKETS.CREDITO = 0)
+GROUP BY IDA_TICKETS.CODALM, IDA_TICKETS.FECCIERRE, IDA_TICKETS.IDALBV, IDA_TICKETS.IDFACV, CABEALBV.SERIE, CABEALBV.NUMDOC, ALMACEN.IDA_CODCLI, 
+                         ALMACEN.IDA_DESCDEPOSITO, ALMACEN.DESCALM, REGIVA.APLIIVA, REGIVA.APLIREC, MONTH(IDA_TICKETS.FECCIERRE), YEAR(IDA_TICKETS.FECCIERRE), 
+                         CABEALBV.CODALM, IDA_TIPOSTIENDA.CONREPER, IDA_TIPOSTIENDA.CONVENCIM, IDA_TIPOSTIENDA.GENERAALBARAN, IDA_TIPOSTIENDA.GENERAFACTURA, 
+                         IDA_TIPOSTIENDA.TIPOCONTFACTURA, IDA_TIPOSTIENDA.TIPOCONTALBARAN, IDA_TIPOSTIENDA.SERIEFACTURA, IDA_TIPOSTIENDA.SERIEALBARAN, 
+                         IDA_TIPOSTIENDA.IVAINCLUIDO, IDA_TIPOSTIENDA.FACTURADIARIA, ALMACEN.INTEXT
+ORDER BY IDA_TICKETS.FECCIERRE, CABEALBV.CODALM</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODALM" DataSetColumn="CODALM" />
+              <Mapping SourceColumn="FECCIERRE" DataSetColumn="FECCIERRE" />
+              <Mapping SourceColumn="IDALBV" DataSetColumn="IDALBV" />
+              <Mapping SourceColumn="IDFACV" DataSetColumn="IDFACV" />
+              <Mapping SourceColumn="NUMTICKETS" DataSetColumn="NUMTICKETS" />
+              <Mapping SourceColumn="ALBARAN_NUMDOC" DataSetColumn="ALBARAN_NUMDOC" />
+              <Mapping SourceColumn="IDA_CODCLI" DataSetColumn="IDA_CODCLI" />
+              <Mapping SourceColumn="IDA_DESCDEPOSITO" DataSetColumn="IDA_DESCDEPOSITO" />
+              <Mapping SourceColumn="DESCALM" DataSetColumn="DESCALM" />
+              <Mapping SourceColumn="APLIIVA" DataSetColumn="APLIIVA" />
+              <Mapping SourceColumn="APLIREC" DataSetColumn="APLIREC" />
+              <Mapping SourceColumn="MES" DataSetColumn="MES" />
+              <Mapping SourceColumn="EJERCICIO" DataSetColumn="EJERCICIO" />
+              <Mapping SourceColumn="SELECCIONAR" DataSetColumn="SELECCIONAR" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="TOTAL" DataSetColumn="TOTAL" />
+              <Mapping SourceColumn="CONREPER" DataSetColumn="CONREPER" />
+              <Mapping SourceColumn="CONVENCIM" DataSetColumn="CONVENCIM" />
+              <Mapping SourceColumn="GENERAALBARAN" DataSetColumn="GENERAALBARAN" />
+              <Mapping SourceColumn="GENERAFACTURA" DataSetColumn="GENERAFACTURA" />
+              <Mapping SourceColumn="TIPOCONTFACTURA" DataSetColumn="TIPOCONTFACTURA" />
+              <Mapping SourceColumn="TIPOCONTALBARAN" DataSetColumn="TIPOCONTALBARAN" />
+              <Mapping SourceColumn="SERIEFACTURA" DataSetColumn="SERIEFACTURA" />
+              <Mapping SourceColumn="SERIEALBARAN" DataSetColumn="SERIEALBARAN" />
+              <Mapping SourceColumn="IVAINCLUIDO" DataSetColumn="IVAINCLUIDO" />
+              <Mapping SourceColumn="INTEXT" DataSetColumn="INTEXT" />
+              <Mapping SourceColumn="TOTEFECTIVO" DataSetColumn="TOTEFECTIVO" />
+              <Mapping SourceColumn="TOTTARJETA" DataSetColumn="TOTTARJETA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TOTALESTableAdapter" GeneratorDataComponentClassName="TOTALESTableAdapter" Name="TOTALES" UserDataComponentName="TOTALESTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        VENTAS.FECCIERRE, VENTAS.CODALM, VENTAS.TIPIVA, VENTAS.TOTAL, TIPOIVA.NOMTIVA
+FROM            (SELECT        IDA_TICKETS.FECCIERRE, IDA_TICKETS.CODALM, IDA_TICKETSLINEAS.TIPIVA, SUM(IDA_TICKETSLINEAS.TOTLIN) AS TOTAL
+                          FROM            IDA_TICKETS LEFT OUTER JOIN
+                                                    IDA_TICKETSLINEAS ON IDA_TICKETS.IDTICKET = IDA_TICKETSLINEAS.IDTICKET LEFT OUTER JOIN
+                                                    ALMACEN ON IDA_TICKETS.CODALM = ALMACEN.CODALM LEFT OUTER JOIN
+                                                    ARTICULO ON IDA_TICKETSLINEAS.CODART = ARTICULO.CODART
+                          WHERE        (IDA_TICKETS.IDFACV IS NULL) AND (IDA_TICKETS.CREDITO = 0) AND (ISNULL(ARTICULO.IDA_ARTICULODIRECTO, 'T') 
+                                                    = CASE ALMACEN.INTEXT WHEN 'F' THEN 'F' ELSE ISNULL(ARTICULO.IDA_ARTICULODIRECTO, 'T') END)
+                          GROUP BY IDA_TICKETS.FECCIERRE, IDA_TICKETS.CODALM, IDA_TICKETSLINEAS.TIPIVA) AS VENTAS INNER JOIN
+                         TIPOIVA ON VENTAS.TIPIVA = TIPOIVA.TIPIVA
+ORDER BY VENTAS.FECCIERRE, VENTAS.CODALM, VENTAS.TIPIVA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODALM" DataSetColumn="CODALM" />
+              <Mapping SourceColumn="TIPIVA" DataSetColumn="TIPIVA" />
+              <Mapping SourceColumn="NOMTIVA" DataSetColumn="NOMTIVA" />
+              <Mapping SourceColumn="FECCIERRE" DataSetColumn="FECCIERRE" />
+              <Mapping SourceColumn="TOTAL" DataSetColumn="TOTAL" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LINEASCIERRETableAdapter" GeneratorDataComponentClassName="LINEASCIERRETableAdapter" Name="LINEASCIERRE" UserDataComponentName="LINEASCIERRETableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TICKETS.CODALM, TICKETS.FECCIERRE, TICKETS.CODART, TICKETS.DESCLIN, TICKETS.TIPIVA, TICKETS.UNIDADES, TICKETS.IMPORTE, TICKETS.PRECIO, 
+                         TIPOIVA.PORIVA, TIPOIVA.PORREC, ISNULL(TICKETS.ARTICULODIRECTO,ISNULL(ARTICULO.IDA_ARTICULODIRECTO, 'T')) ARTICULODIRECTO, ISNULL(ARTICULO.IDA_ARTICULOSECCION, 'T') 
+                         AS ARTICULOSECCION
+FROM            IDA_TIPOSTIENDA INNER JOIN
+                         ALMACEN ON IDA_TIPOSTIENDA.CODIGO = ALMACEN.IDA_TIPOTIENDA INNER JOIN
+                             (SELECT        IDA_TICKETS.CODALM, IDA_TICKETS.FECCIERRE, IDA_TICKETSLINEAS.CODART, IDA_TICKETSLINEAS.DESCLIN, IDA_TICKETSLINEAS.TIPIVA, IDA_TICKETSLINEAS.ARTICULODIRECTO,
+                                                         SUM(IDA_TICKETSLINEAS.CANTIDAD) AS UNIDADES, SUM(IDA_TICKETSLINEAS.TOTLIN) AS IMPORTE, CASE SUM(IDA_TICKETSLINEAS.CANTIDAD) 
+                                                         WHEN 0 THEN 0 ELSE SUM(IDA_TICKETSLINEAS.TOTLIN) / SUM(IDA_TICKETSLINEAS.CANTIDAD) END AS PRECIO
+                               FROM            IDA_TICKETS INNER JOIN
+                                                         IDA_TICKETSLINEAS ON IDA_TICKETS.IDTICKET = IDA_TICKETSLINEAS.IDTICKET
+                               WHERE        (IDA_TICKETS.IDFACV IS NULL) AND (IDA_TICKETS.CREDITO = 0)
+                               GROUP BY IDA_TICKETS.FECCIERRE, IDA_TICKETSLINEAS.CODART, IDA_TICKETSLINEAS.DESCLIN, IDA_TICKETS.CODALM, IDA_TICKETSLINEAS.TIPIVA, IDA_TICKETSLINEAS.ARTICULODIRECTO
+                               HAVING         (SUM(IDA_TICKETSLINEAS.CANTIDAD) &lt;&gt; 0)) AS TICKETS ON ALMACEN.CODALM = TICKETS.CODALM INNER JOIN
+                         TIPOIVA ON TICKETS.TIPIVA = TIPOIVA.TIPIVA LEFT OUTER JOIN
+                         ARTICULO ON TICKETS.CODART = ARTICULO.CODART
+ORDER BY TICKETS.FECCIERRE, TICKETS.CODALM, TICKETS.CODART</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODALM" DataSetColumn="CODALM" />
+              <Mapping SourceColumn="CODART" DataSetColumn="CODART" />
+              <Mapping SourceColumn="DESCLIN" DataSetColumn="DESCLIN" />
+              <Mapping SourceColumn="TIPIVA" DataSetColumn="TIPIVA" />
+              <Mapping SourceColumn="PORIVA" DataSetColumn="PORIVA" />
+              <Mapping SourceColumn="PORREC" DataSetColumn="PORREC" />
+              <Mapping SourceColumn="FECCIERRE" DataSetColumn="FECCIERRE" />
+              <Mapping SourceColumn="UNIDADES" DataSetColumn="UNIDADES" />
+              <Mapping SourceColumn="IMPORTE" DataSetColumn="IMPORTE" />
+              <Mapping SourceColumn="PRECIO" DataSetColumn="PRECIO" />
+              <Mapping SourceColumn="ARTICULOSECCION" DataSetColumn="ARTICULOSECCION" />
+              <Mapping SourceColumn="ARTICULODIRECTO" DataSetColumn="ARTICULODIRECTO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IDA_CAJASTableAdapter" GeneratorDataComponentClassName="IDA_CAJASTableAdapter" Name="IDA_CAJAS" UserDataComponentName="IDA_CAJASTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectName="Solum.dbo.IDA_CAJAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Situacion" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Situacion" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Situacion">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        'CAJA ' + CONVERT(VARCHAR, CAJA) AS CAJA, CAJA AS IDCAJA, SUM(COBROSCLIENTE) AS COBROSCLIENTE, CODALM, 
+                         SUM(EFECTIVO) AS EFECTIVO, SUM(ENTRADACAMBIOS) AS ENTRADACAMBIOS, SUM(ENVASES) AS ENVASES, SUM(LINEAS) AS LINEAS, SUM(PAGOSPROVEEDOR) 
+                         AS PAGOSPROVEEDOR, SUM(PENDIENTECOBRO) AS PENDIENTECOBRO, SUM(REPARTODOMICILIO) AS REPARTODOMICILIO, SUM(RETIRADAFONDOS) 
+                         AS RETIRADAFONDOS, SUM(TALON) AS TALON, SUM(TARJETA) AS TARJETA, SUM(TICKETS) AS TICKETS, SUM(VALESCOBRADOS) AS VALESCOBRADOS, 
+                         SUM(VALESEMITIDOS) AS VALESEMITIDOS, SUM(VALESPROVEEDOR) AS VALESPROVEEDOR, SUM(VENTA) AS VENTA, GETDATE() AS FECHA,
+SUM(NUMALBARANES) AS NUMALBARANES, SUM(TOTALBARANES) AS TOTALBARANES, SUM(NUMFACTURAS) AS NUMFACTURAS, SUM(TOTFACTURAS) AS TOTFACTURAS
+FROM            IDA_CAJAS
+WHERE        (FECHA BETWEEN @FECINI AND @FECFIN) AND (CODALM = @CODLAM)
+GROUP BY CODALM, CAJA</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="FECINI" ColumnName="GETDATE()" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@FECINI" Precision="0" Scale="0" Size="8" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="FECFIN" ColumnName="GETDATE()" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@FECFIN" Precision="0" Scale="0" Size="8" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CODLAM" ColumnName="CODALM" DataSourceName="Solum.dbo.IDA_CAJAS" DataTypeServer="varchar(8)" DbType="AnsiString" Direction="Input" ParameterName="@CODLAM" Precision="0" ProviderType="VarChar" Scale="0" Size="8" SourceColumn="CODALM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CAJA" DataSetColumn="CAJA" />
+              <Mapping SourceColumn="IDCAJA" DataSetColumn="IDCAJA" />
+              <Mapping SourceColumn="COBROSCLIENTE" DataSetColumn="COBROSCLIENTE" />
+              <Mapping SourceColumn="CODALM" DataSetColumn="CODALM" />
+              <Mapping SourceColumn="EFECTIVO" DataSetColumn="EFECTIVO" />
+              <Mapping SourceColumn="ENTRADACAMBIOS" DataSetColumn="ENTRADACAMBIOS" />
+              <Mapping SourceColumn="ENVASES" DataSetColumn="ENVASES" />
+              <Mapping SourceColumn="LINEAS" DataSetColumn="LINEAS" />
+              <Mapping SourceColumn="PAGOSPROVEEDOR" DataSetColumn="PAGOSPROVEEDOR" />
+              <Mapping SourceColumn="PENDIENTECOBRO" DataSetColumn="PENDIENTECOBRO" />
+              <Mapping SourceColumn="REPARTODOMICILIO" DataSetColumn="REPARTODOMICILIO" />
+              <Mapping SourceColumn="RETIRADAFONDOS" DataSetColumn="RETIRADAFONDOS" />
+              <Mapping SourceColumn="TALON" DataSetColumn="TALON" />
+              <Mapping SourceColumn="TARJETA" DataSetColumn="TARJETA" />
+              <Mapping SourceColumn="TICKETS" DataSetColumn="TICKETS" />
+              <Mapping SourceColumn="VALESCOBRADOS" DataSetColumn="VALESCOBRADOS" />
+              <Mapping SourceColumn="VALESEMITIDOS" DataSetColumn="VALESEMITIDOS" />
+              <Mapping SourceColumn="VALESPROVEEDOR" DataSetColumn="VALESPROVEEDOR" />
+              <Mapping SourceColumn="VENTA" DataSetColumn="VENTA" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="NUMALBARANES" DataSetColumn="NUMALBARANES" />
+              <Mapping SourceColumn="TOTALBARANES" DataSetColumn="TOTALBARANES" />
+              <Mapping SourceColumn="NUMFACTURAS" DataSetColumn="NUMFACTURAS" />
+              <Mapping SourceColumn="TOTFACTURAS" DataSetColumn="TOTFACTURAS" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectName="Solum.dbo.IDA_CAJAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="PendientesAsiento" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="PendientesAsiento" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="PendientesAsiento">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        SUM(ALBARANCREDITO) AS ALBARANCREDITO, SUM(ALBARANES) AS ALBARANES, 'TOTALES' AS CAJA, 0 AS IDCAJA, SUM(COBROSCLIENTE) AS COBROSCLIENTE, 
+                         CODALM, SUM(EFECTIVO) AS EFECTIVO, SUM(ENTRADACAMBIOS) AS ENTRADACAMBIOS, SUM(ENVASES) AS ENVASES, SUM(LINEAS) AS LINEAS, 
+                         SUM(PAGOSPROVEEDOR) AS PAGOSPROVEEDOR, SUM(PENDIENTECOBRO) AS PENDIENTECOBRO, SUM(REPARTODOMICILIO) AS REPARTODOMICILIO, 
+                         SUM(RETIRADAFONDOS) AS RETIRADAFONDOS, SUM(TALON) AS TALON, SUM(TARJETA) AS TARJETA, SUM(TICKETS) AS TICKETS, SUM(VALESCOBRADOS) 
+                         AS VALESCOBRADOS, SUM(VALESEMITIDOS) AS VALESEMITIDOS, SUM(VALESPROVEEDOR) AS VALESPROVEEDOR, SUM(VENTA) AS VENTA, FECHA
+FROM            IDA_CAJAS
+WHERE        (NUMAPUNTE IS NULL)
+GROUP BY CODALM, FECHA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectName="Solum.dbo.IDA_CAJAS" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="SituacionTotales" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="SituacionTotales" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SituacionTotales">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        'TOTALES' AS CAJA, 0 AS IDCAJA, SUM(COBROSCLIENTE) AS COBROSCLIENTE, CODALM,
+                          SUM(EFECTIVO) AS EFECTIVO, SUM(ENTRADACAMBIOS) AS ENTRADACAMBIOS, SUM(ENVASES) AS ENVASES, SUM(LINEAS) AS LINEAS, SUM(PAGOSPROVEEDOR) 
+                         AS PAGOSPROVEEDOR, SUM(PENDIENTECOBRO) AS PENDIENTECOBRO, SUM(REPARTODOMICILIO) AS REPARTODOMICILIO, SUM(RETIRADAFONDOS) 
+                         AS RETIRADAFONDOS, SUM(TALON) AS TALON, SUM(TARJETA) AS TARJETA, SUM(TICKETS) AS TICKETS, SUM(VALESCOBRADOS) AS VALESCOBRADOS, 
+                         SUM(VALESEMITIDOS) AS VALESEMITIDOS, SUM(VALESPROVEEDOR) AS VALESPROVEEDOR, SUM(VENTA) AS VENTA, GETDATE() AS FECHA,
+SUM(NUMALBARANES) AS NUMALBARANES, SUM(TOTALBARANES) AS TOTALBARANES, SUM(NUMFACTURAS) AS NUMFACTURAS, SUM(TOTFACTURAS) AS TOTFACTURAS
+FROM            IDA_CAJAS
+WHERE        (FECHA BETWEEN @FECINI AND @FECFIN) AND (CODALM = @CODLAM)
+GROUP BY CODALM</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="FECINI" ColumnName="GETDATE()" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@FECINI" Precision="0" Scale="0" Size="8" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="FECFIN" ColumnName="GETDATE()" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@FECFIN" Precision="0" Scale="0" Size="8" SourceColumn="FECHA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="CODLAM" ColumnName="CODALM" DataSourceName="Solum.dbo.IDA_CAJAS" DataTypeServer="varchar(8)" DbType="AnsiString" Direction="Input" ParameterName="@CODLAM" Precision="0" ProviderType="VarChar" Scale="0" Size="8" SourceColumn="CODALM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IDA_TIPOSFACTURACIONTableAdapter" GeneratorDataComponentClassName="IDA_TIPOSFACTURACIONTableAdapter" Name="IDA_TIPOSFACTURACION" UserDataComponentName="IDA_TIPOSFACTURACIONTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectName="Calavia.dbo.IDA_TIPOSFACTURACION" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDA_TIPOSFACTURACION.*
+FROM            IDA_TIPOSFACTURACION</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="DESCRIPCION" DataSetColumn="DESCRIPCION" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsFacturacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsFacturacion" msprop:Generator_UserDSName="dsFacturacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TICKETS" msprop:Generator_TableClassName="TICKETSDataTable" msprop:Generator_TableVarName="tableTICKETS" msprop:Generator_RowChangedName="TICKETSRowChanged" msprop:Generator_TablePropName="TICKETS" msprop:Generator_RowDeletingName="TICKETSRowDeleting" msprop:Generator_RowChangingName="TICKETSRowChanging" msprop:Generator_RowEvHandlerName="TICKETSRowChangeEventHandler" msprop:Generator_RowDeletedName="TICKETSRowDeleted" msprop:Generator_RowClassName="TICKETSRow" msprop:Generator_UserTableName="TICKETS" msprop:Generator_RowEvArgName="TICKETSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODALM" msprop:Generator_ColumnVarNameInTable="columnCODALM" msprop:Generator_ColumnPropNameInRow="CODALM" msprop:Generator_ColumnPropNameInTable="CODALMColumn" msprop:Generator_UserColumnName="CODALM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCALM" msprop:Generator_ColumnVarNameInTable="columnDESCALM" msprop:Generator_ColumnPropNameInRow="DESCALM" msprop:Generator_ColumnPropNameInTable="DESCALMColumn" msprop:Generator_UserColumnName="DESCALM" type="xs:string" minOccurs="0" />
+              <xs:element name="IDA_TIPOTIENDA" msprop:Generator_ColumnVarNameInTable="columnIDA_TIPOTIENDA" msprop:Generator_ColumnPropNameInRow="IDA_TIPOTIENDA" msprop:Generator_ColumnPropNameInTable="IDA_TIPOTIENDAColumn" msprop:Generator_UserColumnName="IDA_TIPOTIENDA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOTAL" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" msprop:Generator_UserColumnName="TOTAL" type="xs:double" minOccurs="0" />
+              <xs:element name="SELECCIONAR" msprop:Generator_ColumnVarNameInTable="columnSELECCIONAR" msprop:Generator_ColumnPropNameInRow="SELECCIONAR" msprop:Generator_ColumnPropNameInTable="SELECCIONARColumn" msprop:Generator_UserColumnName="SELECCIONAR" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CODCLI" msprop:Generator_ColumnVarNameInTable="columnCODCLI" msprop:Generator_ColumnPropNameInRow="CODCLI" msprop:Generator_ColumnPropNameInTable="CODCLIColumn" msprop:Generator_UserColumnName="CODCLI" type="xs:string" minOccurs="0" />
+              <xs:element name="NOMCLI" msprop:Generator_ColumnVarNameInTable="columnNOMCLI" msprop:Generator_ColumnPropNameInRow="NOMCLI" msprop:Generator_ColumnPropNameInTable="NOMCLIColumn" msprop:Generator_UserColumnName="NOMCLI" type="xs:string" />
+              <xs:element name="APLIIVA" msprop:Generator_ColumnVarNameInTable="columnAPLIIVA" msprop:Generator_ColumnPropNameInRow="APLIIVA" msprop:Generator_ColumnPropNameInTable="APLIIVAColumn" msprop:Generator_UserColumnName="APLIIVA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="APLIREC" msprop:Generator_ColumnVarNameInTable="columnAPLIREC" msprop:Generator_ColumnPropNameInRow="APLIREC" msprop:Generator_ColumnPropNameInTable="APLIRECColumn" msprop:Generator_UserColumnName="APLIREC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_DESCDEPOSITO" msprop:Generator_ColumnVarNameInTable="columnIDA_DESCDEPOSITO" msprop:Generator_ColumnPropNameInRow="IDA_DESCDEPOSITO" msprop:Generator_ColumnPropNameInTable="IDA_DESCDEPOSITOColumn" msprop:Generator_UserColumnName="IDA_DESCDEPOSITO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TICKETDESDE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTICKETDESDE" msprop:Generator_ColumnPropNameInRow="TICKETDESDE" msprop:Generator_ColumnPropNameInTable="TICKETDESDEColumn" msprop:Generator_UserColumnName="TICKETDESDE" type="xs:int" minOccurs="0" />
+              <xs:element name="TICKETHASTA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTICKETHASTA" msprop:Generator_ColumnPropNameInRow="TICKETHASTA" msprop:Generator_ColumnPropNameInTable="TICKETHASTAColumn" msprop:Generator_UserColumnName="TICKETHASTA" type="xs:int" minOccurs="0" />
+              <xs:element name="IDALBV" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIDALBV" msprop:Generator_ColumnPropNameInRow="IDALBV" msprop:Generator_ColumnPropNameInTable="IDALBVColumn" msprop:Generator_UserColumnName="IDALBV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FECCIERRE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECCIERRE" msprop:Generator_ColumnPropNameInRow="FECCIERRE" msprop:Generator_ColumnPropNameInTable="FECCIERREColumn" msprop:Generator_UserColumnName="FECCIERRE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FACTURA" msprop:Generator_ColumnVarNameInTable="columnFACTURA" msprop:Generator_ColumnPropNameInRow="FACTURA" msprop:Generator_ColumnPropNameInTable="FACTURAColumn" msprop:Generator_UserColumnName="FACTURA" type="xs:string" minOccurs="0" />
+              <xs:element name="IDFACV" msprop:Generator_ColumnVarNameInTable="columnIDFACV" msprop:Generator_ColumnPropNameInRow="IDFACV" msprop:Generator_ColumnPropNameInTable="IDFACVColumn" msprop:Generator_UserColumnName="IDFACV" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CABEALBV" msprop:Generator_TableClassName="CABEALBVDataTable" msprop:Generator_TableVarName="tableCABEALBV" msprop:Generator_RowChangedName="CABEALBVRowChanged" msprop:Generator_TablePropName="CABEALBV" msprop:Generator_RowDeletingName="CABEALBVRowDeleting" msprop:Generator_RowChangingName="CABEALBVRowChanging" msprop:Generator_RowEvHandlerName="CABEALBVRowChangeEventHandler" msprop:Generator_RowDeletedName="CABEALBVRowDeleted" msprop:Generator_RowClassName="CABEALBVRow" msprop:Generator_UserTableName="CABEALBV" msprop:Generator_RowEvArgName="CABEALBVRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FACTURA" msprop:Generator_ColumnVarNameInTable="columnFACTURA" msprop:Generator_ColumnPropNameInRow="FACTURA" msprop:Generator_ColumnPropNameInTable="FACTURAColumn" msprop:Generator_UserColumnName="FACTURA" type="xs:string" minOccurs="0" />
+              <xs:element name="CABECERA" msprop:Generator_ColumnVarNameInTable="columnCABECERA" msprop:Generator_ColumnPropNameInRow="CABECERA" msprop:Generator_ColumnPropNameInTable="CABECERAColumn" msprop:Generator_UserColumnName="CABECERA" type="xs:string" minOccurs="0" />
+              <xs:element name="SELECCIONAR" msprop:Generator_ColumnVarNameInTable="columnSELECCIONAR" msprop:Generator_ColumnPropNameInRow="SELECCIONAR" msprop:Generator_ColumnPropNameInTable="SELECCIONARColumn" msprop:Generator_UserColumnName="SELECCIONAR" type="xs:boolean" minOccurs="0" />
+              <xs:element name="IDALBV" msprop:Generator_ColumnVarNameInTable="columnIDALBV" msprop:Generator_ColumnPropNameInRow="IDALBV" msprop:Generator_ColumnPropNameInTable="IDALBVColumn" msprop:Generator_UserColumnName="IDALBV" type="xs:decimal" />
+              <xs:element name="TIPOCONT" msprop:Generator_ColumnVarNameInTable="columnTIPOCONT" msprop:Generator_ColumnPropNameInRow="TIPOCONT" msprop:Generator_ColumnPropNameInTable="TIPOCONTColumn" msprop:Generator_UserColumnName="TIPOCONT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIE" msprop:Generator_ColumnVarNameInTable="columnSERIE" msprop:Generator_ColumnPropNameInRow="SERIE" msprop:Generator_ColumnPropNameInTable="SERIEColumn" msprop:Generator_UserColumnName="SERIE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMDOC" msprop:Generator_ColumnVarNameInTable="columnNUMDOC" msprop:Generator_ColumnPropNameInRow="NUMDOC" msprop:Generator_ColumnPropNameInTable="NUMDOCColumn" msprop:Generator_UserColumnName="NUMDOC" type="xs:decimal" />
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CODCLI" msprop:Generator_ColumnVarNameInTable="columnCODCLI" msprop:Generator_ColumnPropNameInRow="CODCLI" msprop:Generator_ColumnPropNameInTable="CODCLIColumn" msprop:Generator_UserColumnName="CODCLI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMCLI" msprop:Generator_ColumnVarNameInTable="columnNOMCLI" msprop:Generator_ColumnPropNameInRow="NOMCLI" msprop:Generator_ColumnPropNameInTable="NOMCLIColumn" msprop:Generator_UserColumnName="NOMCLI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POBCLI" msprop:Generator_ColumnVarNameInTable="columnPOBCLI" msprop:Generator_ColumnPropNameInRow="POBCLI" msprop:Generator_ColumnPropNameInTable="POBCLIColumn" msprop:Generator_UserColumnName="POBCLI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="REFERENCIA" msprop:Generator_ColumnVarNameInTable="columnREFERENCIA" msprop:Generator_ColumnPropNameInRow="REFERENCIA" msprop:Generator_ColumnPropNameInTable="REFERENCIAColumn" msprop:Generator_UserColumnName="REFERENCIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TARIFA" msprop:Generator_ColumnVarNameInTable="columnTARIFA" msprop:Generator_ColumnPropNameInRow="TARIFA" msprop:Generator_ColumnPropNameInTable="TARIFAColumn" msprop:Generator_UserColumnName="TARIFA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIRENT1" msprop:Generator_ColumnVarNameInTable="columnDIRENT1" msprop:Generator_ColumnPropNameInRow="DIRENT1" msprop:Generator_ColumnPropNameInTable="DIRENT1Column" msprop:Generator_UserColumnName="DIRENT1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOTDOC" msprop:Generator_ColumnVarNameInTable="columnTOTDOC" msprop:Generator_ColumnPropNameInRow="TOTDOC" msprop:Generator_ColumnPropNameInTable="TOTDOCColumn" msprop:Generator_UserColumnName="TOTDOC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CAMBIOASEGURADO" msprop:Generator_ColumnVarNameInTable="columnCAMBIOASEGURADO" msprop:Generator_ColumnPropNameInRow="CAMBIOASEGURADO" msprop:Generator_ColumnPropNameInTable="CAMBIOASEGURADOColumn" msprop:Generator_UserColumnName="CAMBIOASEGURADO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CAMBIO" msprop:Generator_ColumnVarNameInTable="columnCAMBIO" msprop:Generator_ColumnPropNameInRow="CAMBIO" msprop:Generator_ColumnPropNameInTable="CAMBIOColumn" msprop:Generator_UserColumnName="CAMBIO" type="xs:double" minOccurs="0" />
+              <xs:element name="CODALM" msprop:Generator_ColumnVarNameInTable="columnCODALM" msprop:Generator_ColumnPropNameInRow="CODALM" msprop:Generator_ColumnPropNameInTable="CODALMColumn" msprop:Generator_UserColumnName="CODALM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIDIOMA" msprop:Generator_ColumnVarNameInTable="columnCODIDIOMA" msprop:Generator_ColumnPropNameInRow="CODIDIOMA" msprop:Generator_ColumnPropNameInTable="CODIDIOMAColumn" msprop:Generator_UserColumnName="CODIDIOMA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODMON" msprop:Generator_ColumnVarNameInTable="columnCODMON" msprop:Generator_ColumnPropNameInRow="CODMON" msprop:Generator_ColumnPropNameInTable="CODMONColumn" msprop:Generator_UserColumnName="CODMON">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODPAIS" msprop:Generator_ColumnVarNameInTable="columnCODPAIS" msprop:Generator_ColumnPropNameInRow="CODPAIS" msprop:Generator_ColumnPropNameInTable="CODPAISColumn" msprop:Generator_UserColumnName="CODPAIS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODPER" msprop:Generator_ColumnVarNameInTable="columnCODPER" msprop:Generator_ColumnPropNameInRow="CODPER" msprop:Generator_ColumnPropNameInTable="CODPERColumn" msprop:Generator_UserColumnName="CODPER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODREP" msprop:Generator_ColumnVarNameInTable="columnCODREP" msprop:Generator_ColumnPropNameInRow="CODREP" msprop:Generator_ColumnPropNameInTable="CODREPColumn" msprop:Generator_UserColumnName="CODREP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODREP2" msprop:Generator_ColumnVarNameInTable="columnCODREP2" msprop:Generator_ColumnPropNameInRow="CODREP2" msprop:Generator_ColumnPropNameInTable="CODREP2Column" msprop:Generator_UserColumnName="CODREP2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODREP3" msprop:Generator_ColumnVarNameInTable="columnCODREP3" msprop:Generator_ColumnPropNameInRow="CODREP3" msprop:Generator_ColumnPropNameInTable="CODREP3Column" msprop:Generator_UserColumnName="CODREP3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODTRA" msprop:Generator_ColumnVarNameInTable="columnCODTRA" msprop:Generator_ColumnPropNameInRow="CODTRA" msprop:Generator_ColumnPropNameInTable="CODTRAColumn" msprop:Generator_UserColumnName="CODTRA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOCPAG" msprop:Generator_ColumnVarNameInTable="columnDOCPAG" msprop:Generator_ColumnPropNameInRow="DOCPAG" msprop:Generator_ColumnPropNameInTable="DOCPAGColumn" msprop:Generator_UserColumnName="DOCPAG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FORPAG" msprop:Generator_ColumnVarNameInTable="columnFORPAG" msprop:Generator_ColumnPropNameInRow="FORPAG" msprop:Generator_ColumnPropNameInTable="FORPAGColumn" msprop:Generator_UserColumnName="FORPAG">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDDIRENT" msprop:Generator_ColumnVarNameInTable="columnIDDIRENT" msprop:Generator_ColumnPropNameInRow="IDDIRENT" msprop:Generator_ColumnPropNameInTable="IDDIRENTColumn" msprop:Generator_UserColumnName="IDDIRENT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IVAINCLUIDO" msprop:Generator_ColumnVarNameInTable="columnIVAINCLUIDO" msprop:Generator_ColumnPropNameInRow="IVAINCLUIDO" msprop:Generator_ColumnPropNameInTable="IVAINCLUIDOColumn" msprop:Generator_UserColumnName="IVAINCLUIDO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMDOM" msprop:Generator_ColumnVarNameInTable="columnNUMDOM" msprop:Generator_ColumnPropNameInRow="NUMDOM" msprop:Generator_ColumnPropNameInTable="NUMDOMColumn" msprop:Generator_UserColumnName="NUMDOM" type="xs:short" minOccurs="0" />
+              <xs:element name="PORPRONTO" msprop:Generator_ColumnVarNameInTable="columnPORPRONTO" msprop:Generator_ColumnPropNameInRow="PORPRONTO" msprop:Generator_ColumnPropNameInTable="PORPRONTOColumn" msprop:Generator_UserColumnName="PORPRONTO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PORIRPF" msprop:Generator_ColumnVarNameInTable="columnPORIRPF" msprop:Generator_ColumnPropNameInRow="PORIRPF" msprop:Generator_ColumnPropNameInTable="PORIRPFColumn" msprop:Generator_UserColumnName="PORIRPF" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PORRECFIN" msprop:Generator_ColumnVarNameInTable="columnPORRECFIN" msprop:Generator_ColumnPropNameInRow="PORRECFIN" msprop:Generator_ColumnPropNameInTable="PORRECFINColumn" msprop:Generator_UserColumnName="PORRECFIN" type="xs:decimal" minOccurs="0" />
+              <xs:element name="REGIVA" msprop:Generator_ColumnVarNameInTable="columnREGIVA" msprop:Generator_ColumnPropNameInRow="REGIVA" msprop:Generator_ColumnPropNameInTable="REGIVAColumn" msprop:Generator_UserColumnName="REGIVA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPFAC" msprop:Generator_ColumnVarNameInTable="columnTIPFAC" msprop:Generator_ColumnPropNameInRow="TIPFAC" msprop:Generator_ColumnPropNameInTable="TIPFACColumn" msprop:Generator_UserColumnName="TIPFAC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCFOR" msprop:Generator_ColumnVarNameInTable="columnDESCFOR" msprop:Generator_ColumnPropNameInRow="DESCFOR" msprop:Generator_ColumnPropNameInTable="DESCFORColumn" msprop:Generator_UserColumnName="DESCFOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCDOC" msprop:Generator_ColumnVarNameInTable="columnDESCDOC" msprop:Generator_ColumnPropNameInRow="DESCDOC" msprop:Generator_ColumnPropNameInTable="DESCDOCColumn" msprop:Generator_UserColumnName="DESCDOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RUTA" msprop:Generator_ColumnVarNameInTable="columnRUTA" msprop:Generator_ColumnPropNameInRow="RUTA" msprop:Generator_ColumnPropNameInTable="RUTAColumn" msprop:Generator_UserColumnName="RUTA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMRUTA" msprop:Generator_ColumnVarNameInTable="columnNOMRUTA" msprop:Generator_ColumnPropNameInRow="NOMRUTA" msprop:Generator_ColumnPropNameInTable="NOMRUTAColumn" msprop:Generator_UserColumnName="NOMRUTA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LINEASTICKETS" msprop:Generator_TableClassName="LINEASTICKETSDataTable" msprop:Generator_TableVarName="tableLINEASTICKETS" msprop:Generator_RowChangedName="LINEASTICKETSRowChanged" msprop:Generator_TablePropName="LINEASTICKETS" msprop:Generator_RowDeletingName="LINEASTICKETSRowDeleting" msprop:Generator_RowChangingName="LINEASTICKETSRowChanging" msprop:Generator_RowEvHandlerName="LINEASTICKETSRowChangeEventHandler" msprop:Generator_RowDeletedName="LINEASTICKETSRowDeleted" msprop:Generator_RowClassName="LINEASTICKETSRow" msprop:Generator_UserTableName="LINEASTICKETS" msprop:Generator_RowEvArgName="LINEASTICKETSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODALM" msprop:Generator_ColumnVarNameInTable="columnCODALM" msprop:Generator_ColumnPropNameInRow="CODALM" msprop:Generator_ColumnPropNameInTable="CODALMColumn" msprop:Generator_UserColumnName="CODALM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODART" msprop:Generator_ColumnVarNameInTable="columnCODART" msprop:Generator_ColumnPropNameInRow="CODART" msprop:Generator_ColumnPropNameInTable="CODARTColumn" msprop:Generator_UserColumnName="CODART">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCLIN" msprop:Generator_ColumnVarNameInTable="columnDESCLIN" msprop:Generator_ColumnPropNameInRow="DESCLIN" msprop:Generator_ColumnPropNameInTable="DESCLINColumn" msprop:Generator_UserColumnName="DESCLIN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UNIDADES" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUNIDADES" msprop:Generator_ColumnPropNameInRow="UNIDADES" msprop:Generator_ColumnPropNameInTable="UNIDADESColumn" msprop:Generator_UserColumnName="UNIDADES" type="xs:double" minOccurs="0" />
+              <xs:element name="PRECIO" msprop:Generator_ColumnVarNameInTable="columnPRECIO" msprop:Generator_ColumnPropNameInRow="PRECIO" msprop:Generator_ColumnPropNameInTable="PRECIOColumn" msprop:Generator_UserColumnName="PRECIO" type="xs:double" minOccurs="0" />
+              <xs:element name="IMPORTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" msprop:Generator_UserColumnName="IMPORTE" type="xs:double" minOccurs="0" />
+              <xs:element name="IDA_TIPOTIENDA" msprop:Generator_ColumnVarNameInTable="columnIDA_TIPOTIENDA" msprop:Generator_ColumnPropNameInRow="IDA_TIPOTIENDA" msprop:Generator_ColumnPropNameInTable="IDA_TIPOTIENDAColumn" msprop:Generator_UserColumnName="IDA_TIPOTIENDA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPIVA" msprop:Generator_ColumnVarNameInTable="columnTIPIVA" msprop:Generator_ColumnPropNameInRow="TIPIVA" msprop:Generator_ColumnPropNameInTable="TIPIVAColumn" msprop:Generator_UserColumnName="TIPIVA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PORIVA" msprop:Generator_ColumnVarNameInTable="columnPORIVA" msprop:Generator_ColumnPropNameInRow="PORIVA" msprop:Generator_ColumnPropNameInTable="PORIVAColumn" msprop:Generator_UserColumnName="PORIVA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PORREC" msprop:Generator_ColumnVarNameInTable="columnPORREC" msprop:Generator_ColumnPropNameInRow="PORREC" msprop:Generator_ColumnPropNameInTable="PORRECColumn" msprop:Generator_UserColumnName="PORREC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ARTICULODIRECTO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnARTICULODIRECTO" msprop:Generator_ColumnPropNameInRow="ARTICULODIRECTO" msprop:Generator_ColumnPropNameInTable="ARTICULODIRECTOColumn" msprop:Generator_UserColumnName="ARTICULODIRECTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ARTICULOSECCION" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnARTICULOSECCION" msprop:Generator_ColumnPropNameInRow="ARTICULOSECCION" msprop:Generator_ColumnPropNameInTable="ARTICULOSECCIONColumn" msprop:Generator_UserColumnName="ARTICULOSECCION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CIERRES" msprop:Generator_TableClassName="CIERRESDataTable" msprop:Generator_TableVarName="tableCIERRES" msprop:Generator_RowChangedName="CIERRESRowChanged" msprop:Generator_TablePropName="CIERRES" msprop:Generator_RowDeletingName="CIERRESRowDeleting" msprop:Generator_RowChangingName="CIERRESRowChanging" msprop:Generator_RowEvHandlerName="CIERRESRowChangeEventHandler" msprop:Generator_RowDeletedName="CIERRESRowDeleted" msprop:Generator_RowClassName="CIERRESRow" msprop:Generator_UserTableName="CIERRES" msprop:Generator_RowEvArgName="CIERRESRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODALM" msdata:Caption="Tienda" msprop:Generator_ColumnVarNameInTable="columnCODALM" msprop:Generator_ColumnPropNameInRow="CODALM" msprop:Generator_ColumnPropNameInTable="CODALMColumn" msprop:Generator_UserColumnName="CODALM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECCIERRE" msdata:Caption="Fecha cierre" msprop:Generator_ColumnVarNameInTable="columnFECCIERRE" msprop:Generator_ColumnPropNameInRow="FECCIERRE" msprop:Generator_ColumnPropNameInTable="FECCIERREColumn" msprop:Generator_UserColumnName="FECCIERRE" type="xs:dateTime" />
+              <xs:element name="IDALBV" msprop:Generator_ColumnVarNameInTable="columnIDALBV" msprop:Generator_ColumnPropNameInRow="IDALBV" msprop:Generator_ColumnPropNameInTable="IDALBVColumn" msprop:Generator_UserColumnName="IDALBV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDFACV" msprop:Generator_ColumnVarNameInTable="columnIDFACV" msprop:Generator_ColumnPropNameInRow="IDFACV" msprop:Generator_ColumnPropNameInTable="IDFACVColumn" msprop:Generator_UserColumnName="IDFACV" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NUMTICKETS" msdata:ReadOnly="true" msdata:Caption="Nº tickets" msprop:Generator_ColumnVarNameInTable="columnNUMTICKETS" msprop:Generator_ColumnPropNameInRow="NUMTICKETS" msprop:Generator_ColumnPropNameInTable="NUMTICKETSColumn" msprop:Generator_UserColumnName="NUMTICKETS" type="xs:int" minOccurs="0" />
+              <xs:element name="ALBARAN_NUMDOC" msdata:Caption="Nº albarán" msprop:Generator_ColumnVarNameInTable="columnALBARAN_NUMDOC" msprop:Generator_ColumnPropNameInRow="ALBARAN_NUMDOC" msprop:Generator_ColumnPropNameInTable="ALBARAN_NUMDOCColumn" msprop:Generator_UserColumnName="ALBARAN_NUMDOC" type="xs:string" minOccurs="0" />
+              <xs:element name="IDA_CODCLI" msdata:Caption="Cliente" msprop:Generator_ColumnVarNameInTable="columnIDA_CODCLI" msprop:Generator_ColumnPropNameInRow="IDA_CODCLI" msprop:Generator_ColumnPropNameInTable="IDA_CODCLIColumn" msprop:Generator_UserColumnName="IDA_CODCLI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_DESCDEPOSITO" msdata:Caption="Dto. Depósito" msprop:Generator_ColumnVarNameInTable="columnIDA_DESCDEPOSITO" msprop:Generator_ColumnPropNameInRow="IDA_DESCDEPOSITO" msprop:Generator_ColumnPropNameInTable="IDA_DESCDEPOSITOColumn" msprop:Generator_UserColumnName="IDA_DESCDEPOSITO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DESCALM" msdata:Caption="Descripción" msprop:Generator_ColumnVarNameInTable="columnDESCALM" msprop:Generator_ColumnPropNameInRow="DESCALM" msprop:Generator_ColumnPropNameInTable="DESCALMColumn" msprop:Generator_UserColumnName="DESCALM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="APLIIVA" msprop:Generator_ColumnVarNameInTable="columnAPLIIVA" msprop:Generator_ColumnPropNameInRow="APLIIVA" msprop:Generator_ColumnPropNameInTable="APLIIVAColumn" msprop:Generator_UserColumnName="APLIIVA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="APLIREC" msprop:Generator_ColumnVarNameInTable="columnAPLIREC" msprop:Generator_ColumnPropNameInRow="APLIREC" msprop:Generator_ColumnPropNameInTable="APLIRECColumn" msprop:Generator_UserColumnName="APLIREC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MES" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMES" msprop:Generator_ColumnPropNameInRow="MES" msprop:Generator_ColumnPropNameInTable="MESColumn" msprop:Generator_UserColumnName="MES" type="xs:int" minOccurs="0" />
+              <xs:element name="EJERCICIO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEJERCICIO" msprop:Generator_ColumnPropNameInRow="EJERCICIO" msprop:Generator_ColumnPropNameInTable="EJERCICIOColumn" msprop:Generator_UserColumnName="EJERCICIO" type="xs:int" minOccurs="0" />
+              <xs:element name="SELECCIONAR" msdata:Caption="Seleccionar" msprop:Generator_ColumnVarNameInTable="columnSELECCIONAR" msprop:Generator_ColumnPropNameInRow="SELECCIONAR" msprop:Generator_ColumnPropNameInTable="SELECCIONARColumn" msprop:Generator_UserColumnName="SELECCIONAR" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TOTAL" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" msprop:Generator_UserColumnName="TOTAL" type="xs:double" minOccurs="0" />
+              <xs:element name="PROPIOS_BASE" msprop:Generator_ColumnVarNameInTable="columnPROPIOS_BASE" msprop:Generator_ColumnPropNameInRow="PROPIOS_BASE" msprop:Generator_ColumnPropNameInTable="PROPIOS_BASEColumn" msprop:Generator_UserColumnName="PROPIOS_BASE" type="xs:double" minOccurs="0" />
+              <xs:element name="PROPIOS_IVA" msprop:Generator_ColumnVarNameInTable="columnPROPIOS_IVA" msprop:Generator_ColumnPropNameInRow="PROPIOS_IVA" msprop:Generator_ColumnPropNameInTable="PROPIOS_IVAColumn" msprop:Generator_UserColumnName="PROPIOS_IVA" type="xs:double" minOccurs="0" />
+              <xs:element name="PROPIOS_TOTAL" msprop:Generator_ColumnVarNameInTable="columnPROPIOS_TOTAL" msprop:Generator_ColumnPropNameInRow="PROPIOS_TOTAL" msprop:Generator_ColumnPropNameInTable="PROPIOS_TOTALColumn" msprop:Generator_UserColumnName="PROPIOS_TOTAL" type="xs:double" minOccurs="0" />
+              <xs:element name="ALMACEN_BASE" msprop:Generator_ColumnVarNameInTable="columnALMACEN_BASE" msprop:Generator_ColumnPropNameInRow="ALMACEN_BASE" msprop:Generator_ColumnPropNameInTable="ALMACEN_BASEColumn" msprop:Generator_UserColumnName="ALMACEN_BASE" type="xs:double" minOccurs="0" />
+              <xs:element name="ALMACEN_IVA" msprop:Generator_ColumnVarNameInTable="columnALMACEN_IVA" msprop:Generator_ColumnPropNameInRow="ALMACEN_IVA" msprop:Generator_ColumnPropNameInTable="ALMACEN_IVAColumn" msprop:Generator_UserColumnName="ALMACEN_IVA" type="xs:double" minOccurs="0" />
+              <xs:element name="ALMACEN_TOTAL" msprop:Generator_ColumnVarNameInTable="columnALMACEN_TOTAL" msprop:Generator_ColumnPropNameInRow="ALMACEN_TOTAL" msprop:Generator_ColumnPropNameInTable="ALMACEN_TOTALColumn" msprop:Generator_UserColumnName="ALMACEN_TOTAL" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_BASE" msprop:Generator_ColumnVarNameInTable="columnTOTAL_BASE" msprop:Generator_ColumnPropNameInRow="TOTAL_BASE" msprop:Generator_ColumnPropNameInTable="TOTAL_BASEColumn" msprop:Generator_UserColumnName="TOTAL_BASE" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTAL_IVA" msprop:Generator_ColumnVarNameInTable="columnTOTAL_IVA" msprop:Generator_ColumnPropNameInRow="TOTAL_IVA" msprop:Generator_ColumnPropNameInTable="TOTAL_IVAColumn" msprop:Generator_UserColumnName="TOTAL_IVA" type="xs:double" minOccurs="0" />
+              <xs:element name="CONREPER" msprop:Generator_ColumnVarNameInTable="columnCONREPER" msprop:Generator_ColumnPropNameInRow="CONREPER" msprop:Generator_ColumnPropNameInTable="CONREPERColumn" msprop:Generator_UserColumnName="CONREPER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONVENCIM" msprop:Generator_ColumnVarNameInTable="columnCONVENCIM" msprop:Generator_ColumnPropNameInRow="CONVENCIM" msprop:Generator_ColumnPropNameInTable="CONVENCIMColumn" msprop:Generator_UserColumnName="CONVENCIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GENERAALBARAN" msprop:Generator_ColumnVarNameInTable="columnGENERAALBARAN" msprop:Generator_ColumnPropNameInRow="GENERAALBARAN" msprop:Generator_ColumnPropNameInTable="GENERAALBARANColumn" msprop:Generator_UserColumnName="GENERAALBARAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GENERAFACTURA" msprop:Generator_ColumnVarNameInTable="columnGENERAFACTURA" msprop:Generator_ColumnPropNameInRow="GENERAFACTURA" msprop:Generator_ColumnPropNameInTable="GENERAFACTURAColumn" msprop:Generator_UserColumnName="GENERAFACTURA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTFACTURA" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTFACTURA" msprop:Generator_ColumnPropNameInRow="TIPOCONTFACTURA" msprop:Generator_ColumnPropNameInTable="TIPOCONTFACTURAColumn" msprop:Generator_UserColumnName="TIPOCONTFACTURA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTALBARAN" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTALBARAN" msprop:Generator_ColumnPropNameInRow="TIPOCONTALBARAN" msprop:Generator_ColumnPropNameInTable="TIPOCONTALBARANColumn" msprop:Generator_UserColumnName="TIPOCONTALBARAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEFACTURA" msprop:Generator_ColumnVarNameInTable="columnSERIEFACTURA" msprop:Generator_ColumnPropNameInRow="SERIEFACTURA" msprop:Generator_ColumnPropNameInTable="SERIEFACTURAColumn" msprop:Generator_UserColumnName="SERIEFACTURA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEALBARAN" msprop:Generator_ColumnVarNameInTable="columnSERIEALBARAN" msprop:Generator_ColumnPropNameInRow="SERIEALBARAN" msprop:Generator_ColumnPropNameInTable="SERIEALBARANColumn" msprop:Generator_UserColumnName="SERIEALBARAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IVAINCLUIDO" msprop:Generator_ColumnVarNameInTable="columnIVAINCLUIDO" msprop:Generator_ColumnPropNameInRow="IVAINCLUIDO" msprop:Generator_ColumnPropNameInTable="IVAINCLUIDOColumn" msprop:Generator_UserColumnName="IVAINCLUIDO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INTEXT" msprop:Generator_ColumnVarNameInTable="columnINTEXT" msprop:Generator_ColumnPropNameInRow="INTEXT" msprop:Generator_ColumnPropNameInTable="INTEXTColumn" msprop:Generator_UserColumnName="INTEXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOTEFECTIVO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTEFECTIVO" msprop:Generator_ColumnPropNameInRow="TOTEFECTIVO" msprop:Generator_ColumnPropNameInTable="TOTEFECTIVOColumn" msprop:Generator_UserColumnName="TOTEFECTIVO" type="xs:double" minOccurs="0" />
+              <xs:element name="TOTTARJETA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTTARJETA" msprop:Generator_ColumnPropNameInRow="TOTTARJETA" msprop:Generator_ColumnPropNameInTable="TOTTARJETAColumn" msprop:Generator_UserColumnName="TOTTARJETA" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TOTALES" msprop:Generator_TableClassName="TOTALESDataTable" msprop:Generator_TableVarName="tableTOTALES" msprop:Generator_RowChangedName="TOTALESRowChanged" msprop:Generator_TablePropName="TOTALES" msprop:Generator_RowDeletingName="TOTALESRowDeleting" msprop:Generator_RowChangingName="TOTALESRowChanging" msprop:Generator_RowEvHandlerName="TOTALESRowChangeEventHandler" msprop:Generator_RowDeletedName="TOTALESRowDeleted" msprop:Generator_RowClassName="TOTALESRow" msprop:Generator_UserTableName="TOTALES" msprop:Generator_RowEvArgName="TOTALESRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODALM" msprop:Generator_ColumnVarNameInTable="columnCODALM" msprop:Generator_ColumnPropNameInRow="CODALM" msprop:Generator_ColumnPropNameInTable="CODALMColumn" msprop:Generator_UserColumnName="CODALM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPIVA" msprop:Generator_ColumnVarNameInTable="columnTIPIVA" msprop:Generator_ColumnPropNameInRow="TIPIVA" msprop:Generator_ColumnPropNameInTable="TIPIVAColumn" msprop:Generator_UserColumnName="TIPIVA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOTAL" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTAL" msprop:Generator_ColumnPropNameInRow="TOTAL" msprop:Generator_ColumnPropNameInTable="TOTALColumn" msprop:Generator_UserColumnName="TOTAL" type="xs:double" minOccurs="0" />
+              <xs:element name="NOMTIVA" msprop:Generator_ColumnVarNameInTable="columnNOMTIVA" msprop:Generator_ColumnPropNameInRow="NOMTIVA" msprop:Generator_ColumnPropNameInTable="NOMTIVAColumn" msprop:Generator_UserColumnName="NOMTIVA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECCIERRE" msprop:Generator_ColumnVarNameInTable="columnFECCIERRE" msprop:Generator_ColumnPropNameInRow="FECCIERRE" msprop:Generator_ColumnPropNameInTable="FECCIERREColumn" msprop:Generator_UserColumnName="FECCIERRE" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IDA_CAJAS" msprop:Generator_TableClassName="IDA_CAJASDataTable" msprop:Generator_TableVarName="tableIDA_CAJAS" msprop:Generator_TablePropName="IDA_CAJAS" msprop:Generator_RowDeletingName="IDA_CAJASRowDeleting" msprop:Generator_RowChangingName="IDA_CAJASRowChanging" msprop:Generator_RowEvHandlerName="IDA_CAJASRowChangeEventHandler" msprop:Generator_RowDeletedName="IDA_CAJASRowDeleted" msprop:Generator_UserTableName="IDA_CAJAS" msprop:Generator_RowChangedName="IDA_CAJASRowChanged" msprop:Generator_RowEvArgName="IDA_CAJASRowChangeEvent" msprop:Generator_RowClassName="IDA_CAJASRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CAJA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCAJA" msprop:Generator_ColumnPropNameInRow="CAJA" msprop:Generator_ColumnPropNameInTable="CAJAColumn" msprop:Generator_UserColumnName="CAJA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDCAJA" msprop:Generator_ColumnVarNameInTable="columnIDCAJA" msprop:Generator_ColumnPropNameInRow="IDCAJA" msprop:Generator_ColumnPropNameInTable="IDCAJAColumn" msprop:Generator_UserColumnName="IDCAJA" type="xs:int" />
+              <xs:element name="COBROSCLIENTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCOBROSCLIENTE" msprop:Generator_ColumnPropNameInRow="COBROSCLIENTE" msprop:Generator_ColumnPropNameInTable="COBROSCLIENTEColumn" msprop:Generator_UserColumnName="COBROSCLIENTE" type="xs:double" minOccurs="0" />
+              <xs:element name="CODALM" msprop:Generator_ColumnVarNameInTable="columnCODALM" msprop:Generator_ColumnPropNameInRow="CODALM" msprop:Generator_ColumnPropNameInTable="CODALMColumn" msprop:Generator_UserColumnName="CODALM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EFECTIVO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEFECTIVO" msprop:Generator_ColumnPropNameInRow="EFECTIVO" msprop:Generator_ColumnPropNameInTable="EFECTIVOColumn" msprop:Generator_UserColumnName="EFECTIVO" type="xs:double" minOccurs="0" />
+              <xs:element name="ENTRADACAMBIOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnENTRADACAMBIOS" msprop:Generator_ColumnPropNameInRow="ENTRADACAMBIOS" msprop:Generator_ColumnPropNameInTable="ENTRADACAMBIOSColumn" msprop:Generator_UserColumnName="ENTRADACAMBIOS" type="xs:double" minOccurs="0" />
+              <xs:element name="ENVASES" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnENVASES" msprop:Generator_ColumnPropNameInRow="ENVASES" msprop:Generator_ColumnPropNameInTable="ENVASESColumn" msprop:Generator_UserColumnName="ENVASES" type="xs:double" minOccurs="0" />
+              <xs:element name="LINEAS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLINEAS" msprop:Generator_ColumnPropNameInRow="LINEAS" msprop:Generator_ColumnPropNameInTable="LINEASColumn" msprop:Generator_UserColumnName="LINEAS" type="xs:int" minOccurs="0" />
+              <xs:element name="PAGOSPROVEEDOR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPAGOSPROVEEDOR" msprop:Generator_ColumnPropNameInRow="PAGOSPROVEEDOR" msprop:Generator_ColumnPropNameInTable="PAGOSPROVEEDORColumn" msprop:Generator_UserColumnName="PAGOSPROVEEDOR" type="xs:double" minOccurs="0" />
+              <xs:element name="PENDIENTECOBRO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPENDIENTECOBRO" msprop:Generator_ColumnPropNameInRow="PENDIENTECOBRO" msprop:Generator_ColumnPropNameInTable="PENDIENTECOBROColumn" msprop:Generator_UserColumnName="PENDIENTECOBRO" type="xs:double" minOccurs="0" />
+              <xs:element name="REPARTODOMICILIO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnREPARTODOMICILIO" msprop:Generator_ColumnPropNameInRow="REPARTODOMICILIO" msprop:Generator_ColumnPropNameInTable="REPARTODOMICILIOColumn" msprop:Generator_UserColumnName="REPARTODOMICILIO" type="xs:double" minOccurs="0" />
+              <xs:element name="RETIRADAFONDOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnRETIRADAFONDOS" msprop:Generator_ColumnPropNameInRow="RETIRADAFONDOS" msprop:Generator_ColumnPropNameInTable="RETIRADAFONDOSColumn" msprop:Generator_UserColumnName="RETIRADAFONDOS" type="xs:double" minOccurs="0" />
+              <xs:element name="TALON" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTALON" msprop:Generator_ColumnPropNameInRow="TALON" msprop:Generator_ColumnPropNameInTable="TALONColumn" msprop:Generator_UserColumnName="TALON" type="xs:double" minOccurs="0" />
+              <xs:element name="TARJETA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTARJETA" msprop:Generator_ColumnPropNameInRow="TARJETA" msprop:Generator_ColumnPropNameInTable="TARJETAColumn" msprop:Generator_UserColumnName="TARJETA" type="xs:double" minOccurs="0" />
+              <xs:element name="TICKETS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTICKETS" msprop:Generator_ColumnPropNameInRow="TICKETS" msprop:Generator_ColumnPropNameInTable="TICKETSColumn" msprop:Generator_UserColumnName="TICKETS" type="xs:int" minOccurs="0" />
+              <xs:element name="VALESCOBRADOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVALESCOBRADOS" msprop:Generator_ColumnPropNameInRow="VALESCOBRADOS" msprop:Generator_ColumnPropNameInTable="VALESCOBRADOSColumn" msprop:Generator_UserColumnName="VALESCOBRADOS" type="xs:double" minOccurs="0" />
+              <xs:element name="VALESEMITIDOS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVALESEMITIDOS" msprop:Generator_ColumnPropNameInRow="VALESEMITIDOS" msprop:Generator_ColumnPropNameInTable="VALESEMITIDOSColumn" msprop:Generator_UserColumnName="VALESEMITIDOS" type="xs:double" minOccurs="0" />
+              <xs:element name="VALESPROVEEDOR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVALESPROVEEDOR" msprop:Generator_ColumnPropNameInRow="VALESPROVEEDOR" msprop:Generator_ColumnPropNameInTable="VALESPROVEEDORColumn" msprop:Generator_UserColumnName="VALESPROVEEDOR" type="xs:double" minOccurs="0" />
+              <xs:element name="VENTA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnVENTA" msprop:Generator_ColumnPropNameInRow="VENTA" msprop:Generator_ColumnPropNameInTable="VENTAColumn" msprop:Generator_UserColumnName="VENTA" type="xs:double" minOccurs="0" />
+              <xs:element name="FECHA" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="NUMALBARANES" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNUMALBARANES" msprop:Generator_ColumnPropNameInRow="NUMALBARANES" msprop:Generator_ColumnPropNameInTable="NUMALBARANESColumn" msprop:Generator_UserColumnName="NUMALBARANES" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTALBARANES" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTALBARANES" msprop:Generator_ColumnPropNameInRow="TOTALBARANES" msprop:Generator_ColumnPropNameInTable="TOTALBARANESColumn" msprop:Generator_UserColumnName="TOTALBARANES" type="xs:double" minOccurs="0" />
+              <xs:element name="NUMFACTURAS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNUMFACTURAS" msprop:Generator_ColumnPropNameInRow="NUMFACTURAS" msprop:Generator_ColumnPropNameInTable="NUMFACTURASColumn" msprop:Generator_UserColumnName="NUMFACTURAS" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTFACTURAS" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTOTFACTURAS" msprop:Generator_ColumnPropNameInRow="TOTFACTURAS" msprop:Generator_ColumnPropNameInTable="TOTFACTURASColumn" msprop:Generator_UserColumnName="TOTFACTURAS" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IDA_TIPOSFACTURACION" msprop:Generator_TableClassName="IDA_TIPOSFACTURACIONDataTable" msprop:Generator_TableVarName="tableIDA_TIPOSFACTURACION" msprop:Generator_TablePropName="IDA_TIPOSFACTURACION" msprop:Generator_RowDeletingName="IDA_TIPOSFACTURACIONRowDeleting" msprop:Generator_RowChangingName="IDA_TIPOSFACTURACIONRowChanging" msprop:Generator_RowEvHandlerName="IDA_TIPOSFACTURACIONRowChangeEventHandler" msprop:Generator_RowDeletedName="IDA_TIPOSFACTURACIONRowDeleted" msprop:Generator_UserTableName="IDA_TIPOSFACTURACION" msprop:Generator_RowChangedName="IDA_TIPOSFACTURACIONRowChanged" msprop:Generator_RowEvArgName="IDA_TIPOSFACTURACIONRowChangeEvent" msprop:Generator_RowClassName="IDA_TIPOSFACTURACIONRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_UserColumnName="DESCRIPCION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LINEASCIERRE" msprop:Generator_TableClassName="LINEASCIERREDataTable" msprop:Generator_TableVarName="tableLINEASCIERRE" msprop:Generator_TablePropName="LINEASCIERRE" msprop:Generator_RowDeletingName="LINEASCIERRERowDeleting" msprop:Generator_RowChangingName="LINEASCIERRERowChanging" msprop:Generator_RowEvHandlerName="LINEASCIERRERowChangeEventHandler" msprop:Generator_RowDeletedName="LINEASCIERRERowDeleted" msprop:Generator_UserTableName="LINEASCIERRE" msprop:Generator_RowChangedName="LINEASCIERRERowChanged" msprop:Generator_RowEvArgName="LINEASCIERRERowChangeEvent" msprop:Generator_RowClassName="LINEASCIERRERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODALM" msprop:Generator_ColumnVarNameInTable="columnCODALM" msprop:Generator_ColumnPropNameInRow="CODALM" msprop:Generator_ColumnPropNameInTable="CODALMColumn" msprop:Generator_UserColumnName="CODALM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECCIERRE" msprop:Generator_ColumnVarNameInTable="columnFECCIERRE" msprop:Generator_ColumnPropNameInRow="FECCIERRE" msprop:Generator_ColumnPropNameInTable="FECCIERREColumn" msprop:Generator_UserColumnName="FECCIERRE" type="xs:dateTime" />
+              <xs:element name="CODART" msprop:Generator_ColumnVarNameInTable="columnCODART" msprop:Generator_ColumnPropNameInRow="CODART" msprop:Generator_ColumnPropNameInTable="CODARTColumn" msprop:Generator_UserColumnName="CODART">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCLIN" msprop:Generator_ColumnVarNameInTable="columnDESCLIN" msprop:Generator_ColumnPropNameInRow="DESCLIN" msprop:Generator_ColumnPropNameInTable="DESCLINColumn" msprop:Generator_UserColumnName="DESCLIN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UNIDADES" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnUNIDADES" msprop:Generator_ColumnPropNameInRow="UNIDADES" msprop:Generator_ColumnPropNameInTable="UNIDADESColumn" msprop:Generator_UserColumnName="UNIDADES" type="xs:double" minOccurs="0" />
+              <xs:element name="PRECIO" msprop:Generator_ColumnVarNameInTable="columnPRECIO" msprop:Generator_ColumnPropNameInRow="PRECIO" msprop:Generator_ColumnPropNameInTable="PRECIOColumn" msprop:Generator_UserColumnName="PRECIO" type="xs:double" minOccurs="0" />
+              <xs:element name="IMPORTE" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnIMPORTE" msprop:Generator_ColumnPropNameInRow="IMPORTE" msprop:Generator_ColumnPropNameInTable="IMPORTEColumn" msprop:Generator_UserColumnName="IMPORTE" type="xs:double" minOccurs="0" />
+              <xs:element name="TIPIVA" msprop:Generator_ColumnVarNameInTable="columnTIPIVA" msprop:Generator_ColumnPropNameInRow="TIPIVA" msprop:Generator_ColumnPropNameInTable="TIPIVAColumn" msprop:Generator_UserColumnName="TIPIVA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NUMDOC" msprop:Generator_ColumnVarNameInTable="columnNUMDOC" msprop:Generator_ColumnPropNameInRow="NUMDOC" msprop:Generator_ColumnPropNameInTable="NUMDOCColumn" msprop:Generator_UserColumnName="NUMDOC" type="xs:string" minOccurs="0" />
+              <xs:element name="NUMLINEA" msprop:Generator_ColumnVarNameInTable="columnNUMLINEA" msprop:Generator_ColumnPropNameInRow="NUMLINEA" msprop:Generator_ColumnPropNameInTable="NUMLINEAColumn" msprop:Generator_UserColumnName="NUMLINEA" type="xs:int" minOccurs="0" />
+              <xs:element name="DESC" msprop:Generator_ColumnVarNameInTable="columnDESC" msprop:Generator_ColumnPropNameInRow="DESC" msprop:Generator_ColumnPropNameInTable="DESCColumn" msprop:Generator_UserColumnName="DESC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PORIVA" msprop:Generator_ColumnVarNameInTable="columnPORIVA" msprop:Generator_ColumnPropNameInRow="PORIVA" msprop:Generator_ColumnPropNameInTable="PORIVAColumn" msprop:Generator_UserColumnName="PORIVA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PORREC" msprop:Generator_ColumnVarNameInTable="columnPORREC" msprop:Generator_ColumnPropNameInRow="PORREC" msprop:Generator_ColumnPropNameInTable="PORRECColumn" msprop:Generator_UserColumnName="PORREC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ARTICULOSECCION" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnARTICULOSECCION" msprop:Generator_ColumnPropNameInRow="ARTICULOSECCION" msprop:Generator_ColumnPropNameInTable="ARTICULOSECCIONColumn" msprop:Generator_UserColumnName="ARTICULOSECCION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ARTICULODIRECTO" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnARTICULODIRECTO" msprop:Generator_ColumnPropNameInRow="ARTICULODIRECTO" msprop:Generator_ColumnPropNameInTable="ARTICULODIRECTOColumn" msprop:Generator_UserColumnName="ARTICULODIRECTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CABEALBV" />
+      <xs:field xpath="mstns:IDALBV" />
+    </xs:unique>
+    <xs:unique name="IDA_TIPOSFACTURACION_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:IDA_TIPOSFACTURACION" />
+      <xs:field xpath="mstns:CODIGO" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="TICKETS_LINEASTICKETS" msdata:parent="TICKETS" msdata:child="LINEASTICKETS" msdata:parentkey="FECHA CODALM" msdata:childkey="FECHA CODALM" msprop:Generator_UserChildTable="LINEASTICKETS" msprop:Generator_ChildPropName="GetLINEASTICKETSRows" msprop:Generator_UserRelationName="TICKETS_LINEASTICKETS" msprop:Generator_RelationVarName="relationTICKETS_LINEASTICKETS" msprop:Generator_UserParentTable="TICKETS" msprop:Generator_ParentPropName="TICKETSRowParent" />
+      <msdata:Relationship name="TICKETS_CIERRES" msdata:parent="TICKETS" msdata:child="CIERRES" msdata:parentkey="FECHA CODALM" msdata:childkey="FECHA CODALM" msprop:Generator_UserChildTable="CIERRES" msprop:Generator_ChildPropName="GetCIERRESRows" msprop:Generator_UserRelationName="TICKETS_CIERRES" msprop:Generator_RelationVarName="relationTICKETS_CIERRES" msprop:Generator_UserParentTable="TICKETS" msprop:Generator_ParentPropName="TICKETSRowParent" />
+      <msdata:Relationship name="CIERRES_LINEASCIERRE" msdata:parent="CIERRES" msdata:child="LINEASCIERRE" msdata:parentkey="CODALM FECCIERRE" msdata:childkey="CODALM FECCIERRE" msprop:Generator_UserChildTable="LINEASCIERRE" msprop:Generator_ChildPropName="GetLINEASCIERRERows" msprop:Generator_UserRelationName="CIERRES_LINEASCIERRE" msprop:Generator_ParentPropName="CIERRESRowParent" msprop:Generator_RelationVarName="relationCIERRES_LINEASCIERRE" msprop:Generator_UserParentTable="CIERRES" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

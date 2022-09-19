@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsSeleccion" targetNamespace="http://tempuri.org/dsSeleccion.xsd" xmlns:mstns="http://tempuri.org/dsSeleccion.xsd" xmlns="http://tempuri.org/dsSeleccion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SqlConection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SqlConection (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.a3ERP_AydaraTPV.Settings.GlobalReference.Default.SqlConection" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CLIENTESTableAdapter" GeneratorDataComponentClassName="CLIENTESTableAdapter" Name="CLIENTES" UserDataComponentName="CLIENTESTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        CONVERT(BIT, CASE CLIENTES.BLOQUEADO WHEN 'T' THEN 1 ELSE 0 END) AS BLOQUEADO, CLIENTES.CODCLI, CLIENTES.NOMCLI, CLIENTES.RAZON, CLIENTES.DIRCLI, CLIENTES.POBCLI, CLIENTES.DTOCLI, PROVINCI.NOMPROVI, 
+                         CLIENTES.TELCLI, CLIENTES.TELCLI2, CLIENTES.FAXCLI, CLIENTES.NIFCLI, CLIENTES.E_MAIL
+FROM            CLIENTES INNER JOIN
+                         PROVINCI ON CLIENTES.CODPROVI = PROVINCI.CODPROVI</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODCLI" DataSetColumn="CODCLI" />
+              <Mapping SourceColumn="NOMCLI" DataSetColumn="NOMCLI" />
+              <Mapping SourceColumn="RAZON" DataSetColumn="RAZON" />
+              <Mapping SourceColumn="DIRCLI" DataSetColumn="DIRCLI" />
+              <Mapping SourceColumn="POBCLI" DataSetColumn="POBCLI" />
+              <Mapping SourceColumn="DTOCLI" DataSetColumn="DTOCLI" />
+              <Mapping SourceColumn="NOMPROVI" DataSetColumn="NOMPROVI" />
+              <Mapping SourceColumn="TELCLI" DataSetColumn="TELCLI" />
+              <Mapping SourceColumn="TELCLI2" DataSetColumn="TELCLI2" />
+              <Mapping SourceColumn="FAXCLI" DataSetColumn="FAXCLI" />
+              <Mapping SourceColumn="NIFCLI" DataSetColumn="NIFCLI" />
+              <Mapping SourceColumn="E_MAIL" DataSetColumn="E_MAIL" />
+              <Mapping SourceColumn="BLOQUEADO" DataSetColumn="BLOQUEADO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ARTICULOSTableAdapter" GeneratorDataComponentClassName="ARTICULOSTableAdapter" Name="ARTICULOS" UserDataComponentName="ARTICULOSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ARTICULO.CODART, ARTICULO.DESCART, ARTICULO.BLOQUEADO, ARTICULO.PRCVENTA, TIPOIVA.PORIVA,
+                             (SELECT        MAX(FECHA) AS FECHA
+                               FROM            LINEALBA
+                               WHERE        (COMVEN = 'V') AND (CODART = ARTICULO.CODART)) AS ULTFECHAALB,
+                             (SELECT        MAX(FECHA) AS FECHA
+                               FROM            LINEFACT
+                               WHERE        (COMVEN = 'V') AND (CODART = ARTICULO.CODART)) AS ULTFECHAFAC, ARTICULO.CAR1
+FROM            ARTICULO LEFT OUTER JOIN
+                         TIPOIVA ON ARTICULO.TIPIVA = TIPOIVA.TIPIVA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODART" DataSetColumn="CODART" />
+              <Mapping SourceColumn="DESCART" DataSetColumn="DESCART" />
+              <Mapping SourceColumn="BLOQUEADO" DataSetColumn="BLOQUEADO" />
+              <Mapping SourceColumn="PRCVENTA" DataSetColumn="PRCVENTA" />
+              <Mapping SourceColumn="PORIVA" DataSetColumn="PORIVA" />
+              <Mapping SourceColumn="ULTFECHAALB" DataSetColumn="ULTFECHAALB" />
+              <Mapping SourceColumn="ULTFECHAFAC" DataSetColumn="ULTFECHAFAC" />
+              <Mapping SourceColumn="CAR1" DataSetColumn="CAR1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsSeleccion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsSeleccion" msprop:Generator_UserDSName="dsSeleccion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CLIENTES" msprop:Generator_TableClassName="CLIENTESDataTable" msprop:Generator_TableVarName="tableCLIENTES" msprop:Generator_RowChangedName="CLIENTESRowChanged" msprop:Generator_TablePropName="CLIENTES" msprop:Generator_RowDeletingName="CLIENTESRowDeleting" msprop:Generator_RowChangingName="CLIENTESRowChanging" msprop:Generator_RowEvHandlerName="CLIENTESRowChangeEventHandler" msprop:Generator_RowDeletedName="CLIENTESRowDeleted" msprop:Generator_RowClassName="CLIENTESRow" msprop:Generator_UserTableName="CLIENTES" msprop:Generator_RowEvArgName="CLIENTESRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODCLI" msdata:Caption="Código" msprop:Generator_ColumnVarNameInTable="columnCODCLI" msprop:Generator_ColumnPropNameInRow="CODCLI" msprop:Generator_ColumnPropNameInTable="CODCLIColumn" msprop:Generator_UserColumnName="CODCLI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMCLI" msdata:Caption="Nombre" msprop:Generator_ColumnVarNameInTable="columnNOMCLI" msprop:Generator_ColumnPropNameInRow="NOMCLI" msprop:Generator_ColumnPropNameInTable="NOMCLIColumn" msprop:Generator_UserColumnName="NOMCLI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RAZON" msdata:Caption="Razón fiscal" msprop:Generator_ColumnVarNameInTable="columnRAZON" msprop:Generator_ColumnPropNameInRow="RAZON" msprop:Generator_ColumnPropNameInTable="RAZONColumn" msprop:Generator_UserColumnName="RAZON" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIRCLI" msdata:Caption="Dirección" msprop:Generator_ColumnVarNameInTable="columnDIRCLI" msprop:Generator_ColumnPropNameInRow="DIRCLI" msprop:Generator_ColumnPropNameInTable="DIRCLIColumn" msprop:Generator_UserColumnName="DIRCLI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POBCLI" msdata:Caption="Población" msprop:Generator_ColumnVarNameInTable="columnPOBCLI" msprop:Generator_ColumnPropNameInRow="POBCLI" msprop:Generator_ColumnPropNameInTable="POBCLIColumn" msprop:Generator_UserColumnName="POBCLI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DTOCLI" msdata:Caption="C.P." msprop:Generator_ColumnVarNameInTable="columnDTOCLI" msprop:Generator_ColumnPropNameInRow="DTOCLI" msprop:Generator_ColumnPropNameInTable="DTOCLIColumn" msprop:Generator_UserColumnName="DTOCLI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMPROVI" msdata:Caption="Provincia" msprop:Generator_ColumnVarNameInTable="columnNOMPROVI" msprop:Generator_ColumnPropNameInRow="NOMPROVI" msprop:Generator_ColumnPropNameInTable="NOMPROVIColumn" msprop:Generator_UserColumnName="NOMPROVI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TELCLI" msdata:Caption="Teléfono" msprop:Generator_ColumnVarNameInTable="columnTELCLI" msprop:Generator_ColumnPropNameInRow="TELCLI" msprop:Generator_ColumnPropNameInTable="TELCLIColumn" msprop:Generator_UserColumnName="TELCLI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TELCLI2" msdata:Caption="Teléfono 2" msprop:Generator_ColumnVarNameInTable="columnTELCLI2" msprop:Generator_ColumnPropNameInRow="TELCLI2" msprop:Generator_ColumnPropNameInTable="TELCLI2Column" msprop:Generator_UserColumnName="TELCLI2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FAXCLI" msdata:Caption="Fax" msprop:Generator_ColumnVarNameInTable="columnFAXCLI" msprop:Generator_ColumnPropNameInRow="FAXCLI" msprop:Generator_ColumnPropNameInTable="FAXCLIColumn" msprop:Generator_UserColumnName="FAXCLI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NIFCLI" msdata:Caption="N.I.F." msprop:Generator_ColumnVarNameInTable="columnNIFCLI" msprop:Generator_ColumnPropNameInRow="NIFCLI" msprop:Generator_ColumnPropNameInTable="NIFCLIColumn" msprop:Generator_UserColumnName="NIFCLI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="E_MAIL" msdata:Caption="E-mail" msprop:Generator_ColumnVarNameInTable="columnE_MAIL" msprop:Generator_ColumnPropNameInRow="E_MAIL" msprop:Generator_ColumnPropNameInTable="E_MAILColumn" msprop:Generator_UserColumnName="E_MAIL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BLOQUEADO" msdata:ReadOnly="true" msdata:Caption="Bloqueado" msprop:Generator_ColumnVarNameInTable="columnBLOQUEADO" msprop:Generator_ColumnPropNameInRow="BLOQUEADO" msprop:Generator_ColumnPropNameInTable="BLOQUEADOColumn" msprop:Generator_UserColumnName="BLOQUEADO" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ARTICULOS" msprop:Generator_TableClassName="ARTICULOSDataTable" msprop:Generator_TableVarName="tableARTICULOS" msprop:Generator_RowChangedName="ARTICULOSRowChanged" msprop:Generator_TablePropName="ARTICULOS" msprop:Generator_RowDeletingName="ARTICULOSRowDeleting" msprop:Generator_RowChangingName="ARTICULOSRowChanging" msprop:Generator_RowEvHandlerName="ARTICULOSRowChangeEventHandler" msprop:Generator_RowDeletedName="ARTICULOSRowDeleted" msprop:Generator_RowClassName="ARTICULOSRow" msprop:Generator_UserTableName="ARTICULOS" msprop:Generator_RowEvArgName="ARTICULOSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODART" msdata:Caption="Código" msprop:Generator_ColumnVarNameInTable="columnCODART" msprop:Generator_ColumnPropNameInRow="CODART" msprop:Generator_ColumnPropNameInTable="CODARTColumn" msprop:Generator_UserColumnName="CODART">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCART" msdata:Caption="Descripción" msprop:Generator_ColumnVarNameInTable="columnDESCART" msprop:Generator_ColumnPropNameInRow="DESCART" msprop:Generator_ColumnPropNameInTable="DESCARTColumn" msprop:Generator_UserColumnName="DESCART" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BLOQUEADO" msdata:Caption="Bloqueado" msprop:Generator_ColumnVarNameInTable="columnBLOQUEADO" msprop:Generator_ColumnPropNameInRow="BLOQUEADO" msprop:Generator_ColumnPropNameInTable="BLOQUEADOColumn" msprop:Generator_UserColumnName="BLOQUEADO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRCVENTA" msdata:Caption="Precio venta" msprop:Generator_ColumnVarNameInTable="columnPRCVENTA" msprop:Generator_ColumnPropNameInRow="PRCVENTA" msprop:Generator_ColumnPropNameInTable="PRCVENTAColumn" msprop:Generator_UserColumnName="PRCVENTA" type="xs:double" minOccurs="0" />
+              <xs:element name="PORIVA" msdata:Caption="% IVA" msprop:Generator_ColumnVarNameInTable="columnPORIVA" msprop:Generator_ColumnPropNameInRow="PORIVA" msprop:Generator_ColumnPropNameInTable="PORIVAColumn" msprop:Generator_UserColumnName="PORIVA" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ULTFECHAALB" msdata:ReadOnly="true" msdata:Caption="Último albarán" msprop:Generator_ColumnVarNameInTable="columnULTFECHAALB" msprop:Generator_ColumnPropNameInRow="ULTFECHAALB" msprop:Generator_ColumnPropNameInTable="ULTFECHAALBColumn" msprop:Generator_UserColumnName="ULTFECHAALB" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ULTFECHAFAC" msdata:ReadOnly="true" msdata:Caption="Última factura" msprop:Generator_ColumnVarNameInTable="columnULTFECHAFAC" msprop:Generator_ColumnPropNameInRow="ULTFECHAFAC" msprop:Generator_ColumnPropNameInTable="ULTFECHAFACColumn" msprop:Generator_UserColumnName="ULTFECHAFAC" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CAR1" msprop:Generator_ColumnVarNameInTable="columnCAR1" msprop:Generator_ColumnPropNameInRow="CAR1" msprop:Generator_ColumnPropNameInTable="CAR1Column" msprop:Generator_UserColumnName="CAR1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:CLIENTES" />
+      <xs:field xpath="mstns:CODCLI" />
+    </xs:unique>
+    <xs:unique name="ARTICULOS_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ARTICULOS" />
+      <xs:field xpath="mstns:CODART" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

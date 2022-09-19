@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="AydaraTPV.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+  <connectionStrings>
+    <add name="AydaraTPV.My.MySettings.AydaraTPVConnectionString"
+      connectionString="Data Source=IDA2012\A3ERP;Initial Catalog=AydaraTPV_HIPER;Persist Security Info=True;User ID=sa;Password=Isl#Web2009;Connect Timeout=120"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <userSettings>
+    <AydaraTPV.My.MySettings>
+      <setting name="Apariencia" serializeAs="String">
+        <value>Blue</value>
+      </setting>
+      <setting name="ImpresoraTickets" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="CadenaConexion" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="TiempoEsperaBascula" serializeAs="String">
+        <value>25</value>
+      </setting>
+      <setting name="PuertoBascula" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="PuertoLector" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="DirectorioBascula" serializeAs="String">
+        <value />
+      </setting>
+      <setting name="ImpresoraFacturas" serializeAs="String">
+        <value />
+      </setting>
+    </AydaraTPV.My.MySettings>
+  </userSettings>
+	<runtime>
+		<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+			<dependentAssembly>
+				<assemblyIdentity name="ICSharpCode.SharpZipLib" publicKeyToken="1B03E6ACF1164F73" culture="neutral"/>
+				<bindingRedirect oldVersion="0.0.0.0-0.86.0.518" newVersion="0.86.0.518"/>
+			</dependentAssembly>
+		</assemblyBinding>
+	</runtime>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5.1"/></startup></configuration>

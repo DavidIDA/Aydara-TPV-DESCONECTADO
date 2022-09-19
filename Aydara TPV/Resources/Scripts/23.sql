@@ -1,0 +1,4 @@
+--Aydara TPV 15.7.02
+ALTER TABLE INCIDENCIAS ADD [PrecioCoste] [decimal](18, 4) NULL
+GO
+UPDATE INCIDENCIAS SET PrecioCoste = 0

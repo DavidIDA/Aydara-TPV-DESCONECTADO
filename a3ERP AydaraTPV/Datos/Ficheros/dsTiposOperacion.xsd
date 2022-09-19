@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsTiposOperacion" targetNamespace="http://tempuri.org/dsTiposOperacion.xsd" xmlns:mstns="http://tempuri.org/dsTiposOperacion.xsd" xmlns="http://tempuri.org/dsTiposOperacion.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SqlConection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SqlConection (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.a3ERP_AydaraTPV.Settings.GlobalReference.Default.SqlConection" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="REGIVATableAdapter" GeneratorDataComponentClassName="REGIVATableAdapter" Name="REGIVA" UserDataComponentName="REGIVATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectName="Calavia.dbo.REGIVA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        REGIVA, NOMRIVA
+FROM            REGIVA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="REGIVA" DataSetColumn="REGIVA" />
+              <Mapping SourceColumn="NOMRIVA" DataSetColumn="NOMRIVA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsTiposOperacion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTiposOperacion" msprop:Generator_UserDSName="dsTiposOperacion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="REGIVA" msprop:Generator_TableClassName="REGIVADataTable" msprop:Generator_TableVarName="tableREGIVA" msprop:Generator_RowChangedName="REGIVARowChanged" msprop:Generator_TablePropName="REGIVA" msprop:Generator_RowDeletingName="REGIVARowDeleting" msprop:Generator_RowChangingName="REGIVARowChanging" msprop:Generator_RowEvHandlerName="REGIVARowChangeEventHandler" msprop:Generator_RowDeletedName="REGIVARowDeleted" msprop:Generator_RowClassName="REGIVARow" msprop:Generator_UserTableName="REGIVA" msprop:Generator_RowEvArgName="REGIVARowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REGIVA" msprop:Generator_ColumnVarNameInTable="columnREGIVA" msprop:Generator_ColumnPropNameInRow="REGIVA" msprop:Generator_ColumnPropNameInTable="REGIVAColumn" msprop:Generator_UserColumnName="REGIVA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMRIVA" msprop:Generator_ColumnVarNameInTable="columnNOMRIVA" msprop:Generator_ColumnPropNameInRow="NOMRIVA" msprop:Generator_ColumnPropNameInTable="NOMRIVAColumn" msprop:Generator_UserColumnName="NOMRIVA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:REGIVA" />
+      <xs:field xpath="mstns:REGIVA" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

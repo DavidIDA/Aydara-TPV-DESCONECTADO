@@ -1,0 +1,34 @@
+--Aydara TPV 16.06.01
+ALTER TABLE ARTICULOS ADD ImporteEcoraee decimal(18, 4) NULL, Equivalencia decimal(18, 4) NULL
+GO
+UPDATE ARTICULOS SET ImporteEcoraee = 0, Equivalencia = 0
+
+GO
+
+ALTER TABLE CLIENTES ADD Matricula varchar(20) NULL, Marca varchar(50) NULL, Modelo varchar(50) NULL
+GO
+UPDATE CLIENTES SET Matricula = '', Marca = '', Modelo = ''
+
+GO
+
+ALTER TABLE TICKETS ADD Km decimal(18, 2) NULL
+GO
+UPDATE TICKETS SET Km = 0
+GO
+ALTER TABLE HISTORICO_TICKETS ADD Km decimal(18, 2) NULL
+GO
+UPDATE HISTORICO_TICKETS SET Km = 0
+GO
+ALTER TABLE HISTORICO_TICKETS_ANULADOS ADD Km decimal(18, 2) NULL
+GO
+UPDATE HISTORICO_TICKETS_ANULADOS SET Km = 0
+
+GO
+
+ALTER TABLE TICKETS_LINEAS ADD ImporteEcoraee decimal(18, 4) NULL, UnidadStock decimal(18, 4) NULL
+GO
+UPDATE TICKETS_LINEAS SET ImporteEcoraee = 0, UnidadStock = 0
+GO
+ALTER TABLE HISTORICO_TICKETS_LINEAS ADD ImporteEcoraee decimal(18, 4) NULL, UnidadStock decimal(18, 4) NULL
+GO
+UPDATE HISTORICO_TICKETS_LINEAS SET ImporteEcoraee = 0, UnidadStock = 0

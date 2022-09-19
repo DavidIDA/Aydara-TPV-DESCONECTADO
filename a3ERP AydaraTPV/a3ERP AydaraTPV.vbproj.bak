@@ -1,0 +1,1038 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2264A9C2-6DF6-49AB-8A81-22F44B181277}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>a3ERP_AydaraTPV</RootNamespace>
+    <AssemblyName>a3ERP AydaraTPV</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>Off</OptionInfer>
+    <TargetFrameworkProfile />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MyType>Windows</MyType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>a3erp.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AGI2005">
+      <HintPath>\\agiws\AGI\AGI\Codigo\Libreria AGI\AGI2005\v 0.5.16.0\AGI2005.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v13.2">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v13.2.UI, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v13.2.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v13.2.UI, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.Extensions, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.UI, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2.Wizard, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v13.2">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2.Extensions, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraVerticalGrid.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\agiws\AGI\AGI\Codigo\Libreria AGI\AGI2005\v 0.5.16.0\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>\\agiws\AGI\AGI\Codigo\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="a3ERP.vb" />
+    <Compile Include="Clases\Aydara.vb" />
+    <Compile Include="Clases\dsSeleccion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSeleccion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\dsSeleccion.vb">
+      <DependentUpon>dsSeleccion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Ftp.vb" />
+    <Compile Include="Clases\Informes.vb" />
+    <Compile Include="Datos\dsPedidos.vb">
+      <DependentUpon>dsPedidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\dsPedidos1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPedidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Estadisticas\dsEstadisticas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstadisticas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Estadisticas\dsEstadisticas.vb">
+      <DependentUpon>dsEstadisticas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsClientes.vb">
+      <DependentUpon>dsClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsClientes1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsClientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsEmpresa.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEmpresa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsEmpresa.vb">
+      <DependentUpon>dsEmpresa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsFamilias.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFamilias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsFamilias.vb">
+      <DependentUpon>dsFamilias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsIncidencias.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsIncidencias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsIncidencias.vb">
+      <DependentUpon>dsIncidencias.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsProveedores.vb">
+      <DependentUpon>dsProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsProveedores1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProveedores.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsTiendas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTiendas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsTiendas.vb">
+      <DependentUpon>dsTiendas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsTiposIVA.vb">
+      <DependentUpon>dsTiposIVA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsTiposIVA1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTiposIVA.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsTiposOperacion.designer.vb">
+      <DependentUpon>dsTiposOperacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsTiposOperacion.vb">
+      <DependentUpon>dsTiposOperacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsFacturacion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsFacturacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsFacturacion.vb">
+      <DependentUpon>dsFacturacion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTarjetas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTarjetas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTarjetas.vb">
+      <DependentUpon>dsTarjetas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsAlmacenes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAlmacenes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsAlmacenes.vb">
+      <DependentUpon>dsAlmacenes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsArticulos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsArticulos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsArticulos.vb">
+      <DependentUpon>dsArticulos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsConsultaTickets.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConsultaTickets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsConsultaTickets.vb">
+      <DependentUpon>dsConsultaTickets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsInventarios.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInventarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsInventarios.vb">
+      <DependentUpon>dsInventarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTickets.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTickets.vb">
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTPVConfiguracion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTPVConfiguracion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTPVConfiguracion.vb">
+      <DependentUpon>dsTPVConfiguracion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTPVEnvio.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTPVEnvio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTPVEnvio.vb">
+      <DependentUpon>dsTPVEnvio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTPVLog.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTPVLog.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTPVLog.vb">
+      <DependentUpon>dsTPVLog.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTPVRecepcion.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTPVRecepcion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\TPV\dsTPVRecepcion.vb">
+      <DependentUpon>dsTPVRecepcion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsPersonas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPersonas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsPersonas.vb">
+      <DependentUpon>dsPersonas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsRepresentantes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsRepresentantes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsRepresentantes.vb">
+      <DependentUpon>dsRepresentantes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsSeries.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSeries.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsSeries.vb">
+      <DependentUpon>dsSeries.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsTarifas.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTarifas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\Ficheros\dsTarifas.vb">
+      <DependentUpon>dsTarifas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fListado.Designer.vb">
+      <DependentUpon>fListado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fListado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fPedido.Designer.vb">
+      <DependentUpon>fPedido.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fPedido.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fPopupMenu.designer.vb">
+      <DependentUpon>fPopupMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fPopupMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fCierreTienda.Designer.vb">
+      <DependentUpon>fCierreTienda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fCierreTienda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fIngresosTienda.Designer.vb">
+      <DependentUpon>fIngresosTienda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fIngresosTienda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fTarjetasTiendas.Designer.vb">
+      <DependentUpon>fTarjetasTiendas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fTarjetasTiendas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fTotalesCaja.Designer.vb">
+      <DependentUpon>fTotalesCaja.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fTotalesCaja.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fLogin.designer.vb">
+      <DependentUpon>fLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PreImpreso.designer.vb">
+      <DependentUpon>PreImpreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PreImpreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PropiedadesControl.designer.vb">
+      <DependentUpon>PropiedadesControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PropiedadesControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\fSeleccion.designer.vb">
+      <DependentUpon>fSeleccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\fSeleccion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fConfiguracionTPV.designer.vb">
+      <DependentUpon>fConfiguracionTPV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fConfiguracionTPV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fEstadisticasTickets.designer.vb">
+      <DependentUpon>fEstadisticasTickets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fEstadisticasTickets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fTerminalesInventario.Designer.vb">
+      <DependentUpon>fTerminalesInventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fTerminalesInventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fLogTiendas.Designer.vb">
+      <DependentUpon>fLogTiendas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fLogTiendas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fProgresoTiendas.Designer.vb">
+      <DependentUpon>fProgresoTiendas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fProgresoTiendas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fRecepcionTiendas.designer.vb">
+      <DependentUpon>fRecepcionTiendas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fRecepcionTiendas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fSituacionTienda.designer.vb">
+      <DependentUpon>fSituacionTienda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fSituacionTienda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fTicket.Designer.vb">
+      <DependentUpon>fTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TPV\fTickets.Designer.vb">
+      <DependentUpon>fTickets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TPV\fTickets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="PrintRibbonControllerResources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\fImpreso.Designer.vb">
+      <DependentUpon>fImpreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\fImpreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\fImpreso_Designer.Designer.vb">
+      <DependentUpon>fImpreso_Designer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\fImpreso_Designer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\fListadoExterno.Designer.vb">
+      <DependentUpon>fListadoExterno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\fListadoExterno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\InfContable.designer.vb">
+      <DependentUpon>InfContable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InfContable.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\InfContable_IVA.designer.vb">
+      <DependentUpon>InfContable_IVA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InfContable_IVA.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\InfContable_Totales.designer.vb">
+      <DependentUpon>InfContable_Totales.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\InfContable_Totales.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XRDesignRibbonControllerResources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XRDesignRibbonControllerResources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\fListado.resx">
+      <DependentUpon>fListado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fPedido.resx">
+      <DependentUpon>fPedido.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fPopupMenu.resx">
+      <DependentUpon>fPopupMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fCierreTienda.resx">
+      <DependentUpon>fCierreTienda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fIngresosTienda.resx">
+      <DependentUpon>fIngresosTienda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fTarjetasTiendas.resx">
+      <DependentUpon>fTarjetasTiendas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fTotalesCaja.resx">
+      <DependentUpon>fTotalesCaja.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fLogin.resx">
+      <DependentUpon>fLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PreImpreso.resx">
+      <DependentUpon>PreImpreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PropiedadesControl.resx">
+      <DependentUpon>PropiedadesControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\fSeleccion.resx">
+      <DependentUpon>fSeleccion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fConfiguracionTPV.resx">
+      <DependentUpon>fConfiguracionTPV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fEstadisticasTickets.resx">
+      <DependentUpon>fEstadisticasTickets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fTerminalesInventario.resx">
+      <DependentUpon>fTerminalesInventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fLogTiendas.resx">
+      <DependentUpon>fLogTiendas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fProgresoTiendas.resx">
+      <DependentUpon>fProgresoTiendas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fRecepcionTiendas.resx">
+      <DependentUpon>fRecepcionTiendas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fSituacionTienda.resx">
+      <DependentUpon>fSituacionTienda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fTicket.resx">
+      <DependentUpon>fTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TPV\fTickets.resx">
+      <DependentUpon>fTickets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\fImpreso.resx">
+      <DependentUpon>fImpreso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\fImpreso_Designer.resx">
+      <DependentUpon>fImpreso_Designer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\fListadoExterno.resx">
+      <DependentUpon>fListadoExterno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InfContable.resx">
+      <DependentUpon>InfContable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InfContable_IVA.resx">
+      <DependentUpon>InfContable_IVA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InfContable_Totales.resx">
+      <DependentUpon>InfContable_Totales.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XRDesignRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>XRDesignRibbonControllerResources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Clases\dsSeleccion.xsc">
+      <DependentUpon>dsSeleccion.xsd</DependentUpon>
+    </None>
+    <None Include="Clases\dsSeleccion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSeleccion.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Clases\dsSeleccion.xss">
+      <DependentUpon>dsSeleccion.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\dsPedidos.xsc">
+      <DependentUpon>dsPedidos.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\dsPedidos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPedidos1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\dsPedidos.xss">
+      <DependentUpon>dsPedidos.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Estadisticas\dsEstadisticas.xsc">
+      <DependentUpon>dsEstadisticas.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Estadisticas\dsEstadisticas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEstadisticas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Estadisticas\dsEstadisticas.xss">
+      <DependentUpon>dsEstadisticas.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsClientes.xsc">
+      <DependentUpon>dsClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsClientes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsClientes1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\Ficheros\dsClientes.xss">
+      <DependentUpon>dsClientes.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsEmpresa.xsc">
+      <DependentUpon>dsEmpresa.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsEmpresa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEmpresa.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Ficheros\dsEmpresa.xss">
+      <DependentUpon>dsEmpresa.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsFamilias.xsc">
+      <DependentUpon>dsFamilias.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsFamilias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFamilias.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Ficheros\dsFamilias.xss">
+      <DependentUpon>dsFamilias.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsIncidencias.xsc">
+      <DependentUpon>dsIncidencias.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsIncidencias.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsIncidencias.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Ficheros\dsIncidencias.xss">
+      <DependentUpon>dsIncidencias.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsProveedores.xsc">
+      <DependentUpon>dsProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsProveedores.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProveedores1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\Ficheros\dsProveedores.xss">
+      <DependentUpon>dsProveedores.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsTiendas.xsc">
+      <DependentUpon>dsTiendas.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsTiendas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTiendas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Ficheros\dsTiendas.xss">
+      <DependentUpon>dsTiendas.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsTiposIVA.xsc">
+      <DependentUpon>dsTiposIVA.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsTiposIVA.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTiposIVA1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\Ficheros\dsTiposIVA.xss">
+      <DependentUpon>dsTiposIVA.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsTiposOperacion.xsc">
+      <DependentUpon>dsTiposOperacion.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsTiposOperacion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTiposOperacion1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\Ficheros\dsTiposOperacion.xss">
+      <DependentUpon>dsTiposOperacion.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsFacturacion.xsc">
+      <DependentUpon>dsFacturacion.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsFacturacion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsFacturacion.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Datos\TPV\dsFacturacion.xss">
+      <DependentUpon>dsFacturacion.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTarjetas.xsc">
+      <DependentUpon>dsTarjetas.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTarjetas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTarjetas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\TPV\dsTarjetas.xss">
+      <DependentUpon>dsTarjetas.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsAlmacenes.xsc">
+      <DependentUpon>dsAlmacenes.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsAlmacenes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAlmacenes.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Ficheros\dsAlmacenes.xss">
+      <DependentUpon>dsAlmacenes.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsArticulos.xsc">
+      <DependentUpon>dsArticulos.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsArticulos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsArticulos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Ficheros\dsArticulos.xss">
+      <DependentUpon>dsArticulos.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsConsultaTickets.xsc">
+      <DependentUpon>dsConsultaTickets.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsConsultaTickets.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConsultaTickets.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\TPV\dsConsultaTickets.xss">
+      <DependentUpon>dsConsultaTickets.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsInventarios.xsc">
+      <DependentUpon>dsInventarios.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsInventarios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInventarios.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\TPV\dsInventarios.xss">
+      <DependentUpon>dsInventarios.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTickets.xsc">
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTickets.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTickets.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\TPV\dsTickets.xss">
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTPVConfiguracion.xsc">
+      <DependentUpon>dsTPVConfiguracion.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTPVConfiguracion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTPVConfiguracion.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\TPV\dsTPVConfiguracion.xss">
+      <DependentUpon>dsTPVConfiguracion.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTPVEnvio.xsc">
+      <DependentUpon>dsTPVEnvio.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTPVEnvio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTPVEnvio.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\TPV\dsTPVEnvio.xss">
+      <DependentUpon>dsTPVEnvio.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTPVLog.xsc">
+      <DependentUpon>dsTPVLog.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTPVLog.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTPVLog.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\TPV\dsTPVLog.xss">
+      <DependentUpon>dsTPVLog.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTPVRecepcion.xsc">
+      <DependentUpon>dsTPVRecepcion.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\TPV\dsTPVRecepcion.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTPVRecepcion.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\TPV\dsTPVRecepcion.xss">
+      <DependentUpon>dsTPVRecepcion.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsPersonas.xsc">
+      <DependentUpon>dsPersonas.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsPersonas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPersonas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Ficheros\dsPersonas.xss">
+      <DependentUpon>dsPersonas.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsRepresentantes.xsc">
+      <DependentUpon>dsRepresentantes.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsRepresentantes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsRepresentantes.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Ficheros\dsRepresentantes.xss">
+      <DependentUpon>dsRepresentantes.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsSeries.xsc">
+      <DependentUpon>dsSeries.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsSeries.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSeries.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Ficheros\dsSeries.xss">
+      <DependentUpon>dsSeries.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsTarifas.xsc">
+      <DependentUpon>dsTarifas.xsd</DependentUpon>
+    </None>
+    <None Include="Datos\Ficheros\dsTarifas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTarifas.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Datos\Ficheros\dsTarifas.xss">
+      <DependentUpon>dsTarifas.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="a3ERPActiveX">
+      <Guid>{C29630B5-F172-4ED9-8D55-F0579E0F571E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ADODB">
+      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="a3.ico" />
+    <Content Include="a3erp.ico" />
+    <Content Include="aydara_business.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

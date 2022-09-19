@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="bandDetalle.Name" xml:space="preserve">
+    <value>bandDetalle</value>
+  </metadata>
+  <metadata name="XrTable2.Name" xml:space="preserve">
+    <value>XrTable2</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="XrTable2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 0</value>
+  </data>
+  <metadata name="Detalle.Name" xml:space="preserve">
+    <value>Detalle</value>
+  </metadata>
+  <metadata name="XrTableCell8.Name" xml:space="preserve">
+    <value>XrTableCell8</value>
+  </metadata>
+  <metadata name="XrTableCell2.Name" xml:space="preserve">
+    <value>XrTableCell2</value>
+  </metadata>
+  <data name="XrTableCell2.Text" xml:space="preserve">
+    <value>XrTableCell2</value>
+  </data>
+  <assembly alias="DevExpress.Utils.v13.2" name="DevExpress.Utils.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="XrTableCell2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopCenter</value>
+  </data>
+  <metadata name="txtImporteTicket.Name" xml:space="preserve">
+    <value>txtImporteTicket</value>
+  </metadata>
+  <data name="txtImporteTicket.Text" xml:space="preserve">
+    <value>txtImporteTicket</value>
+  </data>
+  <data name="txtImporteTicket.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopRight</value>
+  </data>
+  <metadata name="txtImporteCobrado.Name" xml:space="preserve">
+    <value>txtImporteCobrado</value>
+  </metadata>
+  <data name="txtImporteCobrado.Text" xml:space="preserve">
+    <value>txtImporteCobrado</value>
+  </data>
+  <data name="txtImporteCobrado.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopRight</value>
+  </data>
+  <metadata name="txtImportePendiente.Name" xml:space="preserve">
+    <value>txtImportePendiente</value>
+  </metadata>
+  <data name="XrSummary1.FormatString" xml:space="preserve">
+    <value>{0:c2}</value>
+  </data>
+  <data name="txtImportePendiente.Text" xml:space="preserve">
+    <value>txtImportePendiente</value>
+  </data>
+  <data name="txtImportePendiente.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopRight</value>
+  </data>
+  <data name="XrTable2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 17</value>
+  </data>
+  <data name="bandDetalle.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopLeft</value>
+  </data>
+  <metadata name="PageFooter.Name" xml:space="preserve">
+    <value>PageFooter</value>
+  </metadata>
+  <metadata name="XrPageInfo2.Name" xml:space="preserve">
+    <value>XrPageInfo2</value>
+  </metadata>
+  <data name="XrPageInfo2.Format" xml:space="preserve">
+    <value>Página {0} de {1}</value>
+  </data>
+  <data name="XrPageInfo2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 6</value>
+  </data>
+  <data name="XrPageInfo2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 23</value>
+  </data>
+  <data name="XrPageInfo2.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopRight</value>
+  </data>
+  <metadata name="XrPageInfo1.Name" xml:space="preserve">
+    <value>XrPageInfo1</value>
+  </metadata>
+  <data name="XrPageInfo1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="XrPageInfo1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 23</value>
+  </data>
+  <data name="PageFooter.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopLeft</value>
+  </data>
+  <metadata name="PageHeader.Name" xml:space="preserve">
+    <value>PageHeader</value>
+  </metadata>
+  <metadata name="XrLabel5.Name" xml:space="preserve">
+    <value>XrLabel5</value>
+  </metadata>
+  <data name="XrLabel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>542, 0</value>
+  </data>
+  <data name="XrLabel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 33</value>
+  </data>
+  <data name="XrLabel5.Text" xml:space="preserve">
+    <value>Total importe</value>
+  </data>
+  <data name="XrLabel5.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>MiddleRight</value>
+  </data>
+  <metadata name="XrLabel4.Name" xml:space="preserve">
+    <value>XrLabel4</value>
+  </metadata>
+  <data name="XrLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 0</value>
+  </data>
+  <data name="XrLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>533, 33</value>
+  </data>
+  <data name="XrLabel4.Text" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="XrLabel4.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="PageHeader.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopLeft</value>
+  </data>
+  <metadata name="Title.Name" xml:space="preserve">
+    <value>Title</value>
+  </metadata>
+  <metadata name="FieldCaption.Name" xml:space="preserve">
+    <value>FieldCaption</value>
+  </metadata>
+  <metadata name="PageInfo.Name" xml:space="preserve">
+    <value>PageInfo</value>
+  </metadata>
+  <metadata name="DataField.Name" xml:space="preserve">
+    <value>DataField</value>
+  </metadata>
+  <metadata name="ReportHeaderBand1.Name" xml:space="preserve">
+    <value>ReportHeaderBand1</value>
+  </metadata>
+  <metadata name="XrLabel1.Name" xml:space="preserve">
+    <value>XrLabel1</value>
+  </metadata>
+  <data name="XrLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="XrLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>638, 33</value>
+  </data>
+  <data name="XrLabel1.Text" xml:space="preserve">
+    <value>Listado saldos de clientes</value>
+  </data>
+  <metadata name="ghCliente.Name" xml:space="preserve">
+    <value>ghCliente</value>
+  </metadata>
+  <metadata name="XrLabel10.Name" xml:space="preserve">
+    <value>XrLabel10</value>
+  </metadata>
+  <data name="XrLabel10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt, style=Bold</value>
+  </data>
+  <data name="XrLabel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>542, 25</value>
+  </data>
+  <data name="XrLabel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 17</value>
+  </data>
+  <data name="XrLabel10.Text" xml:space="preserve">
+    <value>Pendiente</value>
+  </data>
+  <data name="XrLabel10.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopRight</value>
+  </data>
+  <metadata name="XrLabel9.Name" xml:space="preserve">
+    <value>XrLabel9</value>
+  </metadata>
+  <data name="XrLabel9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt, style=Bold</value>
+  </data>
+  <data name="XrLabel9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>433, 25</value>
+  </data>
+  <data name="XrLabel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 17</value>
+  </data>
+  <data name="XrLabel9.Text" xml:space="preserve">
+    <value>Importe cobrado</value>
+  </data>
+  <data name="XrLabel9.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopRight</value>
+  </data>
+  <metadata name="XrLabel8.Name" xml:space="preserve">
+    <value>XrLabel8</value>
+  </metadata>
+  <data name="XrLabel8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt, style=Bold</value>
+  </data>
+  <data name="XrLabel8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 25</value>
+  </data>
+  <data name="XrLabel8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 17</value>
+  </data>
+  <data name="XrLabel8.Text" xml:space="preserve">
+    <value>Importe ticket</value>
+  </data>
+  <data name="XrLabel8.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopRight</value>
+  </data>
+  <metadata name="XrLabel7.Name" xml:space="preserve">
+    <value>XrLabel7</value>
+  </metadata>
+  <data name="XrLabel7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt, style=Bold</value>
+  </data>
+  <data name="XrLabel7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>258, 25</value>
+  </data>
+  <data name="XrLabel7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 17</value>
+  </data>
+  <data name="XrLabel7.Text" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="XrLabel7.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopCenter</value>
+  </data>
+  <metadata name="XrLabel6.Name" xml:space="preserve">
+    <value>XrLabel6</value>
+  </metadata>
+  <data name="XrLabel6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt, style=Bold</value>
+  </data>
+  <data name="XrLabel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>192, 25</value>
+  </data>
+  <data name="XrLabel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 17</value>
+  </data>
+  <data name="XrLabel6.Text" xml:space="preserve">
+    <value>Nº Ticket</value>
+  </data>
+  <data name="XrLabel6.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopLeft</value>
+  </data>
+  <metadata name="XrLabel3.Name" xml:space="preserve">
+    <value>XrLabel3</value>
+  </metadata>
+  <data name="XrLabel3.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Gainsboro</value>
+  </data>
+  <data name="XrLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 0</value>
+  </data>
+  <data name="XrLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 25</value>
+  </data>
+  <data name="XrLabel3.Text" xml:space="preserve">
+    <value>XrLabel3</value>
+  </data>
+  <metadata name="XrLabel2.Name" xml:space="preserve">
+    <value>XrLabel2</value>
+  </metadata>
+  <data name="XrLabel2.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Gainsboro</value>
+  </data>
+  <data name="XrLabel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 0</value>
+  </data>
+  <data name="XrLabel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>558, 25</value>
+  </data>
+  <data name="XrLabel2.Text" xml:space="preserve">
+    <value>XrLabel2</value>
+  </data>
+  <metadata name="GroupFooter1.Name" xml:space="preserve">
+    <value>GroupFooter1</value>
+  </metadata>
+  <metadata name="txtNombreCliente.Name" xml:space="preserve">
+    <value>txtNombreCliente</value>
+  </metadata>
+  <data name="txtNombreCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 0</value>
+  </data>
+  <data name="txtNombreCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 17</value>
+  </data>
+  <data name="txtNombreCliente.Text" xml:space="preserve">
+    <value>txtNombreCliente</value>
+  </data>
+  <metadata name="txtCodigoCliente.Name" xml:space="preserve">
+    <value>txtCodigoCliente</value>
+  </metadata>
+  <data name="txtCodigoCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 0</value>
+  </data>
+  <data name="txtCodigoCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 17</value>
+  </data>
+  <data name="txtCodigoCliente.Text" xml:space="preserve">
+    <value>txtCodigoCliente</value>
+  </data>
+  <metadata name="txtTotalImporteCliente.Name" xml:space="preserve">
+    <value>txtTotalImporteCliente</value>
+  </metadata>
+  <data name="txtTotalImporteCliente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt, style=Bold</value>
+  </data>
+  <data name="txtTotalImporteCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>542, 0</value>
+  </data>
+  <data name="txtTotalImporteCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 17</value>
+  </data>
+  <data name="XrSummary2.FormatString" xml:space="preserve">
+    <value>{0:c2}</value>
+  </data>
+  <data name="txtTotalImporteCliente.Text" xml:space="preserve">
+    <value>txtTotalImporteCliente</value>
+  </data>
+  <data name="txtTotalImporteCliente.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopRight</value>
+  </data>
+  <metadata name="ImportePrendiente.Name" xml:space="preserve">
+    <value>ImportePrendiente</value>
+  </metadata>
+  <metadata name="DsPendientesCobro1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="DsPendientesCobro1.Name" xml:space="preserve">
+    <value>DsPendientesCobro1</value>
+  </metadata>
+  <metadata name="PENDIENTES_COBROTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>183, 17</value>
+  </metadata>
+  <metadata name="PENDIENTES_COBROTableAdapter.Name" xml:space="preserve">
+    <value>PENDIENTES_COBROTableAdapter</value>
+  </metadata>
+  <metadata name="ReportFooter.Name" xml:space="preserve">
+    <value>ReportFooter</value>
+  </metadata>
+  <metadata name="txtTotalImporte.Name" xml:space="preserve">
+    <value>txtTotalImporte</value>
+  </metadata>
+  <data name="txtTotalImporte.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 9.75pt, style=Bold</value>
+  </data>
+  <data name="txtTotalImporte.Location" type="System.Drawing.Point, System.Drawing">
+    <value>542, 8</value>
+  </data>
+  <data name="txtTotalImporte.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="XrSummary3.FormatString" xml:space="preserve">
+    <value>{0:c2}</value>
+  </data>
+  <data name="txtTotalImporte.Text" xml:space="preserve">
+    <value>txtTotalImporte</value>
+  </data>
+  <data name="txtTotalImporte.TextAlignment" type="DevExpress.XtraPrinting.TextAlignment, DevExpress.Utils.v13.2">
+    <value>TopRight</value>
+  </data>
+  <metadata name="$this.Name" xml:space="preserve">
+    <value>InfListadoSaldoclientes</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

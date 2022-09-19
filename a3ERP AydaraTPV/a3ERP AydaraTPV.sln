@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Aydara a3ERP", "Aydara a3ERP.vbproj", "{2264A9C2-6DF6-49AB-8A81-22F44B181277}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Aydara a3ERP DLL", "Aydara a3ERP DLL\Aydara a3ERP DLL.vbproj", "{6F2E3507-53BE-465C-8DD9-0F6979A0B674}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://ibmserver2008:8080/tfs/ida
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Aydara\u0020a3ERP.vbproj
+		SccLocalPath1 = .
+		SccProjectUniqueName2 = Aydara\u0020a3ERP\u0020DLL\\Aydara\u0020a3ERP\u0020DLL.vbproj
+		SccProjectName2 = Aydara\u0020a3ERP\u0020DLL
+		SccLocalPath2 = Aydara\u0020a3ERP\u0020DLL
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2264A9C2-6DF6-49AB-8A81-22F44B181277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2264A9C2-6DF6-49AB-8A81-22F44B181277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2264A9C2-6DF6-49AB-8A81-22F44B181277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2264A9C2-6DF6-49AB-8A81-22F44B181277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F2E3507-53BE-465C-8DD9-0F6979A0B674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F2E3507-53BE-465C-8DD9-0F6979A0B674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F2E3507-53BE-465C-8DD9-0F6979A0B674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F2E3507-53BE-465C-8DD9-0F6979A0B674}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

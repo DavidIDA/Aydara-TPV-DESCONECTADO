@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsTiendas" targetNamespace="http://tempuri.org/dsTiendas.xsd" xmlns:mstns="http://tempuri.org/dsTiendas.xsd" xmlns="http://tempuri.org/dsTiendas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SqlConection" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SqlConection (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.a3ERP_AydaraTPV.Settings.GlobalReference.Default.SqlConection" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TIENDASTableAdapter" GeneratorDataComponentClassName="TIENDASTableAdapter" Name="TIENDAS" UserDataComponentName="TIENDASTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectName="ARAESTETIC.dbo.IDA_TIENDAS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        AVISO0, AVISOMAX, AVISOMIN, AVISOSTOCKPREVISTO0, AVISOSTOCKPREVISTOMAX, AVISOSTOCKPREVISTOMIN, CIM, CODALM, CODGRUPOALMACEN, CODPAIS, 
+                         CODPROVI, DESCALM, DIRALM, DTOALM, E_MAIL, ENCARGADO, FAXALM, INTEXT, OBSALM, POBALM, STOCKNEG, TEL2ALM, TELALM, IDA_CODCLI, 
+                         IDA_DESCDEPOSITO, IDA_TIPOTIENDA, IDA_COMUNICACION, IDA_CTAABONOENVASES, IDA_CTACOBROSCLIENTE, IDA_CTAEFECTIVO, 
+                         IDA_CTAPAGOSPROVEEDOR, IDA_CTAPENDIENTECOBRO, IDA_CTATALON, IDA_CTATARJETA, IDA_CTAVALESCOBRADOS, IDA_CTAVALESPROPIOS, 
+                         IDA_CTAVALESPROVEEDOR, IDA_TIPOTERMINAL, IDA_CODCLIPED, ALBARANCREDITO, ARTICULOSDIRECTOS, CODIGO, CONREPER, CONVENCIM, DESCRIPCION, 
+                         DESGLOSEPEDIDO, ENVIARINVENTARIO, FACTURADIARIA, GENERAALBARAN, GENERAFACTURA, IVAINCLUIDO, PEDIDOMANUAL, RECIBECOMPRAS, 
+                         RECIBETICKETS, SERIEALBARAN, SERIEALBCREDITO, SERIECOMPRAS, SERIEDESTINO, SERIEFACTURA, SERIEPEDIDO, TIPOCONTALBARAN, 
+                         TIPOCONTALBCREDITO, TIPOCONTCOMPRAS, TIPOCONTDESTINO, TIPOCONTFACTURA, TIPOCONTPEDIDO, TIPODOCUDESTINO, IDA_CTABANCO, 
+                         IDA_CTAVALESCLIENTE, IDA_SERIEFRA1, IDA_SERIEFRA2, IDA_TIPOCONTFRA1, IDA_TIPOCONTFRA2
+FROM            IDA_TIENDAS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CODALM" DataSetColumn="CODALM" />
+              <Mapping SourceColumn="DESCALM" DataSetColumn="DESCALM" />
+              <Mapping SourceColumn="ALBARANCREDITO" DataSetColumn="ALBARANCREDITO" />
+              <Mapping SourceColumn="CONREPER" DataSetColumn="CONREPER" />
+              <Mapping SourceColumn="CONVENCIM" DataSetColumn="CONVENCIM" />
+              <Mapping SourceColumn="DESCRIPCION" DataSetColumn="DESCRIPCION" />
+              <Mapping SourceColumn="DESGLOSEPEDIDO" DataSetColumn="DESGLOSEPEDIDO" />
+              <Mapping SourceColumn="ENVIARINVENTARIO" DataSetColumn="ENVIARINVENTARIO" />
+              <Mapping SourceColumn="FACTURADIARIA" DataSetColumn="FACTURADIARIA" />
+              <Mapping SourceColumn="GENERAALBARAN" DataSetColumn="GENERAALBARAN" />
+              <Mapping SourceColumn="GENERAFACTURA" DataSetColumn="GENERAFACTURA" />
+              <Mapping SourceColumn="PEDIDOMANUAL" DataSetColumn="PEDIDOMANUAL" />
+              <Mapping SourceColumn="RECIBECOMPRAS" DataSetColumn="RECIBECOMPRAS" />
+              <Mapping SourceColumn="RECIBETICKETS" DataSetColumn="RECIBETICKETS" />
+              <Mapping SourceColumn="SERIEALBARAN" DataSetColumn="SERIEALBARAN" />
+              <Mapping SourceColumn="SERIEALBCREDITO" DataSetColumn="SERIEALBCREDITO" />
+              <Mapping SourceColumn="SERIECOMPRAS" DataSetColumn="SERIECOMPRAS" />
+              <Mapping SourceColumn="SERIEDESTINO" DataSetColumn="SERIEDESTINO" />
+              <Mapping SourceColumn="SERIEFACTURA" DataSetColumn="SERIEFACTURA" />
+              <Mapping SourceColumn="SERIEPEDIDO" DataSetColumn="SERIEPEDIDO" />
+              <Mapping SourceColumn="TIPOCONTALBARAN" DataSetColumn="TIPOCONTALBARAN" />
+              <Mapping SourceColumn="TIPOCONTALBCREDITO" DataSetColumn="TIPOCONTALBCREDITO" />
+              <Mapping SourceColumn="TIPOCONTCOMPRAS" DataSetColumn="TIPOCONTCOMPRAS" />
+              <Mapping SourceColumn="TIPOCONTDESTINO" DataSetColumn="TIPOCONTDESTINO" />
+              <Mapping SourceColumn="TIPOCONTFACTURA" DataSetColumn="TIPOCONTFACTURA" />
+              <Mapping SourceColumn="TIPOCONTPEDIDO" DataSetColumn="TIPOCONTPEDIDO" />
+              <Mapping SourceColumn="IDA_CODCLI" DataSetColumn="IDA_CODCLI" />
+              <Mapping SourceColumn="IDA_DESCDEPOSITO" DataSetColumn="IDA_DESCDEPOSITO" />
+              <Mapping SourceColumn="IDA_TIPOTIENDA" DataSetColumn="IDA_TIPOTIENDA" />
+              <Mapping SourceColumn="IDA_COMUNICACION" DataSetColumn="IDA_COMUNICACION" />
+              <Mapping SourceColumn="IDA_CTAABONOENVASES" DataSetColumn="IDA_CTAABONOENVASES" />
+              <Mapping SourceColumn="IDA_CTACOBROSCLIENTE" DataSetColumn="IDA_CTACOBROSCLIENTE" />
+              <Mapping SourceColumn="IDA_CTAEFECTIVO" DataSetColumn="IDA_CTAEFECTIVO" />
+              <Mapping SourceColumn="IDA_CTAPAGOSPROVEEDOR" DataSetColumn="IDA_CTAPAGOSPROVEEDOR" />
+              <Mapping SourceColumn="IDA_CTAPENDIENTECOBRO" DataSetColumn="IDA_CTAPENDIENTECOBRO" />
+              <Mapping SourceColumn="IDA_CTATALON" DataSetColumn="IDA_CTATALON" />
+              <Mapping SourceColumn="IDA_CTATARJETA" DataSetColumn="IDA_CTATARJETA" />
+              <Mapping SourceColumn="IDA_CTAVALESCOBRADOS" DataSetColumn="IDA_CTAVALESCOBRADOS" />
+              <Mapping SourceColumn="IDA_CTAVALESPROPIOS" DataSetColumn="IDA_CTAVALESPROPIOS" />
+              <Mapping SourceColumn="IDA_CTAVALESPROVEEDOR" DataSetColumn="IDA_CTAVALESPROVEEDOR" />
+              <Mapping SourceColumn="IDA_TIPOTERMINAL" DataSetColumn="IDA_TIPOTERMINAL" />
+              <Mapping SourceColumn="IVAINCLUIDO" DataSetColumn="IVAINCLUIDO" />
+              <Mapping SourceColumn="INTEXT" DataSetColumn="INTEXT" />
+              <Mapping SourceColumn="TIPODOCUDESTINO" DataSetColumn="TIPODOCUDESTINO" />
+              <Mapping SourceColumn="AVISO0" DataSetColumn="AVISO0" />
+              <Mapping SourceColumn="AVISOMAX" DataSetColumn="AVISOMAX" />
+              <Mapping SourceColumn="AVISOMIN" DataSetColumn="AVISOMIN" />
+              <Mapping SourceColumn="AVISOSTOCKPREVISTO0" DataSetColumn="AVISOSTOCKPREVISTO0" />
+              <Mapping SourceColumn="AVISOSTOCKPREVISTOMAX" DataSetColumn="AVISOSTOCKPREVISTOMAX" />
+              <Mapping SourceColumn="AVISOSTOCKPREVISTOMIN" DataSetColumn="AVISOSTOCKPREVISTOMIN" />
+              <Mapping SourceColumn="CIM" DataSetColumn="CIM" />
+              <Mapping SourceColumn="CODGRUPOALMACEN" DataSetColumn="CODGRUPOALMACEN" />
+              <Mapping SourceColumn="CODPAIS" DataSetColumn="CODPAIS" />
+              <Mapping SourceColumn="CODPROVI" DataSetColumn="CODPROVI" />
+              <Mapping SourceColumn="DIRALM" DataSetColumn="DIRALM" />
+              <Mapping SourceColumn="DTOALM" DataSetColumn="DTOALM" />
+              <Mapping SourceColumn="E_MAIL" DataSetColumn="E_MAIL" />
+              <Mapping SourceColumn="ENCARGADO" DataSetColumn="ENCARGADO" />
+              <Mapping SourceColumn="FAXALM" DataSetColumn="FAXALM" />
+              <Mapping SourceColumn="OBSALM" DataSetColumn="OBSALM" />
+              <Mapping SourceColumn="POBALM" DataSetColumn="POBALM" />
+              <Mapping SourceColumn="STOCKNEG" DataSetColumn="STOCKNEG" />
+              <Mapping SourceColumn="TEL2ALM" DataSetColumn="TEL2ALM" />
+              <Mapping SourceColumn="TELALM" DataSetColumn="TELALM" />
+              <Mapping SourceColumn="IDA_CODCLIPED" DataSetColumn="IDA_CODCLIPED" />
+              <Mapping SourceColumn="ARTICULOSDIRECTOS" DataSetColumn="ARTICULOSDIRECTOS" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="IDA_CTABANCO" DataSetColumn="IDA_CTABANCO" />
+              <Mapping SourceColumn="IDA_CTAVALESCLIENTE" DataSetColumn="IDA_CTAVALESCLIENTE" />
+              <Mapping SourceColumn="IDA_SERIEFRA1" DataSetColumn="IDA_SERIEFRA1" />
+              <Mapping SourceColumn="IDA_SERIEFRA2" DataSetColumn="IDA_SERIEFRA2" />
+              <Mapping SourceColumn="IDA_TIPOCONTFRA1" DataSetColumn="IDA_TIPOCONTFRA1" />
+              <Mapping SourceColumn="IDA_TIPOCONTFRA2" DataSetColumn="IDA_TIPOCONTFRA2" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectName="Solum.dbo.IDA_TIENDAS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ALBARANCREDITO, ARTICULOSDIRECTOS, AVISO0, AVISOMAX, AVISOMIN, AVISOSTOCKPREVISTO0, AVISOSTOCKPREVISTOMAX, AVISOSTOCKPREVISTOMIN, CIM, 
+                         CODALM, CODGRUPOALMACEN, CODIGO, CODPAIS, CODPROVI, CONREPER, CONVENCIM, DESCALM, DESCRIPCION, DESGLOSEPEDIDO, DIRALM, DTOALM, 
+                         ENCARGADO, ENVIARINVENTARIO, E_MAIL, FACTURADIARIA, FAXALM, GENERAALBARAN, GENERAFACTURA, IDA_CODCLI, IDA_COMUNICACION, 
+                         IDA_CTAABONOENVASES, IDA_CTABANCO, IDA_CTACOBROSCLIENTE, IDA_CTAEFECTIVO, IDA_CTAPAGOSPROVEEDOR, IDA_CTAPENDIENTECOBRO, 
+                         IDA_CTATALON, IDA_CTATARJETA, IDA_CTAVALESCLIENTE, IDA_CTAVALESCOBRADOS, IDA_CTAVALESPROPIOS, IDA_CTAVALESPROVEEDOR, IDA_DESCDEPOSITO, 
+                         IDA_TIPOTERMINAL, IDA_TIPOTIENDA, INTEXT, IVAINCLUIDO, OBSALM, PEDIDOMANUAL, POBALM, RECIBECOMPRAS, RECIBETICKETS, SERIEALBARAN, 
+                         SERIEALBCREDITO, SERIECOMPRAS, SERIEDESTINO, SERIEFACTURA, SERIEPEDIDO, STOCKNEG, TEL2ALM, TELALM, TIPOCONTALBARAN, 
+                         TIPOCONTALBCREDITO, TIPOCONTCOMPRAS, TIPOCONTDESTINO, TIPOCONTFACTURA, TIPOCONTPEDIDO, TIPODOCUDESTINO, ISNULL(IDA_CODCLIPED, 
+                         IDA_CODCLI) AS IDA_CODCLIPED, IDA_SERIEFRA1, IDA_SERIEFRA2, IDA_TIPOCONTFRA1, IDA_TIPOCONTFRA2
+FROM            IDA_TIENDAS
+WHERE        (CODALM = @CODALM)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="CODALM" ColumnName="CODALM" DataSourceName="ARAESTETIC.dbo.IDA_TIENDAS" DataTypeServer="varchar(8)" DbType="AnsiString" Direction="Input" ParameterName="@CODALM" Precision="0" ProviderType="VarChar" Scale="0" Size="8" SourceColumn="CODALM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IDA_TIPOSTIENDATableAdapter" GeneratorDataComponentClassName="IDA_TIPOSTIENDATableAdapter" Name="IDA_TIPOSTIENDA" UserDataComponentName="IDA_TIPOSTIENDATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SqlConection (Settings)" DbObjectName="Calavia.dbo.IDA_TIPOSTIENDA" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [IDA_TIPOSTIENDA] WHERE (((@IsNull_ALBARANCREDITO = 1 AND [ALBARANCREDITO] IS NULL) OR ([ALBARANCREDITO] = @Original_ALBARANCREDITO)) AND ((@IsNull_ARTICULOSDIRECTOS = 1 AND [ARTICULOSDIRECTOS] IS NULL) OR ([ARTICULOSDIRECTOS] = @Original_ARTICULOSDIRECTOS)) AND ([CODIGO] = @Original_CODIGO) AND ((@IsNull_CONREPER = 1 AND [CONREPER] IS NULL) OR ([CONREPER] = @Original_CONREPER)) AND ((@IsNull_CONVENCIM = 1 AND [CONVENCIM] IS NULL) OR ([CONVENCIM] = @Original_CONVENCIM)) AND ((@IsNull_DESCRIPCION = 1 AND [DESCRIPCION] IS NULL) OR ([DESCRIPCION] = @Original_DESCRIPCION)) AND ((@IsNull_DESGLOSEPEDIDO = 1 AND [DESGLOSEPEDIDO] IS NULL) OR ([DESGLOSEPEDIDO] = @Original_DESGLOSEPEDIDO)) AND ((@IsNull_ENVIARINVENTARIO = 1 AND [ENVIARINVENTARIO] IS NULL) OR ([ENVIARINVENTARIO] = @Original_ENVIARINVENTARIO)) AND ((@IsNull_FACTURADIARIA = 1 AND [FACTURADIARIA] IS NULL) OR ([FACTURADIARIA] = @Original_FACTURADIARIA)) AND ((@IsNull_GENERAALBARAN = 1 AND [GENERAALBARAN] IS NULL) OR ([GENERAALBARAN] = @Original_GENERAALBARAN)) AND ((@IsNull_GENERAFACTURA = 1 AND [GENERAFACTURA] IS NULL) OR ([GENERAFACTURA] = @Original_GENERAFACTURA)) AND ((@IsNull_IVAINCLUIDO = 1 AND [IVAINCLUIDO] IS NULL) OR ([IVAINCLUIDO] = @Original_IVAINCLUIDO)) AND ((@IsNull_PEDIDOMANUAL = 1 AND [PEDIDOMANUAL] IS NULL) OR ([PEDIDOMANUAL] = @Original_PEDIDOMANUAL)) AND ((@IsNull_RECIBECOMPRAS = 1 AND [RECIBECOMPRAS] IS NULL) OR ([RECIBECOMPRAS] = @Original_RECIBECOMPRAS)) AND ((@IsNull_RECIBETICKETS = 1 AND [RECIBETICKETS] IS NULL) OR ([RECIBETICKETS] = @Original_RECIBETICKETS)) AND ((@IsNull_SERIEALBARAN = 1 AND [SERIEALBARAN] IS NULL) OR ([SERIEALBARAN] = @Original_SERIEALBARAN)) AND ((@IsNull_SERIEALBCREDITO = 1 AND [SERIEALBCREDITO] IS NULL) OR ([SERIEALBCREDITO] = @Original_SERIEALBCREDITO)) AND ((@IsNull_SERIECOMPRAS = 1 AND [SERIECOMPRAS] IS NULL) OR ([SERIECOMPRAS] = @Original_SERIECOMPRAS)) AND ((@IsNull_SERIEDESTINO = 1 AND [SERIEDESTINO] IS NULL) OR ([SERIEDESTINO] = @Original_SERIEDESTINO)) AND ((@IsNull_SERIEFACTURA = 1 AND [SERIEFACTURA] IS NULL) OR ([SERIEFACTURA] = @Original_SERIEFACTURA)) AND ((@IsNull_SERIEPEDIDO = 1 AND [SERIEPEDIDO] IS NULL) OR ([SERIEPEDIDO] = @Original_SERIEPEDIDO)) AND ((@IsNull_TIPOCONTALBARAN = 1 AND [TIPOCONTALBARAN] IS NULL) OR ([TIPOCONTALBARAN] = @Original_TIPOCONTALBARAN)) AND ((@IsNull_TIPOCONTALBCREDITO = 1 AND [TIPOCONTALBCREDITO] IS NULL) OR ([TIPOCONTALBCREDITO] = @Original_TIPOCONTALBCREDITO)) AND ((@IsNull_TIPOCONTCOMPRAS = 1 AND [TIPOCONTCOMPRAS] IS NULL) OR ([TIPOCONTCOMPRAS] = @Original_TIPOCONTCOMPRAS)) AND ((@IsNull_TIPOCONTDESTINO = 1 AND [TIPOCONTDESTINO] IS NULL) OR ([TIPOCONTDESTINO] = @Original_TIPOCONTDESTINO)) AND ((@IsNull_TIPOCONTFACTURA = 1 AND [TIPOCONTFACTURA] IS NULL) OR ([TIPOCONTFACTURA] = @Original_TIPOCONTFACTURA)) AND ((@IsNull_TIPOCONTPEDIDO = 1 AND [TIPOCONTPEDIDO] IS NULL) OR ([TIPOCONTPEDIDO] = @Original_TIPOCONTPEDIDO)) AND ((@IsNull_TIPODOCUDESTINO = 1 AND [TIPODOCUDESTINO] IS NULL) OR ([TIPODOCUDESTINO] = @Original_TIPODOCUDESTINO)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ALBARANCREDITO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ALBARANCREDITO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ALBARANCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ALBARANCREDITO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ARTICULOSDIRECTOS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ARTICULOSDIRECTOS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ARTICULOSDIRECTOS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ARTICULOSDIRECTOS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CODIGO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CODIGO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CONREPER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CONREPER" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CONREPER" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONREPER" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CONVENCIM" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CONVENCIM" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CONVENCIM" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONVENCIM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DESCRIPCION" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DESCRIPCION" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DESCRIPCION" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRIPCION" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DESGLOSEPEDIDO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DESGLOSEPEDIDO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DESGLOSEPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESGLOSEPEDIDO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ENVIARINVENTARIO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ENVIARINVENTARIO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ENVIARINVENTARIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ENVIARINVENTARIO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FACTURADIARIA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FACTURADIARIA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_FACTURADIARIA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FACTURADIARIA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GENERAALBARAN" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GENERAALBARAN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GENERAALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENERAALBARAN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GENERAFACTURA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GENERAFACTURA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GENERAFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENERAFACTURA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IVAINCLUIDO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IVAINCLUIDO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_IVAINCLUIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IVAINCLUIDO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PEDIDOMANUAL" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PEDIDOMANUAL" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PEDIDOMANUAL" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PEDIDOMANUAL" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RECIBECOMPRAS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RECIBECOMPRAS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RECIBECOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RECIBECOMPRAS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RECIBETICKETS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RECIBETICKETS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RECIBETICKETS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RECIBETICKETS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIEALBARAN" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIEALBARAN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIEALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEALBARAN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIEALBCREDITO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIEALBCREDITO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIEALBCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEALBCREDITO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIECOMPRAS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIECOMPRAS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIECOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIECOMPRAS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIEDESTINO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIEDESTINO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIEDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEDESTINO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIEFACTURA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIEFACTURA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIEFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEFACTURA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIEPEDIDO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIEPEDIDO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIEPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEPEDIDO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTALBARAN" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTALBARAN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTALBARAN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTALBCREDITO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTALBCREDITO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTALBCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTALBCREDITO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTCOMPRAS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTCOMPRAS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTCOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTCOMPRAS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTDESTINO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTDESTINO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTDESTINO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTFACTURA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTFACTURA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTFACTURA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTPEDIDO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTPEDIDO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTPEDIDO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPODOCUDESTINO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPODOCUDESTINO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPODOCUDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPODOCUDESTINO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [IDA_TIPOSTIENDA] ([ALBARANCREDITO], [ARTICULOSDIRECTOS], [CODIGO], [CONREPER], [CONVENCIM], [DESCRIPCION], [DESGLOSEPEDIDO], [ENVIARINVENTARIO], [FACTURADIARIA], [GENERAALBARAN], [GENERAFACTURA], [IVAINCLUIDO], [PEDIDOMANUAL], [RECIBECOMPRAS], [RECIBETICKETS], [SERIEALBARAN], [SERIEALBCREDITO], [SERIECOMPRAS], [SERIEDESTINO], [SERIEFACTURA], [SERIEPEDIDO], [TIPOCONTALBARAN], [TIPOCONTALBCREDITO], [TIPOCONTCOMPRAS], [TIPOCONTDESTINO], [TIPOCONTFACTURA], [TIPOCONTPEDIDO], [TIPODOCUDESTINO]) VALUES (@ALBARANCREDITO, @ARTICULOSDIRECTOS, @CODIGO, @CONREPER, @CONVENCIM, @DESCRIPCION, @DESGLOSEPEDIDO, @ENVIARINVENTARIO, @FACTURADIARIA, @GENERAALBARAN, @GENERAFACTURA, @IVAINCLUIDO, @PEDIDOMANUAL, @RECIBECOMPRAS, @RECIBETICKETS, @SERIEALBARAN, @SERIEALBCREDITO, @SERIECOMPRAS, @SERIEDESTINO, @SERIEFACTURA, @SERIEPEDIDO, @TIPOCONTALBARAN, @TIPOCONTALBCREDITO, @TIPOCONTCOMPRAS, @TIPOCONTDESTINO, @TIPOCONTFACTURA, @TIPOCONTPEDIDO, @TIPODOCUDESTINO);
+SELECT ALBARANCREDITO, ARTICULOSDIRECTOS, CODIGO, CONREPER, CONVENCIM, DESCRIPCION, DESGLOSEPEDIDO, ENVIARINVENTARIO, FACTURADIARIA, GENERAALBARAN, GENERAFACTURA, IVAINCLUIDO, PEDIDOMANUAL, RECIBECOMPRAS, RECIBETICKETS, SERIEALBARAN, SERIEALBCREDITO, SERIECOMPRAS, SERIEDESTINO, SERIEFACTURA, SERIEPEDIDO, TIPOCONTALBARAN, TIPOCONTALBCREDITO, TIPOCONTCOMPRAS, TIPOCONTDESTINO, TIPOCONTFACTURA, TIPOCONTPEDIDO, TIPODOCUDESTINO FROM IDA_TIPOSTIENDA WHERE (CODIGO = @CODIGO)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ALBARANCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ALBARANCREDITO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ARTICULOSDIRECTOS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ARTICULOSDIRECTOS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CODIGO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CODIGO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CONREPER" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONREPER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CONVENCIM" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONVENCIM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DESCRIPCION" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRIPCION" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DESGLOSEPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESGLOSEPEDIDO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ENVIARINVENTARIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ENVIARINVENTARIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@FACTURADIARIA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FACTURADIARIA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GENERAALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENERAALBARAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GENERAFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENERAFACTURA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@IVAINCLUIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IVAINCLUIDO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PEDIDOMANUAL" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PEDIDOMANUAL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RECIBECOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RECIBECOMPRAS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RECIBETICKETS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RECIBETICKETS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIEALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEALBARAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIEALBCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEALBCREDITO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIECOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIECOMPRAS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIEDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEDESTINO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIEFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEFACTURA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIEPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEPEDIDO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTALBARAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTALBCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTALBCREDITO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTCOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTCOMPRAS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTDESTINO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTFACTURA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTPEDIDO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPODOCUDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPODOCUDESTINO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        IDA_TIPOSTIENDA.*
+FROM            IDA_TIPOSTIENDA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [IDA_TIPOSTIENDA] SET [ALBARANCREDITO] = @ALBARANCREDITO, [ARTICULOSDIRECTOS] = @ARTICULOSDIRECTOS, [CODIGO] = @CODIGO, [CONREPER] = @CONREPER, [CONVENCIM] = @CONVENCIM, [DESCRIPCION] = @DESCRIPCION, [DESGLOSEPEDIDO] = @DESGLOSEPEDIDO, [ENVIARINVENTARIO] = @ENVIARINVENTARIO, [FACTURADIARIA] = @FACTURADIARIA, [GENERAALBARAN] = @GENERAALBARAN, [GENERAFACTURA] = @GENERAFACTURA, [IVAINCLUIDO] = @IVAINCLUIDO, [PEDIDOMANUAL] = @PEDIDOMANUAL, [RECIBECOMPRAS] = @RECIBECOMPRAS, [RECIBETICKETS] = @RECIBETICKETS, [SERIEALBARAN] = @SERIEALBARAN, [SERIEALBCREDITO] = @SERIEALBCREDITO, [SERIECOMPRAS] = @SERIECOMPRAS, [SERIEDESTINO] = @SERIEDESTINO, [SERIEFACTURA] = @SERIEFACTURA, [SERIEPEDIDO] = @SERIEPEDIDO, [TIPOCONTALBARAN] = @TIPOCONTALBARAN, [TIPOCONTALBCREDITO] = @TIPOCONTALBCREDITO, [TIPOCONTCOMPRAS] = @TIPOCONTCOMPRAS, [TIPOCONTDESTINO] = @TIPOCONTDESTINO, [TIPOCONTFACTURA] = @TIPOCONTFACTURA, [TIPOCONTPEDIDO] = @TIPOCONTPEDIDO, [TIPODOCUDESTINO] = @TIPODOCUDESTINO WHERE (((@IsNull_ALBARANCREDITO = 1 AND [ALBARANCREDITO] IS NULL) OR ([ALBARANCREDITO] = @Original_ALBARANCREDITO)) AND ((@IsNull_ARTICULOSDIRECTOS = 1 AND [ARTICULOSDIRECTOS] IS NULL) OR ([ARTICULOSDIRECTOS] = @Original_ARTICULOSDIRECTOS)) AND ([CODIGO] = @Original_CODIGO) AND ((@IsNull_CONREPER = 1 AND [CONREPER] IS NULL) OR ([CONREPER] = @Original_CONREPER)) AND ((@IsNull_CONVENCIM = 1 AND [CONVENCIM] IS NULL) OR ([CONVENCIM] = @Original_CONVENCIM)) AND ((@IsNull_DESCRIPCION = 1 AND [DESCRIPCION] IS NULL) OR ([DESCRIPCION] = @Original_DESCRIPCION)) AND ((@IsNull_DESGLOSEPEDIDO = 1 AND [DESGLOSEPEDIDO] IS NULL) OR ([DESGLOSEPEDIDO] = @Original_DESGLOSEPEDIDO)) AND ((@IsNull_ENVIARINVENTARIO = 1 AND [ENVIARINVENTARIO] IS NULL) OR ([ENVIARINVENTARIO] = @Original_ENVIARINVENTARIO)) AND ((@IsNull_FACTURADIARIA = 1 AND [FACTURADIARIA] IS NULL) OR ([FACTURADIARIA] = @Original_FACTURADIARIA)) AND ((@IsNull_GENERAALBARAN = 1 AND [GENERAALBARAN] IS NULL) OR ([GENERAALBARAN] = @Original_GENERAALBARAN)) AND ((@IsNull_GENERAFACTURA = 1 AND [GENERAFACTURA] IS NULL) OR ([GENERAFACTURA] = @Original_GENERAFACTURA)) AND ((@IsNull_IVAINCLUIDO = 1 AND [IVAINCLUIDO] IS NULL) OR ([IVAINCLUIDO] = @Original_IVAINCLUIDO)) AND ((@IsNull_PEDIDOMANUAL = 1 AND [PEDIDOMANUAL] IS NULL) OR ([PEDIDOMANUAL] = @Original_PEDIDOMANUAL)) AND ((@IsNull_RECIBECOMPRAS = 1 AND [RECIBECOMPRAS] IS NULL) OR ([RECIBECOMPRAS] = @Original_RECIBECOMPRAS)) AND ((@IsNull_RECIBETICKETS = 1 AND [RECIBETICKETS] IS NULL) OR ([RECIBETICKETS] = @Original_RECIBETICKETS)) AND ((@IsNull_SERIEALBARAN = 1 AND [SERIEALBARAN] IS NULL) OR ([SERIEALBARAN] = @Original_SERIEALBARAN)) AND ((@IsNull_SERIEALBCREDITO = 1 AND [SERIEALBCREDITO] IS NULL) OR ([SERIEALBCREDITO] = @Original_SERIEALBCREDITO)) AND ((@IsNull_SERIECOMPRAS = 1 AND [SERIECOMPRAS] IS NULL) OR ([SERIECOMPRAS] = @Original_SERIECOMPRAS)) AND ((@IsNull_SERIEDESTINO = 1 AND [SERIEDESTINO] IS NULL) OR ([SERIEDESTINO] = @Original_SERIEDESTINO)) AND ((@IsNull_SERIEFACTURA = 1 AND [SERIEFACTURA] IS NULL) OR ([SERIEFACTURA] = @Original_SERIEFACTURA)) AND ((@IsNull_SERIEPEDIDO = 1 AND [SERIEPEDIDO] IS NULL) OR ([SERIEPEDIDO] = @Original_SERIEPEDIDO)) AND ((@IsNull_TIPOCONTALBARAN = 1 AND [TIPOCONTALBARAN] IS NULL) OR ([TIPOCONTALBARAN] = @Original_TIPOCONTALBARAN)) AND ((@IsNull_TIPOCONTALBCREDITO = 1 AND [TIPOCONTALBCREDITO] IS NULL) OR ([TIPOCONTALBCREDITO] = @Original_TIPOCONTALBCREDITO)) AND ((@IsNull_TIPOCONTCOMPRAS = 1 AND [TIPOCONTCOMPRAS] IS NULL) OR ([TIPOCONTCOMPRAS] = @Original_TIPOCONTCOMPRAS)) AND ((@IsNull_TIPOCONTDESTINO = 1 AND [TIPOCONTDESTINO] IS NULL) OR ([TIPOCONTDESTINO] = @Original_TIPOCONTDESTINO)) AND ((@IsNull_TIPOCONTFACTURA = 1 AND [TIPOCONTFACTURA] IS NULL) OR ([TIPOCONTFACTURA] = @Original_TIPOCONTFACTURA)) AND ((@IsNull_TIPOCONTPEDIDO = 1 AND [TIPOCONTPEDIDO] IS NULL) OR ([TIPOCONTPEDIDO] = @Original_TIPOCONTPEDIDO)) AND ((@IsNull_TIPODOCUDESTINO = 1 AND [TIPODOCUDESTINO] IS NULL) OR ([TIPODOCUDESTINO] = @Original_TIPODOCUDESTINO)));
+SELECT ALBARANCREDITO, ARTICULOSDIRECTOS, CODIGO, CONREPER, CONVENCIM, DESCRIPCION, DESGLOSEPEDIDO, ENVIARINVENTARIO, FACTURADIARIA, GENERAALBARAN, GENERAFACTURA, IVAINCLUIDO, PEDIDOMANUAL, RECIBECOMPRAS, RECIBETICKETS, SERIEALBARAN, SERIEALBCREDITO, SERIECOMPRAS, SERIEDESTINO, SERIEFACTURA, SERIEPEDIDO, TIPOCONTALBARAN, TIPOCONTALBCREDITO, TIPOCONTCOMPRAS, TIPOCONTDESTINO, TIPOCONTFACTURA, TIPOCONTPEDIDO, TIPODOCUDESTINO FROM IDA_TIPOSTIENDA WHERE (CODIGO = @CODIGO)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ALBARANCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ALBARANCREDITO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ARTICULOSDIRECTOS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ARTICULOSDIRECTOS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CODIGO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CODIGO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CONREPER" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONREPER" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@CONVENCIM" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONVENCIM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DESCRIPCION" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRIPCION" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@DESGLOSEPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESGLOSEPEDIDO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ENVIARINVENTARIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ENVIARINVENTARIO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@FACTURADIARIA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FACTURADIARIA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GENERAALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENERAALBARAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@GENERAFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENERAFACTURA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@IVAINCLUIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IVAINCLUIDO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@PEDIDOMANUAL" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PEDIDOMANUAL" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RECIBECOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RECIBECOMPRAS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@RECIBETICKETS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RECIBETICKETS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIEALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEALBARAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIEALBCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEALBCREDITO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIECOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIECOMPRAS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIEDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEDESTINO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIEFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEFACTURA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@SERIEPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEPEDIDO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTALBARAN" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTALBCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTALBCREDITO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTCOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTCOMPRAS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTDESTINO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTFACTURA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPOCONTPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTPEDIDO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@TIPODOCUDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPODOCUDESTINO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ALBARANCREDITO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ALBARANCREDITO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ALBARANCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ALBARANCREDITO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ARTICULOSDIRECTOS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ARTICULOSDIRECTOS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ARTICULOSDIRECTOS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ARTICULOSDIRECTOS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CODIGO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CODIGO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CONREPER" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CONREPER" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CONREPER" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONREPER" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_CONVENCIM" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="CONVENCIM" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_CONVENCIM" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="CONVENCIM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DESCRIPCION" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DESCRIPCION" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DESCRIPCION" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRIPCION" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DESGLOSEPEDIDO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DESGLOSEPEDIDO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_DESGLOSEPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESGLOSEPEDIDO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_ENVIARINVENTARIO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="ENVIARINVENTARIO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ENVIARINVENTARIO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ENVIARINVENTARIO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_FACTURADIARIA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="FACTURADIARIA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_FACTURADIARIA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="FACTURADIARIA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GENERAALBARAN" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GENERAALBARAN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GENERAALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENERAALBARAN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GENERAFACTURA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GENERAFACTURA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_GENERAFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="GENERAFACTURA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IVAINCLUIDO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IVAINCLUIDO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_IVAINCLUIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="IVAINCLUIDO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_PEDIDOMANUAL" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="PEDIDOMANUAL" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_PEDIDOMANUAL" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="PEDIDOMANUAL" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RECIBECOMPRAS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RECIBECOMPRAS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RECIBECOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RECIBECOMPRAS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_RECIBETICKETS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="RECIBETICKETS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_RECIBETICKETS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="RECIBETICKETS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIEALBARAN" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIEALBARAN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIEALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEALBARAN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIEALBCREDITO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIEALBCREDITO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIEALBCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEALBCREDITO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIECOMPRAS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIECOMPRAS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIECOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIECOMPRAS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIEDESTINO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIEDESTINO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIEDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEDESTINO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIEFACTURA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIEFACTURA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIEFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEFACTURA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SERIEPEDIDO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SERIEPEDIDO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_SERIEPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="SERIEPEDIDO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTALBARAN" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTALBARAN" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTALBARAN" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTALBARAN" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTALBCREDITO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTALBCREDITO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTALBCREDITO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTALBCREDITO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTCOMPRAS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTCOMPRAS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTCOMPRAS" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTCOMPRAS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTDESTINO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTDESTINO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTDESTINO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTFACTURA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTFACTURA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTFACTURA" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTFACTURA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPOCONTPEDIDO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPOCONTPEDIDO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPOCONTPEDIDO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPOCONTPEDIDO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_TIPODOCUDESTINO" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="TIPODOCUDESTINO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_TIPODOCUDESTINO" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="TIPODOCUDESTINO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ALBARANCREDITO" DataSetColumn="ALBARANCREDITO" />
+              <Mapping SourceColumn="ARTICULOSDIRECTOS" DataSetColumn="ARTICULOSDIRECTOS" />
+              <Mapping SourceColumn="CODIGO" DataSetColumn="CODIGO" />
+              <Mapping SourceColumn="CONREPER" DataSetColumn="CONREPER" />
+              <Mapping SourceColumn="CONVENCIM" DataSetColumn="CONVENCIM" />
+              <Mapping SourceColumn="DESCRIPCION" DataSetColumn="DESCRIPCION" />
+              <Mapping SourceColumn="DESGLOSEPEDIDO" DataSetColumn="DESGLOSEPEDIDO" />
+              <Mapping SourceColumn="ENVIARINVENTARIO" DataSetColumn="ENVIARINVENTARIO" />
+              <Mapping SourceColumn="FACTURADIARIA" DataSetColumn="FACTURADIARIA" />
+              <Mapping SourceColumn="GENERAALBARAN" DataSetColumn="GENERAALBARAN" />
+              <Mapping SourceColumn="GENERAFACTURA" DataSetColumn="GENERAFACTURA" />
+              <Mapping SourceColumn="IVAINCLUIDO" DataSetColumn="IVAINCLUIDO" />
+              <Mapping SourceColumn="PEDIDOMANUAL" DataSetColumn="PEDIDOMANUAL" />
+              <Mapping SourceColumn="RECIBECOMPRAS" DataSetColumn="RECIBECOMPRAS" />
+              <Mapping SourceColumn="RECIBETICKETS" DataSetColumn="RECIBETICKETS" />
+              <Mapping SourceColumn="SERIEALBARAN" DataSetColumn="SERIEALBARAN" />
+              <Mapping SourceColumn="SERIEALBCREDITO" DataSetColumn="SERIEALBCREDITO" />
+              <Mapping SourceColumn="SERIECOMPRAS" DataSetColumn="SERIECOMPRAS" />
+              <Mapping SourceColumn="SERIEDESTINO" DataSetColumn="SERIEDESTINO" />
+              <Mapping SourceColumn="SERIEFACTURA" DataSetColumn="SERIEFACTURA" />
+              <Mapping SourceColumn="SERIEPEDIDO" DataSetColumn="SERIEPEDIDO" />
+              <Mapping SourceColumn="TIPOCONTALBARAN" DataSetColumn="TIPOCONTALBARAN" />
+              <Mapping SourceColumn="TIPOCONTALBCREDITO" DataSetColumn="TIPOCONTALBCREDITO" />
+              <Mapping SourceColumn="TIPOCONTCOMPRAS" DataSetColumn="TIPOCONTCOMPRAS" />
+              <Mapping SourceColumn="TIPOCONTDESTINO" DataSetColumn="TIPOCONTDESTINO" />
+              <Mapping SourceColumn="TIPOCONTFACTURA" DataSetColumn="TIPOCONTFACTURA" />
+              <Mapping SourceColumn="TIPOCONTPEDIDO" DataSetColumn="TIPOCONTPEDIDO" />
+              <Mapping SourceColumn="TIPODOCUDESTINO" DataSetColumn="TIPODOCUDESTINO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsTiendas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTiendas" msprop:Generator_UserDSName="dsTiendas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TIENDAS" msprop:Generator_TableClassName="TIENDASDataTable" msprop:Generator_TableVarName="tableTIENDAS" msprop:Generator_TablePropName="TIENDAS" msprop:Generator_RowDeletingName="TIENDASRowDeleting" msprop:Generator_RowChangingName="TIENDASRowChanging" msprop:Generator_RowEvHandlerName="TIENDASRowChangeEventHandler" msprop:Generator_RowDeletedName="TIENDASRowDeleted" msprop:Generator_UserTableName="TIENDAS" msprop:Generator_RowChangedName="TIENDASRowChanged" msprop:Generator_RowEvArgName="TIENDASRowChangeEvent" msprop:Generator_RowClassName="TIENDASRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CODALM" msprop:Generator_ColumnVarNameInTable="columnCODALM" msprop:Generator_ColumnPropNameInRow="CODALM" msprop:Generator_ColumnPropNameInTable="CODALMColumn" msprop:Generator_UserColumnName="CODALM">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCALM" msprop:Generator_ColumnVarNameInTable="columnDESCALM" msprop:Generator_ColumnPropNameInRow="DESCALM" msprop:Generator_ColumnPropNameInTable="DESCALMColumn" msprop:Generator_UserColumnName="DESCALM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ALBARANCREDITO" msprop:Generator_ColumnVarNameInTable="columnALBARANCREDITO" msprop:Generator_ColumnPropNameInRow="ALBARANCREDITO" msprop:Generator_ColumnPropNameInTable="ALBARANCREDITOColumn" msprop:Generator_UserColumnName="ALBARANCREDITO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONREPER" msprop:Generator_ColumnVarNameInTable="columnCONREPER" msprop:Generator_ColumnPropNameInRow="CONREPER" msprop:Generator_ColumnPropNameInTable="CONREPERColumn" msprop:Generator_UserColumnName="CONREPER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONVENCIM" msprop:Generator_ColumnVarNameInTable="columnCONVENCIM" msprop:Generator_ColumnPropNameInRow="CONVENCIM" msprop:Generator_ColumnPropNameInTable="CONVENCIMColumn" msprop:Generator_UserColumnName="CONVENCIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_UserColumnName="DESCRIPCION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESGLOSEPEDIDO" msprop:Generator_ColumnVarNameInTable="columnDESGLOSEPEDIDO" msprop:Generator_ColumnPropNameInRow="DESGLOSEPEDIDO" msprop:Generator_ColumnPropNameInTable="DESGLOSEPEDIDOColumn" msprop:Generator_UserColumnName="DESGLOSEPEDIDO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENVIARINVENTARIO" msprop:Generator_ColumnVarNameInTable="columnENVIARINVENTARIO" msprop:Generator_ColumnPropNameInRow="ENVIARINVENTARIO" msprop:Generator_ColumnPropNameInTable="ENVIARINVENTARIOColumn" msprop:Generator_UserColumnName="ENVIARINVENTARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FACTURADIARIA" msprop:Generator_ColumnVarNameInTable="columnFACTURADIARIA" msprop:Generator_ColumnPropNameInRow="FACTURADIARIA" msprop:Generator_ColumnPropNameInTable="FACTURADIARIAColumn" msprop:Generator_UserColumnName="FACTURADIARIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GENERAALBARAN" msprop:Generator_ColumnVarNameInTable="columnGENERAALBARAN" msprop:Generator_ColumnPropNameInRow="GENERAALBARAN" msprop:Generator_ColumnPropNameInTable="GENERAALBARANColumn" msprop:Generator_UserColumnName="GENERAALBARAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GENERAFACTURA" msprop:Generator_ColumnVarNameInTable="columnGENERAFACTURA" msprop:Generator_ColumnPropNameInRow="GENERAFACTURA" msprop:Generator_ColumnPropNameInTable="GENERAFACTURAColumn" msprop:Generator_UserColumnName="GENERAFACTURA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PEDIDOMANUAL" msprop:Generator_ColumnVarNameInTable="columnPEDIDOMANUAL" msprop:Generator_ColumnPropNameInRow="PEDIDOMANUAL" msprop:Generator_ColumnPropNameInTable="PEDIDOMANUALColumn" msprop:Generator_UserColumnName="PEDIDOMANUAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RECIBECOMPRAS" msprop:Generator_ColumnVarNameInTable="columnRECIBECOMPRAS" msprop:Generator_ColumnPropNameInRow="RECIBECOMPRAS" msprop:Generator_ColumnPropNameInTable="RECIBECOMPRASColumn" msprop:Generator_UserColumnName="RECIBECOMPRAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RECIBETICKETS" msprop:Generator_ColumnVarNameInTable="columnRECIBETICKETS" msprop:Generator_ColumnPropNameInRow="RECIBETICKETS" msprop:Generator_ColumnPropNameInTable="RECIBETICKETSColumn" msprop:Generator_UserColumnName="RECIBETICKETS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEALBARAN" msprop:Generator_ColumnVarNameInTable="columnSERIEALBARAN" msprop:Generator_ColumnPropNameInRow="SERIEALBARAN" msprop:Generator_ColumnPropNameInTable="SERIEALBARANColumn" msprop:Generator_UserColumnName="SERIEALBARAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEALBCREDITO" msprop:Generator_ColumnVarNameInTable="columnSERIEALBCREDITO" msprop:Generator_ColumnPropNameInRow="SERIEALBCREDITO" msprop:Generator_ColumnPropNameInTable="SERIEALBCREDITOColumn" msprop:Generator_UserColumnName="SERIEALBCREDITO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIECOMPRAS" msprop:Generator_ColumnVarNameInTable="columnSERIECOMPRAS" msprop:Generator_ColumnPropNameInRow="SERIECOMPRAS" msprop:Generator_ColumnPropNameInTable="SERIECOMPRASColumn" msprop:Generator_UserColumnName="SERIECOMPRAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEDESTINO" msprop:Generator_ColumnVarNameInTable="columnSERIEDESTINO" msprop:Generator_ColumnPropNameInRow="SERIEDESTINO" msprop:Generator_ColumnPropNameInTable="SERIEDESTINOColumn" msprop:Generator_UserColumnName="SERIEDESTINO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEFACTURA" msprop:Generator_ColumnVarNameInTable="columnSERIEFACTURA" msprop:Generator_ColumnPropNameInRow="SERIEFACTURA" msprop:Generator_ColumnPropNameInTable="SERIEFACTURAColumn" msprop:Generator_UserColumnName="SERIEFACTURA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEPEDIDO" msprop:Generator_ColumnVarNameInTable="columnSERIEPEDIDO" msprop:Generator_ColumnPropNameInRow="SERIEPEDIDO" msprop:Generator_ColumnPropNameInTable="SERIEPEDIDOColumn" msprop:Generator_UserColumnName="SERIEPEDIDO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTALBARAN" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTALBARAN" msprop:Generator_ColumnPropNameInRow="TIPOCONTALBARAN" msprop:Generator_ColumnPropNameInTable="TIPOCONTALBARANColumn" msprop:Generator_UserColumnName="TIPOCONTALBARAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTALBCREDITO" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTALBCREDITO" msprop:Generator_ColumnPropNameInRow="TIPOCONTALBCREDITO" msprop:Generator_ColumnPropNameInTable="TIPOCONTALBCREDITOColumn" msprop:Generator_UserColumnName="TIPOCONTALBCREDITO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTCOMPRAS" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTCOMPRAS" msprop:Generator_ColumnPropNameInRow="TIPOCONTCOMPRAS" msprop:Generator_ColumnPropNameInTable="TIPOCONTCOMPRASColumn" msprop:Generator_UserColumnName="TIPOCONTCOMPRAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTDESTINO" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTDESTINO" msprop:Generator_ColumnPropNameInRow="TIPOCONTDESTINO" msprop:Generator_ColumnPropNameInTable="TIPOCONTDESTINOColumn" msprop:Generator_UserColumnName="TIPOCONTDESTINO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTFACTURA" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTFACTURA" msprop:Generator_ColumnPropNameInRow="TIPOCONTFACTURA" msprop:Generator_ColumnPropNameInTable="TIPOCONTFACTURAColumn" msprop:Generator_UserColumnName="TIPOCONTFACTURA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTPEDIDO" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTPEDIDO" msprop:Generator_ColumnPropNameInRow="TIPOCONTPEDIDO" msprop:Generator_ColumnPropNameInTable="TIPOCONTPEDIDOColumn" msprop:Generator_UserColumnName="TIPOCONTPEDIDO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CODCLI" msprop:Generator_ColumnVarNameInTable="columnIDA_CODCLI" msprop:Generator_ColumnPropNameInRow="IDA_CODCLI" msprop:Generator_ColumnPropNameInTable="IDA_CODCLIColumn" msprop:Generator_UserColumnName="IDA_CODCLI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_DESCDEPOSITO" msprop:Generator_ColumnVarNameInTable="columnIDA_DESCDEPOSITO" msprop:Generator_ColumnPropNameInRow="IDA_DESCDEPOSITO" msprop:Generator_ColumnPropNameInTable="IDA_DESCDEPOSITOColumn" msprop:Generator_UserColumnName="IDA_DESCDEPOSITO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IDA_TIPOTIENDA" msprop:Generator_ColumnVarNameInTable="columnIDA_TIPOTIENDA" msprop:Generator_ColumnPropNameInRow="IDA_TIPOTIENDA" msprop:Generator_ColumnPropNameInTable="IDA_TIPOTIENDAColumn" msprop:Generator_UserColumnName="IDA_TIPOTIENDA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_COMUNICACION" msprop:Generator_ColumnVarNameInTable="columnIDA_COMUNICACION" msprop:Generator_ColumnPropNameInRow="IDA_COMUNICACION" msprop:Generator_ColumnPropNameInTable="IDA_COMUNICACIONColumn" msprop:Generator_UserColumnName="IDA_COMUNICACION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTAABONOENVASES" msprop:Generator_ColumnVarNameInTable="columnIDA_CTAABONOENVASES" msprop:Generator_ColumnPropNameInRow="IDA_CTAABONOENVASES" msprop:Generator_ColumnPropNameInTable="IDA_CTAABONOENVASESColumn" msprop:Generator_UserColumnName="IDA_CTAABONOENVASES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTACOBROSCLIENTE" msprop:Generator_ColumnVarNameInTable="columnIDA_CTACOBROSCLIENTE" msprop:Generator_ColumnPropNameInRow="IDA_CTACOBROSCLIENTE" msprop:Generator_ColumnPropNameInTable="IDA_CTACOBROSCLIENTEColumn" msprop:Generator_UserColumnName="IDA_CTACOBROSCLIENTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTAEFECTIVO" msprop:Generator_ColumnVarNameInTable="columnIDA_CTAEFECTIVO" msprop:Generator_ColumnPropNameInRow="IDA_CTAEFECTIVO" msprop:Generator_ColumnPropNameInTable="IDA_CTAEFECTIVOColumn" msprop:Generator_UserColumnName="IDA_CTAEFECTIVO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTAPAGOSPROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnIDA_CTAPAGOSPROVEEDOR" msprop:Generator_ColumnPropNameInRow="IDA_CTAPAGOSPROVEEDOR" msprop:Generator_ColumnPropNameInTable="IDA_CTAPAGOSPROVEEDORColumn" msprop:Generator_UserColumnName="IDA_CTAPAGOSPROVEEDOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTAPENDIENTECOBRO" msprop:Generator_ColumnVarNameInTable="columnIDA_CTAPENDIENTECOBRO" msprop:Generator_ColumnPropNameInRow="IDA_CTAPENDIENTECOBRO" msprop:Generator_ColumnPropNameInTable="IDA_CTAPENDIENTECOBROColumn" msprop:Generator_UserColumnName="IDA_CTAPENDIENTECOBRO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTATALON" msprop:Generator_ColumnVarNameInTable="columnIDA_CTATALON" msprop:Generator_ColumnPropNameInRow="IDA_CTATALON" msprop:Generator_ColumnPropNameInTable="IDA_CTATALONColumn" msprop:Generator_UserColumnName="IDA_CTATALON" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTATARJETA" msprop:Generator_ColumnVarNameInTable="columnIDA_CTATARJETA" msprop:Generator_ColumnPropNameInRow="IDA_CTATARJETA" msprop:Generator_ColumnPropNameInTable="IDA_CTATARJETAColumn" msprop:Generator_UserColumnName="IDA_CTATARJETA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTAVALESCOBRADOS" msprop:Generator_ColumnVarNameInTable="columnIDA_CTAVALESCOBRADOS" msprop:Generator_ColumnPropNameInRow="IDA_CTAVALESCOBRADOS" msprop:Generator_ColumnPropNameInTable="IDA_CTAVALESCOBRADOSColumn" msprop:Generator_UserColumnName="IDA_CTAVALESCOBRADOS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTAVALESPROPIOS" msprop:Generator_ColumnVarNameInTable="columnIDA_CTAVALESPROPIOS" msprop:Generator_ColumnPropNameInRow="IDA_CTAVALESPROPIOS" msprop:Generator_ColumnPropNameInTable="IDA_CTAVALESPROPIOSColumn" msprop:Generator_UserColumnName="IDA_CTAVALESPROPIOS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTAVALESPROVEEDOR" msprop:Generator_ColumnVarNameInTable="columnIDA_CTAVALESPROVEEDOR" msprop:Generator_ColumnPropNameInRow="IDA_CTAVALESPROVEEDOR" msprop:Generator_ColumnPropNameInTable="IDA_CTAVALESPROVEEDORColumn" msprop:Generator_UserColumnName="IDA_CTAVALESPROVEEDOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_TIPOTERMINAL" msprop:Generator_ColumnVarNameInTable="columnIDA_TIPOTERMINAL" msprop:Generator_ColumnPropNameInRow="IDA_TIPOTERMINAL" msprop:Generator_ColumnPropNameInTable="IDA_TIPOTERMINALColumn" msprop:Generator_UserColumnName="IDA_TIPOTERMINAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IVAINCLUIDO" msprop:Generator_ColumnVarNameInTable="columnIVAINCLUIDO" msprop:Generator_ColumnPropNameInRow="IVAINCLUIDO" msprop:Generator_ColumnPropNameInTable="IVAINCLUIDOColumn" msprop:Generator_UserColumnName="IVAINCLUIDO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TARIFA" msprop:Generator_ColumnVarNameInTable="columnTARIFA" msprop:Generator_ColumnPropNameInRow="TARIFA" msprop:Generator_ColumnPropNameInTable="TARIFAColumn" msprop:Generator_UserColumnName="TARIFA" type="xs:string" minOccurs="0" />
+              <xs:element name="CENTROCOSTE" msprop:Generator_ColumnVarNameInTable="columnCENTROCOSTE" msprop:Generator_ColumnPropNameInRow="CENTROCOSTE" msprop:Generator_ColumnPropNameInTable="CENTROCOSTEColumn" msprop:Generator_UserColumnName="CENTROCOSTE" type="xs:string" minOccurs="0" />
+              <xs:element name="INTEXT" msprop:Generator_ColumnVarNameInTable="columnINTEXT" msprop:Generator_ColumnPropNameInRow="INTEXT" msprop:Generator_ColumnPropNameInTable="INTEXTColumn" msprop:Generator_UserColumnName="INTEXT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPODOCUDESTINO" msprop:Generator_ColumnVarNameInTable="columnTIPODOCUDESTINO" msprop:Generator_ColumnPropNameInRow="TIPODOCUDESTINO" msprop:Generator_ColumnPropNameInTable="TIPODOCUDESTINOColumn" msprop:Generator_UserColumnName="TIPODOCUDESTINO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AVISO0" msprop:Generator_ColumnVarNameInTable="columnAVISO0" msprop:Generator_ColumnPropNameInRow="AVISO0" msprop:Generator_ColumnPropNameInTable="AVISO0Column" msprop:Generator_UserColumnName="AVISO0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AVISOMAX" msprop:Generator_ColumnVarNameInTable="columnAVISOMAX" msprop:Generator_ColumnPropNameInRow="AVISOMAX" msprop:Generator_ColumnPropNameInTable="AVISOMAXColumn" msprop:Generator_UserColumnName="AVISOMAX" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AVISOMIN" msprop:Generator_ColumnVarNameInTable="columnAVISOMIN" msprop:Generator_ColumnPropNameInRow="AVISOMIN" msprop:Generator_ColumnPropNameInTable="AVISOMINColumn" msprop:Generator_UserColumnName="AVISOMIN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AVISOSTOCKPREVISTO0" msprop:Generator_ColumnVarNameInTable="columnAVISOSTOCKPREVISTO0" msprop:Generator_ColumnPropNameInRow="AVISOSTOCKPREVISTO0" msprop:Generator_ColumnPropNameInTable="AVISOSTOCKPREVISTO0Column" msprop:Generator_UserColumnName="AVISOSTOCKPREVISTO0" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AVISOSTOCKPREVISTOMAX" msprop:Generator_ColumnVarNameInTable="columnAVISOSTOCKPREVISTOMAX" msprop:Generator_ColumnPropNameInRow="AVISOSTOCKPREVISTOMAX" msprop:Generator_ColumnPropNameInTable="AVISOSTOCKPREVISTOMAXColumn" msprop:Generator_UserColumnName="AVISOSTOCKPREVISTOMAX" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AVISOSTOCKPREVISTOMIN" msprop:Generator_ColumnVarNameInTable="columnAVISOSTOCKPREVISTOMIN" msprop:Generator_ColumnPropNameInRow="AVISOSTOCKPREVISTOMIN" msprop:Generator_ColumnPropNameInTable="AVISOSTOCKPREVISTOMINColumn" msprop:Generator_UserColumnName="AVISOSTOCKPREVISTOMIN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CIM" msprop:Generator_ColumnVarNameInTable="columnCIM" msprop:Generator_ColumnPropNameInRow="CIM" msprop:Generator_ColumnPropNameInTable="CIMColumn" msprop:Generator_UserColumnName="CIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODGRUPOALMACEN" msprop:Generator_ColumnVarNameInTable="columnCODGRUPOALMACEN" msprop:Generator_ColumnPropNameInRow="CODGRUPOALMACEN" msprop:Generator_ColumnPropNameInTable="CODGRUPOALMACENColumn" msprop:Generator_UserColumnName="CODGRUPOALMACEN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODPAIS" msprop:Generator_ColumnVarNameInTable="columnCODPAIS" msprop:Generator_ColumnPropNameInRow="CODPAIS" msprop:Generator_ColumnPropNameInTable="CODPAISColumn" msprop:Generator_UserColumnName="CODPAIS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODPROVI" msprop:Generator_ColumnVarNameInTable="columnCODPROVI" msprop:Generator_ColumnPropNameInRow="CODPROVI" msprop:Generator_ColumnPropNameInTable="CODPROVIColumn" msprop:Generator_UserColumnName="CODPROVI" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIRALM" msprop:Generator_ColumnVarNameInTable="columnDIRALM" msprop:Generator_ColumnPropNameInRow="DIRALM" msprop:Generator_ColumnPropNameInTable="DIRALMColumn" msprop:Generator_UserColumnName="DIRALM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DTOALM" msprop:Generator_ColumnVarNameInTable="columnDTOALM" msprop:Generator_ColumnPropNameInRow="DTOALM" msprop:Generator_ColumnPropNameInTable="DTOALMColumn" msprop:Generator_UserColumnName="DTOALM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="E_MAIL" msprop:Generator_ColumnVarNameInTable="columnE_MAIL" msprop:Generator_ColumnPropNameInRow="E_MAIL" msprop:Generator_ColumnPropNameInTable="E_MAILColumn" msprop:Generator_UserColumnName="E_MAIL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENCARGADO" msprop:Generator_ColumnVarNameInTable="columnENCARGADO" msprop:Generator_ColumnPropNameInRow="ENCARGADO" msprop:Generator_ColumnPropNameInTable="ENCARGADOColumn" msprop:Generator_UserColumnName="ENCARGADO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FAXALM" msprop:Generator_ColumnVarNameInTable="columnFAXALM" msprop:Generator_ColumnPropNameInRow="FAXALM" msprop:Generator_ColumnPropNameInTable="FAXALMColumn" msprop:Generator_UserColumnName="FAXALM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OBSALM" msprop:Generator_ColumnVarNameInTable="columnOBSALM" msprop:Generator_ColumnPropNameInRow="OBSALM" msprop:Generator_ColumnPropNameInTable="OBSALMColumn" msprop:Generator_UserColumnName="OBSALM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POBALM" msprop:Generator_ColumnVarNameInTable="columnPOBALM" msprop:Generator_ColumnPropNameInRow="POBALM" msprop:Generator_ColumnPropNameInTable="POBALMColumn" msprop:Generator_UserColumnName="POBALM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STOCKNEG" msprop:Generator_ColumnVarNameInTable="columnSTOCKNEG" msprop:Generator_ColumnPropNameInRow="STOCKNEG" msprop:Generator_ColumnPropNameInTable="STOCKNEGColumn" msprop:Generator_UserColumnName="STOCKNEG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TEL2ALM" msprop:Generator_ColumnVarNameInTable="columnTEL2ALM" msprop:Generator_ColumnPropNameInRow="TEL2ALM" msprop:Generator_ColumnPropNameInTable="TEL2ALMColumn" msprop:Generator_UserColumnName="TEL2ALM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TELALM" msprop:Generator_ColumnVarNameInTable="columnTELALM" msprop:Generator_ColumnPropNameInRow="TELALM" msprop:Generator_ColumnPropNameInTable="TELALMColumn" msprop:Generator_UserColumnName="TELALM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CODCLIPED" msprop:Generator_ColumnVarNameInTable="columnIDA_CODCLIPED" msprop:Generator_ColumnPropNameInRow="IDA_CODCLIPED" msprop:Generator_ColumnPropNameInTable="IDA_CODCLIPEDColumn" msprop:Generator_UserColumnName="IDA_CODCLIPED" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ARTICULOSDIRECTOS" msprop:Generator_ColumnVarNameInTable="columnARTICULOSDIRECTOS" msprop:Generator_ColumnPropNameInRow="ARTICULOSDIRECTOS" msprop:Generator_ColumnPropNameInTable="ARTICULOSDIRECTOSColumn" msprop:Generator_UserColumnName="ARTICULOSDIRECTOS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTABANCO" msprop:Generator_ColumnVarNameInTable="columnIDA_CTABANCO" msprop:Generator_ColumnPropNameInRow="IDA_CTABANCO" msprop:Generator_ColumnPropNameInTable="IDA_CTABANCOColumn" msprop:Generator_UserColumnName="IDA_CTABANCO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_CTAVALESCLIENTE" msprop:Generator_ColumnVarNameInTable="columnIDA_CTAVALESCLIENTE" msprop:Generator_ColumnPropNameInRow="IDA_CTAVALESCLIENTE" msprop:Generator_ColumnPropNameInTable="IDA_CTAVALESCLIENTEColumn" msprop:Generator_UserColumnName="IDA_CTAVALESCLIENTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_SERIEFRA1" msprop:Generator_ColumnVarNameInTable="columnIDA_SERIEFRA1" msprop:Generator_ColumnPropNameInRow="IDA_SERIEFRA1" msprop:Generator_ColumnPropNameInTable="IDA_SERIEFRA1Column" msprop:Generator_UserColumnName="IDA_SERIEFRA1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_SERIEFRA2" msprop:Generator_ColumnVarNameInTable="columnIDA_SERIEFRA2" msprop:Generator_ColumnPropNameInRow="IDA_SERIEFRA2" msprop:Generator_ColumnPropNameInTable="IDA_SERIEFRA2Column" msprop:Generator_UserColumnName="IDA_SERIEFRA2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_TIPOCONTFRA1" msprop:Generator_ColumnVarNameInTable="columnIDA_TIPOCONTFRA1" msprop:Generator_ColumnPropNameInRow="IDA_TIPOCONTFRA1" msprop:Generator_ColumnPropNameInTable="IDA_TIPOCONTFRA1Column" msprop:Generator_UserColumnName="IDA_TIPOCONTFRA1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IDA_TIPOCONTFRA2" msprop:Generator_ColumnVarNameInTable="columnIDA_TIPOCONTFRA2" msprop:Generator_ColumnPropNameInRow="IDA_TIPOCONTFRA2" msprop:Generator_ColumnPropNameInTable="IDA_TIPOCONTFRA2Column" msprop:Generator_UserColumnName="IDA_TIPOCONTFRA2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IDA_TIPOSTIENDA" msprop:Generator_TableClassName="IDA_TIPOSTIENDADataTable" msprop:Generator_TableVarName="tableIDA_TIPOSTIENDA" msprop:Generator_TablePropName="IDA_TIPOSTIENDA" msprop:Generator_RowDeletingName="IDA_TIPOSTIENDARowDeleting" msprop:Generator_RowChangingName="IDA_TIPOSTIENDARowChanging" msprop:Generator_RowEvHandlerName="IDA_TIPOSTIENDARowChangeEventHandler" msprop:Generator_RowDeletedName="IDA_TIPOSTIENDARowDeleted" msprop:Generator_UserTableName="IDA_TIPOSTIENDA" msprop:Generator_RowChangedName="IDA_TIPOSTIENDARowChanged" msprop:Generator_RowEvArgName="IDA_TIPOSTIENDARowChangeEvent" msprop:Generator_RowClassName="IDA_TIPOSTIENDARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ALBARANCREDITO" msprop:Generator_ColumnVarNameInTable="columnALBARANCREDITO" msprop:Generator_ColumnPropNameInRow="ALBARANCREDITO" msprop:Generator_ColumnPropNameInTable="ALBARANCREDITOColumn" msprop:Generator_UserColumnName="ALBARANCREDITO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ARTICULOSDIRECTOS" msprop:Generator_ColumnVarNameInTable="columnARTICULOSDIRECTOS" msprop:Generator_ColumnPropNameInRow="ARTICULOSDIRECTOS" msprop:Generator_ColumnPropNameInTable="ARTICULOSDIRECTOSColumn" msprop:Generator_UserColumnName="ARTICULOSDIRECTOS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO" msprop:Generator_ColumnVarNameInTable="columnCODIGO" msprop:Generator_ColumnPropNameInRow="CODIGO" msprop:Generator_ColumnPropNameInTable="CODIGOColumn" msprop:Generator_UserColumnName="CODIGO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONREPER" msprop:Generator_ColumnVarNameInTable="columnCONREPER" msprop:Generator_ColumnPropNameInRow="CONREPER" msprop:Generator_ColumnPropNameInTable="CONREPERColumn" msprop:Generator_UserColumnName="CONREPER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CONVENCIM" msprop:Generator_ColumnVarNameInTable="columnCONVENCIM" msprop:Generator_ColumnPropNameInRow="CONVENCIM" msprop:Generator_ColumnPropNameInTable="CONVENCIMColumn" msprop:Generator_UserColumnName="CONVENCIM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPCION" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION" msprop:Generator_ColumnPropNameInRow="DESCRIPCION" msprop:Generator_ColumnPropNameInTable="DESCRIPCIONColumn" msprop:Generator_UserColumnName="DESCRIPCION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESGLOSEPEDIDO" msprop:Generator_ColumnVarNameInTable="columnDESGLOSEPEDIDO" msprop:Generator_ColumnPropNameInRow="DESGLOSEPEDIDO" msprop:Generator_ColumnPropNameInTable="DESGLOSEPEDIDOColumn" msprop:Generator_UserColumnName="DESGLOSEPEDIDO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ENVIARINVENTARIO" msprop:Generator_ColumnVarNameInTable="columnENVIARINVENTARIO" msprop:Generator_ColumnPropNameInRow="ENVIARINVENTARIO" msprop:Generator_ColumnPropNameInTable="ENVIARINVENTARIOColumn" msprop:Generator_UserColumnName="ENVIARINVENTARIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FACTURADIARIA" msprop:Generator_ColumnVarNameInTable="columnFACTURADIARIA" msprop:Generator_ColumnPropNameInRow="FACTURADIARIA" msprop:Generator_ColumnPropNameInTable="FACTURADIARIAColumn" msprop:Generator_UserColumnName="FACTURADIARIA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GENERAALBARAN" msprop:Generator_ColumnVarNameInTable="columnGENERAALBARAN" msprop:Generator_ColumnPropNameInRow="GENERAALBARAN" msprop:Generator_ColumnPropNameInTable="GENERAALBARANColumn" msprop:Generator_UserColumnName="GENERAALBARAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GENERAFACTURA" msprop:Generator_ColumnVarNameInTable="columnGENERAFACTURA" msprop:Generator_ColumnPropNameInRow="GENERAFACTURA" msprop:Generator_ColumnPropNameInTable="GENERAFACTURAColumn" msprop:Generator_UserColumnName="GENERAFACTURA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IVAINCLUIDO" msprop:Generator_ColumnVarNameInTable="columnIVAINCLUIDO" msprop:Generator_ColumnPropNameInRow="IVAINCLUIDO" msprop:Generator_ColumnPropNameInTable="IVAINCLUIDOColumn" msprop:Generator_UserColumnName="IVAINCLUIDO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PEDIDOMANUAL" msprop:Generator_ColumnVarNameInTable="columnPEDIDOMANUAL" msprop:Generator_ColumnPropNameInRow="PEDIDOMANUAL" msprop:Generator_ColumnPropNameInTable="PEDIDOMANUALColumn" msprop:Generator_UserColumnName="PEDIDOMANUAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RECIBECOMPRAS" msprop:Generator_ColumnVarNameInTable="columnRECIBECOMPRAS" msprop:Generator_ColumnPropNameInRow="RECIBECOMPRAS" msprop:Generator_ColumnPropNameInTable="RECIBECOMPRASColumn" msprop:Generator_UserColumnName="RECIBECOMPRAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RECIBETICKETS" msprop:Generator_ColumnVarNameInTable="columnRECIBETICKETS" msprop:Generator_ColumnPropNameInRow="RECIBETICKETS" msprop:Generator_ColumnPropNameInTable="RECIBETICKETSColumn" msprop:Generator_UserColumnName="RECIBETICKETS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEALBARAN" msprop:Generator_ColumnVarNameInTable="columnSERIEALBARAN" msprop:Generator_ColumnPropNameInRow="SERIEALBARAN" msprop:Generator_ColumnPropNameInTable="SERIEALBARANColumn" msprop:Generator_UserColumnName="SERIEALBARAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEALBCREDITO" msprop:Generator_ColumnVarNameInTable="columnSERIEALBCREDITO" msprop:Generator_ColumnPropNameInRow="SERIEALBCREDITO" msprop:Generator_ColumnPropNameInTable="SERIEALBCREDITOColumn" msprop:Generator_UserColumnName="SERIEALBCREDITO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIECOMPRAS" msprop:Generator_ColumnVarNameInTable="columnSERIECOMPRAS" msprop:Generator_ColumnPropNameInRow="SERIECOMPRAS" msprop:Generator_ColumnPropNameInTable="SERIECOMPRASColumn" msprop:Generator_UserColumnName="SERIECOMPRAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEDESTINO" msprop:Generator_ColumnVarNameInTable="columnSERIEDESTINO" msprop:Generator_ColumnPropNameInRow="SERIEDESTINO" msprop:Generator_ColumnPropNameInTable="SERIEDESTINOColumn" msprop:Generator_UserColumnName="SERIEDESTINO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEFACTURA" msprop:Generator_ColumnVarNameInTable="columnSERIEFACTURA" msprop:Generator_ColumnPropNameInRow="SERIEFACTURA" msprop:Generator_ColumnPropNameInTable="SERIEFACTURAColumn" msprop:Generator_UserColumnName="SERIEFACTURA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SERIEPEDIDO" msprop:Generator_ColumnVarNameInTable="columnSERIEPEDIDO" msprop:Generator_ColumnPropNameInRow="SERIEPEDIDO" msprop:Generator_ColumnPropNameInTable="SERIEPEDIDOColumn" msprop:Generator_UserColumnName="SERIEPEDIDO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTALBARAN" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTALBARAN" msprop:Generator_ColumnPropNameInRow="TIPOCONTALBARAN" msprop:Generator_ColumnPropNameInTable="TIPOCONTALBARANColumn" msprop:Generator_UserColumnName="TIPOCONTALBARAN" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTALBCREDITO" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTALBCREDITO" msprop:Generator_ColumnPropNameInRow="TIPOCONTALBCREDITO" msprop:Generator_ColumnPropNameInTable="TIPOCONTALBCREDITOColumn" msprop:Generator_UserColumnName="TIPOCONTALBCREDITO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTCOMPRAS" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTCOMPRAS" msprop:Generator_ColumnPropNameInRow="TIPOCONTCOMPRAS" msprop:Generator_ColumnPropNameInTable="TIPOCONTCOMPRASColumn" msprop:Generator_UserColumnName="TIPOCONTCOMPRAS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTDESTINO" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTDESTINO" msprop:Generator_ColumnPropNameInRow="TIPOCONTDESTINO" msprop:Generator_ColumnPropNameInTable="TIPOCONTDESTINOColumn" msprop:Generator_UserColumnName="TIPOCONTDESTINO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTFACTURA" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTFACTURA" msprop:Generator_ColumnPropNameInRow="TIPOCONTFACTURA" msprop:Generator_ColumnPropNameInTable="TIPOCONTFACTURAColumn" msprop:Generator_UserColumnName="TIPOCONTFACTURA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPOCONTPEDIDO" msprop:Generator_ColumnVarNameInTable="columnTIPOCONTPEDIDO" msprop:Generator_ColumnPropNameInRow="TIPOCONTPEDIDO" msprop:Generator_ColumnPropNameInTable="TIPOCONTPEDIDOColumn" msprop:Generator_UserColumnName="TIPOCONTPEDIDO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPODOCUDESTINO" msprop:Generator_ColumnVarNameInTable="columnTIPODOCUDESTINO" msprop:Generator_ColumnPropNameInRow="TIPODOCUDESTINO" msprop:Generator_ColumnPropNameInTable="TIPODOCUDESTINOColumn" msprop:Generator_UserColumnName="TIPODOCUDESTINO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TIENDAS" />
+      <xs:field xpath="mstns:CODALM" />
+    </xs:unique>
+    <xs:unique name="IDA_TIPOSTIENDA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:IDA_TIPOSTIENDA" />
+      <xs:field xpath="mstns:CODIGO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,2 @@
+Public Class InfListadoTarifas
+End Class

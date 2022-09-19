@@ -1,0 +1,2 @@
+--Aydara TPV  13.1.10
+ALTER TABLE CLIENTES ADD AlbaranCredito BIT
