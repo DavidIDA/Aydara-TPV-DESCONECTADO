@@ -80,7 +80,8 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\A3ERP;Initial Catalog=AydaraTPV;Persist Security Info=True;"& _ 
+            "User ID=sa;Password=Isl#Web2009;Connect Timeout=120")>  _
         Public Property CadenaConexion() As String
             Get
                 Return CType(Me("CadenaConexion"),String)
@@ -141,8 +142,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\A3ERP;Initial Catalog=AydaraTPV_araestetic;Persist Security"& _ 
-            " Info=True;User ID=sa;Password=Isl#Web2009;Connect Timeout=120")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\A3ERP;Initial Catalog=AydaraTPV;Persist Security Info=True;"& _ 
+            "User ID=sa;Password=Isl#Web2009;Connect Timeout=120")>  _
         Public ReadOnly Property AydaraTPVConnectionString() As String
             Get
                 Return CType(Me("AydaraTPVConnectionString"),String)
