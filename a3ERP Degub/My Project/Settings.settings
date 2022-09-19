@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="Empresa" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Solum</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Usuario" Type="System.String" Scope="User">
-      <Value Profile="(Default)">sa</Value>
+      <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Password" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Isl#Web2009</Value>
+      <Value Profile="(Default)" />
     </Setting>
   </Settings>
 </SettingsFile>
