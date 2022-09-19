@@ -613,10 +613,14 @@ Comprueba_formularios:
 
 #Region "menuConexion_ItemClick"
     Private Sub menuConexion_ItemClick(ByVal sender As System.Object, ByVal e As DevExpress.XtraBars.ItemClickEventArgs) Handles menuConexion.ItemClick
-        Dim CadenaConexion As String = AGI2005.BaseDatos.OpenBDDialog(My.Settings.CadenaConexion)
-        My.Settings.CadenaConexion = CadenaConexion
-        Me.Principal_Load(Me, Nothing)
-        Me.Principal_Shown(Me, Nothing)
+        Try
+            Dim CadenaConexion As String = AGI2005.BaseDatos.OpenBDDialog(My.Settings.CadenaConexion)
+            My.Settings.CadenaConexion = CadenaConexion
+            Me.Principal_Load(Me, Nothing)
+            Me.Principal_Shown(Me, Nothing)
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Exclamation, Me.Text)
+        End Try
     End Sub
 #End Region
 
